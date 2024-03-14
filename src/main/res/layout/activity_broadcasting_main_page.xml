@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+>
+
+<!--text view for displaying the selected date-->
+
+    <LinearLayout
+        android:id="@+id/menu_layout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_60sdp"
+        android:layout_alignParentTop="true"
+        android:layout_gravity="center"
+        android:background="@color/background_clr"
+        android:orientation="horizontal"
+        android:visibility="visible">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ic_backarrow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="@dimen/_10sdp"
+            android:layout_marginRight="@dimen/_2sdp"
+            android:src="@drawable/ic_baseline_arrow_back_24" />
+
+        <TextView
+            android:id="@+id/toolbar"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/_15sdp"
+            android:background="?attr/colorPrimary"
+            android:fontFamily="@font/manrope_medium"
+            android:gravity="center"
+            android:text="Broadcast Message"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_14sdp"
+            android:textStyle="bold" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/menu_layout"
+        android:orientation="vertical">
+
+
+        <TextView
+            android:id="@+id/idTVDat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="8dp"
+            android:text="Today"
+            android:layout_marginRight="@dimen/_20sdp"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <View
+            android:id="@+id/profile_lay_view"
+            android:layout_width="match_parent"
+            android:layout_height="0.3dp"
+            android:layout_below="@+id/profile_lay"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:background="@color/grey_clr" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            android:text="Great news! We are launching our 5th fund: DLE Senior Living."
+            android:layout_marginRight="@dimen/_20sdp"
+            android:textColor="@color/grey_clr"
+            android:textSize="@dimen/_10sdp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            android:text="Thank you for booking a meeting with us."
+            android:layout_marginRight="@dimen/_20sdp"
+            android:textColor="@color/grey_clr"
+            android:textSize="@dimen/_10sdp"
+            android:textStyle="bold" />
+        <View
+            android:id="@+id/profile_lay_vie"
+            android:layout_width="match_parent"
+            android:layout_height="0.3dp"
+            android:layout_below="@+id/profile_lay"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:background="@color/grey_clr" />
+
+
+        <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:padding="8dp"
+        android:text="Yesterday"
+        android:layout_marginRight="@dimen/_20sdp"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+        <View
+            android:id="@+id/profile_lay"
+            android:layout_width="match_parent"
+            android:layout_height="0.3dp"
+            android:layout_below="@+id/profile_lay"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:background="@color/grey_clr" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            android:text="Great news! We are launching our 5th fund: DLE Senior Living."
+            android:layout_marginRight="@dimen/_20sdp"
+            android:textColor="@color/grey_clr"
+            android:textSize="@dimen/_10sdp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            android:text="Thank you for booking a meeting with us."
+            android:layout_marginRight="@dimen/_20sdp"
+            android:textColor="@color/grey_clr"
+            android:textSize="@dimen/_10sdp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+
+
+
+<!--<androidx.recyclerview.widget.RecyclerView-->
+<!--    android:id="@+id/mbroadcastinglist"-->
+<!--    android:layout_width="match_parent"-->
+<!--    android:layout_height="wrap_content"-->
+<!--    tools:listitem="@layout/meeting_list_recycle"/>-->
+
+</RelativeLayout>

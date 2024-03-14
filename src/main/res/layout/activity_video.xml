@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:keepScreenOn="true"
+    >
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <com.google.android.material.appbar.AppBarLayout
+            android:id="@+id/app_bar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:animateLayoutChanges="true"
+            android:clipChildren="false"
+            android:elevation="0dp"
+            android:fitsSystemWindows="true"
+            android:theme="@style/AppTheme.AppBarOverlay"
+            app:elevation="0dp"
+            app:liftOnScroll="false">
+
+            <com.google.android.material.appbar.MaterialToolbar
+                android:id="@+id/topAppBar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:background="@android:color/transparent"
+                app:contentInsetStartWithNavigation="0dp"
+                app:layout_collapseMode="pin"
+                app:title="Video Call"
+                app:titleCentered="true"
+                app:navigationIcon="@drawable/ic_backarrow_chat"
+                app:titleTextColor="@color/white">
+            </com.google.android.material.appbar.MaterialToolbar>
+
+        </com.google.android.material.appbar.AppBarLayout>
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/idCourseRV"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:layout_below="@+id/app_bar" />
+        <SurfaceView
+            android:id="@+id/surfaceByDefaultCamera"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/bottomView"
+            android:visibility="gone"
+            android:layout_below="@+id/app_bar" />
+        <SurfaceView
+            android:id="@+id/surfaceIncomingVideo"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/bottomView"
+            android:layout_below="@+id/app_bar" />
+
+        <ProgressBar
+            android:id="@+id/progressBarView"
+            android:layout_width="@dimen/_50sdp"
+            android:layout_height="@dimen/_50sdp"
+            android:layout_centerInParent="true"/>
+
+        <SurfaceView
+            android:id="@+id/surfacePreviewCapture"
+            android:layout_width="@dimen/_100sdp"
+            android:layout_height="@dimen/_100sdp"
+            android:layout_above="@+id/bottomView"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="@dimen/_10sdp" />
+
+        <LinearLayout
+            android:id="@+id/userDetailLL"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_30sdp"
+            android:layout_marginVertical="@dimen/_15sdp"
+            android:gravity="center_horizontal"
+            android:layout_below="@+id/app_bar"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:fontFamily="@font/manrope_medium"
+                android:gravity="center_horizontal"
+                android:singleLine="true"
+                android:text="+1(090) 90900-202"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_18sdp" />
+
+            <TextView
+                android:id="@+id/tv_call_status"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_city"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:gravity="center_horizontal"
+                android:text="Calling..."
+                android:fontFamily="@font/manrope_regular"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_15sdp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/bottomView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:id="@+id/ll_incoming_componant"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_20sdp"
+                android:visibility="gone">
+
+                <ImageView
+                    android:id="@+id/iv_incoming_decline"
+                    android:layout_width="@dimen/call_screen_button"
+                    android:layout_height="@dimen/call_screen_button"
+                    android:layout_alignParentStart="true"
+                    android:background="@drawable/decline_call" />
+
+                <ImageView
+                    android:id="@+id/iv_incoming_accept"
+                    android:layout_width="@dimen/call_screen_button"
+                    android:layout_height="@dimen/call_screen_button"
+                    android:layout_alignParentEnd="true"
+                    android:background="@drawable/accept_call"
+                    android:onClick="acceptIncomingCall" />
+            </RelativeLayout>
+            <LinearLayout
+                android:id="@+id/ll_outgoing_componant"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center|center_vertical"
+                android:orientation="vertical">
+                <androidx.coordinatorlayout.widget.CoordinatorLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                    <include layout="@layout/video_bottom_sheet_dialog_layout" />
+                </androidx.coordinatorlayout.widget.CoordinatorLayout>
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

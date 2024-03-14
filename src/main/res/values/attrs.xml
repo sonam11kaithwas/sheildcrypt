@@ -1,0 +1,489 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+<!--
+    <attr name="appOverlay" format="reference" />
+
+    <attr name="mainBackground" format="color" />
+    <attr name="mainTabSelected" format="color" />
+
+    <attr name="downIconBackground" format="color" />
+    <attr name="messagesNotificationsColor" format="color" />
+    <attr name="messagesBackground" format="color" />
+
+    <attr name="incomingChatBubble" format="reference" />
+    <attr name="outgoingChatBubble" format="reference" />
+
+    <attr name="viewProfileDialogBackground" format="color" />
+    <attr name="viewProfileDialogIconTint" format="color" />
+    <declare-styleable name="FullscreenAttrs">
+        <attr name="fullscreenBackgroundColor" format="color" />
+        <attr name="fullscreenTextColor" format="color" />
+    </declare-styleable>
+
+    <declare-styleable name="CropImageView">
+        <attr name="cropGuidelines">
+            <enum name="off" value="0"/>
+            <enum name="onTouch" value="1"/>
+            <enum name="on" value="2"/>
+        </attr>-->
+<!--     <attr name="conversations_overview_background" format="reference|color" />-->
+
+
+<!--    </declare-styleable>-->
+
+    <declare-styleable name="MaterialRippleLayout">
+        <attr name="mrl_rippleColor" format="color" localization="suggested" />
+        <attr name="mrl_rippleDimension" format="dimension" localization="suggested" />
+        <attr name="mrl_rippleOverlay" format="boolean" localization="suggested" />
+        <attr name="mrl_rippleAlpha" format="float" localization="suggested" />
+        <attr name="mrl_rippleDuration" format="integer" localization="suggested" />
+        <attr name="mrl_rippleFadeDuration" format="integer" localization="suggested" />
+        <attr name="mrl_rippleHover" format="boolean" localization="suggested" />
+        <attr name="mrl_rippleBackground" format="color" localization="suggested" />
+        <attr name="mrl_rippleDelayClick" format="boolean" localization="suggested" />
+        <attr name="mrl_ripplePersistent" format="boolean" localization="suggested" />
+        <attr name="mrl_rippleInAdapter" format="boolean" localization="suggested" />
+        <attr name="mrl_rippleRoundedCorners" format="dimension" localization="suggested" />
+    </declare-styleable>
+
+    <declare-styleable name="MiStoryView">
+        <attr name="miStoryImageRadius" format="dimension" />
+        <attr name="miStoryItemIndicatorWidth" format="dimension" />
+        <attr name="miSpaceBetweenImageAndIndicator" format="dimension" />
+        <attr name="miPendingIndicatorColor" format="color" />
+        <attr name="miVisitedIndicatorColor" format="color" />
+        <attr name="miPageTransformer" format="enum">
+            <enum name="BACKGROUND_TO_FOREGROUND_TRANSFORMER" value="0"/>
+            <enum name="CUBE_OUT_TRANSFORMER" value="1"/>
+            <enum name="FOREGROUND_TO_BACKGROUND_TRANSFORMER" value="2"/>
+            <enum name="ZOOM_OUT_PAGE_TRANSFORMER" value="3"/>
+
+            <enum name="CUBE_IN_TRANSFORMER" value="4"/>
+            <enum name="ROTATE_DOWN_PAGE_TRANSFORMER" value="5"/>
+            <enum name="ROTATE_UP_PAGE_TRANSFORMER" value="6"/>
+            <enum name="ZOOM_IN_TRANSFORMER" value="7"/>
+        </attr>
+
+        <!--Full screen horizontal progress attributes-->
+        <!--Set height of progress bar.-->
+        <attr name="miFullScreenProgressBarHeight" format="dimension" />
+        <!--Set margin between two progress bars.-->
+        <attr name="miFullScreenGapBetweenProgressBar" format="dimension" />
+        <!--Set primary color of progress bar.-->
+        <attr name="miFullScreenProgressBarPrimaryColor" format="color" />
+        <!--Set color of progress i.e secondary color of progress bar.-->
+        <attr name="miFullScreenProgressBarSecondaryColor" format="color" />
+        <!--Set duration for single story view.-->
+        <attr name="miFullScreenSingleStoryDisplayTime" format="integer" />
+    </declare-styleable>
+
+    <declare-styleable name="MiStoryHorizontalProgressView">
+        <!--Set height of progress bar.-->
+        <attr name="miProgressBarHeight" format="dimension" />
+        <!--Set margin between two progress bars.-->
+        <attr name="miGapBetweenProgressBar" format="dimension" />
+        <!--Set primary color of progress bar.-->
+        <attr name="miProgressBarPrimaryColor" format="color" />
+        <!--Set color of progress i.e secondary color of progress bar.-->
+        <attr name="miProgressBarSecondaryColor" format="color" />
+        <!--Set duration for single story view.-->
+        <attr name="miSingleStoryDisplayTime" format="integer" />
+    </declare-styleable>
+
+    <declare-styleable name="StoriesProgressView">
+        <attr name="progressCount" format="integer|reference" />
+    </declare-styleable>
+
+   <!-- <attr name="popupOverlayStyle" format="reference" />
+    <attr name="color_background_primary" format="reference|color" />
+    <attr name="color_background_secondary" format="reference|color" />
+
+    <attr name="color_background_tertiary" format="reference|color" />
+    <attr name="color_background_overlay" format="reference|color" />
+    <attr name="color_warning" format="reference|color" />
+
+    <attr name="TextColorOnline" format="reference|color" />
+    <attr name="TextColorError" format="reference|color" />
+    <attr name="edit_text_color" format="reference|color" />
+    <attr name="icon_tint" format="reference|color" />
+
+    <attr name="activity_background_search" format="reference" />
+    <attr name="activity_background_no_results" format="reference" />
+    <attr name="activity_primary_background_no_results" format="reference" />
+    <attr name="EmojiColor" format="reference|color" />
+    <attr name="TextSizeCaption" format="dimension" />
+    <attr name="TextSizeBody1" format="dimension" />
+    <attr name="TextSizeBody2" format="dimension" />
+    <attr name="TextSizeSubhead" format="dimension" />
+    <attr name="TextSizeTitle" format="dimension" />
+
+    <attr name="list_item_background" format="reference" />-->
+    <!--sonm -->
+
+<!--    <attr name="TextSizeCaption" format="dimension" />-->
+<!--    <attr name="TextSizeTitle" format="dimension" />-->
+<!--    <attr name="TextSizeSubhead" format="dimension" />-->
+<!--    <attr name="TextSizeBody1" format="dimension" />-->
+<!--    <attr name="TextSizeBody2" format="dimension" />-->
+<!--    <attr name="TextSizeDisplay2" format="dimension" />-->
+<!--    <attr name="TextSizeInput" format="dimension" />-->
+<!--    <attr name="TextSeparation" format="dimension" />-->
+
+<!--    <attr name="IconSize" format="dimension" />-->
+
+<!--    <attr name="color_background_tertiary" format="reference|color" />-->
+<!--    <attr name="color_background_secondary" format="reference|color" />-->
+<!--    <attr name="color_background_primary" format="reference|color" />-->
+<!--    <attr name="color_background_overlay" format="reference|color" />-->
+<!--    <attr name="edit_text_color" format="reference|color" />-->
+<!--    <attr name="color_warning" format="reference|color" />-->
+<!--    <attr name="EmojiColor" format="reference|color" />-->
+
+<!--    <attr name="activity_background_search" format="reference" />-->
+<!--    <attr name="activity_background_no_results" format="reference" />-->
+<!--    <attr name="activity_primary_background_no_results" format="reference" />-->
+
+<!--    <attr name="list_item_background" format="reference" />-->
+
+<!--    <attr name="TextColorOnline" format="reference|color" />-->
+<!--    <attr name="TextColorError" format="reference|color" />-->
+<!--    <attr name="icon_tint" format="reference|color" />-->
+
+<!--    <attr name="ic_send_cancel_offline" format="reference" />-->
+<!--    <attr name="ic_send_location_offline" format="reference" />-->
+<!--    <attr name="ic_send_photo_offline" format="reference" />-->
+<!--    <attr name="ic_send_picture_offline" format="reference" />-->
+<!--    <attr name="ic_send_text_offline" format="reference" />-->
+<!--    <attr name="ic_send_videocam_offline" format="reference" />-->
+<!--    <attr name="ic_send_voice_offline" format="reference" />-->
+
+<!--    <attr name="ic_attach_camera" format="reference" />-->
+<!--    <attr name="ic_attach_videocam" format="reference" />-->
+<!--    <attr name="ic_attach_document" format="reference" />-->
+<!--    <attr name="ic_attach_location" format="reference" />-->
+<!--    <attr name="ic_attach_photo" format="reference" />-->
+<!--    <attr name="ic_attach_record" format="reference" />-->
+
+<!--    <attr name="ic_make_audio_call" format="reference" />-->
+<!--    <attr name="ic_make_video_call" format="reference" />-->
+
+
+<!--    <attr name="ic_cloud_download" format="reference" />-->
+
+<!--    <attr name="message_bubble_received_monochrome" format="reference" />-->
+<!--    <attr name="message_bubble_sent" format="reference" />-->
+<!--    <attr name="message_bubble_received_green" format="reference" />-->
+
+<!--    <attr name="unread_count" format="reference|color" />-->
+
+<!--    <attr name="conversations_overview_background" format="reference|color" />-->
+
+<!--    <attr name="icon_alpha" format="float" />-->
+<!--    <attr name="delete_icon_alpha" format="float" />-->
+
+<!--    <attr name="media_preview_image" format="reference" />-->
+<!--    <attr name="media_preview_document" format="reference" />-->
+<!--    <attr name="media_preview_recording" format="reference" />-->
+<!--    <attr name="media_preview_audio" format="reference" />-->
+<!--    <attr name="media_preview_location" format="reference" />-->
+<!--    <attr name="media_preview_tour" format="reference" />-->
+<!--    <attr name="media_preview_contact" format="reference" />-->
+<!--    <attr name="media_preview_app" format="reference" />-->
+<!--    <attr name="media_preview_calendar" format="reference" />-->
+<!--    <attr name="media_preview_archive" format="reference" />-->
+<!--    <attr name="media_preview_ebook" format="reference" />-->
+<!--    <attr name="media_preview_backup" format="reference" />-->
+<!--    <attr name="media_preview_unknown" format="reference" />-->
+
+
+<!--    <attr name="icon_add_group" format="reference" />-->
+<!--    <attr name="icon_add_person" format="reference" />-->
+<!--    <attr name="icon_cancel" format="reference" />-->
+<!--    <attr name="icon_copy" format="reference" />-->
+<!--    <attr name="icon_discard" format="reference" />-->
+<!--    <attr name="icon_download" format="reference" />-->
+<!--    <attr name="icon_edit" format="reference" />-->
+<!--    <attr name="icon_edit_body" format="reference" />-->
+<!--    <attr name="icon_save" format="reference" />-->
+<!--    <attr name="icon_done" format="reference" />-->
+<!--    <attr name="icon_group" format="reference" />-->
+<!--    <attr name="icon_new" format="reference" />-->
+<!--    <attr name="icon_new_attachment" format="reference" />-->
+<!--    <attr name="icon_not_secure" format="reference" />-->
+<!--    <attr name="icon_call" format="reference" />-->
+<!--    <attr name="icon_ongoing_call" format="reference" />-->
+<!--    <attr name="ic_ongoing_call_hint" format="reference" />-->
+<!--    <attr name="icon_quote" format="reference" />-->
+<!--    <attr name="icon_refresh" format="reference" />-->
+<!--    <attr name="icon_remove" format="reference" />-->
+<!--    <attr name="icon_search" format="reference" />-->
+<!--    <attr name="icon_help" format="reference" />-->
+<!--    <attr name="icon_goto_chat" format="reference" />-->
+<!--    <attr name="icon_secure" format="reference" />-->
+<!--    <attr name="icon_settings" format="reference" />-->
+<!--    <attr name="icon_share" format="reference" />-->
+<!--    <attr name="icon_import_export" format="reference" />-->
+<!--    <attr name="icon_scan_qr_code" format="reference" />-->
+<!--    <attr name="icon_enable_undecided_device" format="reference" />-->
+<!--    <attr name="icon_scroll_down" format="reference" />-->
+
+<!--    <attr name="icon_gps_not_fixed" format="reference" />-->
+<!--    <attr name="icon_gps_fixed" format="reference" />-->
+<!--    <attr name="icon_directions" format="reference" />-->
+<!--    <attr name="icon_copy_bar" format="reference" />-->
+
+<!--    <attr name="icon_notifications" format="reference" />-->
+<!--    <attr name="icon_notifications_off" format="reference" />-->
+<!--    <attr name="icon_notifications_paused" format="reference" />-->
+<!--    <attr name="icon_notifications_none" format="reference" />-->
+<!--    <attr name="icon_pinned_on_top" format="reference" />-->
+
+<!--    <attr name="dialog_horizontal_padding" format="dimension" />-->
+<!--    <attr name="dialog_vertical_padding" format="dimension" />-->
+
+<!--    <declare-styleable name="UnreadCountCustomView">-->
+<!--        <attr name="backgroundColor" format="reference|color" />-->
+<!--    </declare-styleable>-->
+
+<!--    <attr name="popupOverlayStyle" format="reference" />-->
+
+
+
+
+<!--    <attr name="cropScaleType">-->
+<!--        <enum name="fitCenter" value="0"/>-->
+<!--        <enum name="center" value="1"/>-->
+<!--        <enum name="centerCrop" value="2"/>-->
+<!--        <enum name="centerInside" value="3"/>-->
+<!--    </attr>-->
+<!--    <attr name="cropShape">-->
+<!--        <enum name="rectangle" value="0"/>-->
+<!--        <enum name="oval" value="1"/>-->
+<!--    </attr>-->
+<!--    <attr name="cropAutoZoomEnabled" format="boolean"/>-->
+<!--    <attr name="cropMaxZoom" format="integer"/>-->
+<!--    <attr name="cropMultiTouchEnabled" format="boolean"/>-->
+<!--    <attr name="cropFixAspectRatio" format="boolean"/>-->
+<!--    <attr name="cropAspectRatioX" format="integer"/>-->
+<!--    <attr name="cropAspectRatioY" format="integer"/>-->
+<!--    <attr name="cropInitialCropWindowPaddingRatio" format="float"/>-->
+<!--    <attr name="cropBorderLineThickness" format="dimension"/>-->
+<!--    <attr name="cropBorderLineColor" format="color"/>-->
+<!--    <attr name="cropBorderCornerThickness" format="dimension"/>-->
+<!--    <attr name="cropBorderCornerOffset" format="dimension"/>-->
+<!--    <attr name="cropBorderCornerLength" format="dimension"/>-->
+<!--    <attr name="cropBorderCornerColor" format="color"/>-->
+<!--    <attr name="cropGuidelinesThickness" format="dimension"/>-->
+<!--    <attr name="cropGuidelinesColor" format="color"/>-->
+<!--    <attr name="cropBackgroundColor" format="color"/>-->
+<!--    <attr name="cropSnapRadius" format="dimension"/>-->
+<!--    <attr name="cropTouchRadius" format="dimension"/>-->
+<!--    <attr name="cropSaveBitmapToInstanceState" format="boolean"/>-->
+<!--    <attr name="cropShowCropOverlay" format="boolean"/>-->
+<!--    <attr name="cropShowProgressBar" format="boolean"/>-->
+<!--    <attr name="cropMinCropWindowWidth" format="dimension"/>-->
+<!--    <attr name="cropMinCropWindowHeight" format="dimension"/>-->
+<!--    <attr name="cropMinCropResultWidthPX" format="float"/>-->
+<!--    <attr name="cropMinCropResultHeightPX" format="float"/>-->
+<!--    <attr name="cropMaxCropResultWidthPX" format="float"/>-->
+<!--    <attr name="cropMaxCropResultHeightPX" format="float"/>-->
+<!--    <attr name="cropFlipHorizontally" format="boolean"/>-->
+<!--    <attr name="cropFlipVertically" format="boolean"/>-->
+    <attr name="TextSizeCaption" format="dimension" />
+    <attr name="TextSizeTitle" format="dimension" />
+    <attr name="TextSizeSubhead" format="dimension" />
+    <attr name="TextSizeBody1" format="dimension" />
+    <attr name="TextSizeBody2" format="dimension" />
+    <attr name="TextSizeDisplay2" format="dimension" />
+    <attr name="TextSizeInput" format="dimension" />
+    <attr name="TextSeparation" format="dimension" />
+
+    <attr name="IconSize" format="dimension" />
+
+    <attr name="color_background_tertiary" format="reference|color" />
+    <attr name="color_background_secondary" format="reference|color" />
+    <attr name="color_background_primary" format="reference|color" />
+    <attr name="color_background_overlay" format="reference|color" />
+    <attr name="edit_text_color" format="reference|color" />
+    <attr name="color_warning" format="reference|color" />
+    <attr name="EmojiColor" format="reference|color" />
+
+    <attr name="activity_background_search" format="reference" />
+    <attr name="activity_background_no_results" format="reference" />
+    <attr name="activity_primary_background_no_results" format="reference" />
+
+    <attr name="list_item_background" format="reference" />
+
+    <attr name="TextColorOnline" format="reference|color" />
+    <attr name="TextColorError" format="reference|color" />
+    <attr name="icon_tint" format="reference|color" />
+
+    <attr name="ic_send_cancel_offline" format="reference" />
+    <attr name="ic_send_location_offline" format="reference" />
+    <attr name="ic_send_photo_offline" format="reference" />
+    <attr name="ic_send_picture_offline" format="reference" />
+    <attr name="ic_send_text_offline" format="reference" />
+    <attr name="ic_send_videocam_offline" format="reference" />
+    <attr name="ic_send_voice_offline" format="reference" />
+
+    <attr name="ic_attach_camera" format="reference" />
+    <attr name="ic_attach_videocam" format="reference" />
+    <attr name="ic_attach_document" format="reference" />
+    <attr name="ic_attach_location" format="reference" />
+    <attr name="ic_attach_photo" format="reference" />
+    <attr name="ic_attach_record" format="reference" />
+
+    <attr name="ic_make_audio_call" format="reference" />
+    <attr name="ic_make_video_call" format="reference" />
+
+
+    <attr name="ic_cloud_download" format="reference" />
+
+    <attr name="message_bubble_received_monochrome" format="reference" />
+    <attr name="message_bubble_sent" format="reference" />
+    <attr name="message_bubble_received_green" format="reference" />
+
+    <attr name="unread_count" format="reference|color" />
+
+    <attr name="conversations_overview_background" format="reference|color" />
+
+    <attr name="icon_alpha" format="float" />
+    <attr name="delete_icon_alpha" format="float" />
+
+    <attr name="media_preview_image" format="reference" />
+    <attr name="media_preview_document" format="reference" />
+    <attr name="media_preview_recording" format="reference" />
+    <attr name="media_preview_audio" format="reference" />
+    <attr name="media_preview_location" format="reference" />
+    <attr name="media_preview_tour" format="reference" />
+    <attr name="media_preview_contact" format="reference" />
+    <attr name="media_preview_app" format="reference" />
+    <attr name="media_preview_calendar" format="reference" />
+    <attr name="media_preview_archive" format="reference" />
+    <attr name="media_preview_ebook" format="reference" />
+    <attr name="media_preview_backup" format="reference" />
+    <attr name="media_preview_unknown" format="reference" />
+
+
+    <attr name="icon_add_group" format="reference" />
+    <attr name="icon_add_person" format="reference" />
+    <attr name="icon_cancel" format="reference" />
+    <attr name="icon_copy" format="reference" />
+    <attr name="icon_discard" format="reference" />
+    <attr name="icon_download" format="reference" />
+    <attr name="icon_edit" format="reference" />
+    <attr name="icon_edit_body" format="reference" />
+    <attr name="icon_save" format="reference" />
+    <attr name="icon_done" format="reference" />
+    <attr name="icon_group" format="reference" />
+    <attr name="icon_new" format="reference" />
+    <attr name="icon_new_attachment" format="reference" />
+    <attr name="icon_not_secure" format="reference" />
+    <attr name="icon_call" format="reference" />
+    <attr name="icon_ongoing_call" format="reference" />
+    <attr name="ic_ongoing_call_hint" format="reference" />
+    <attr name="icon_quote" format="reference" />
+    <attr name="icon_refresh" format="reference" />
+    <attr name="icon_remove" format="reference" />
+    <attr name="icon_search" format="reference" />
+    <attr name="icon_help" format="reference" />
+    <attr name="icon_goto_chat" format="reference" />
+    <attr name="icon_secure" format="reference" />
+    <attr name="icon_settings" format="reference" />
+    <attr name="icon_share" format="reference" />
+    <attr name="icon_import_export" format="reference" />
+    <attr name="icon_scan_qr_code" format="reference" />
+    <attr name="icon_enable_undecided_device" format="reference" />
+    <attr name="icon_scroll_down" format="reference" />
+
+    <attr name="icon_gps_not_fixed" format="reference" />
+    <attr name="icon_gps_fixed" format="reference" />
+    <attr name="icon_directions" format="reference" />
+    <attr name="icon_copy_bar" format="reference" />
+
+    <attr name="icon_notifications" format="reference" />
+    <attr name="icon_notifications_off" format="reference" />
+    <attr name="icon_notifications_paused" format="reference" />
+    <attr name="icon_notifications_none" format="reference" />
+    <attr name="icon_pinned_on_top" format="reference" />
+
+    <attr name="dialog_horizontal_padding" format="dimension" />
+    <attr name="dialog_vertical_padding" format="dimension" />
+
+    <declare-styleable name="UnreadCountCustomView">
+        <attr name="backgroundColor" format="reference|color" />
+    </declare-styleable>
+
+    <attr name="popupOverlayStyle" format="reference" />
+
+
+
+
+    <attr name="appOverlay" format="reference" />
+
+    <attr name="mainBackground" format="color" />
+    <attr name="mainTabSelected" format="color" />
+
+    <attr name="downIconBackground" format="color" />
+    <attr name="messagesNotificationsColor" format="color" />
+    <attr name="messagesBackground" format="color" />
+
+    <attr name="incomingChatBubble" format="reference" />
+    <attr name="outgoingChatBubble" format="reference" />
+
+    <attr name="viewProfileDialogBackground" format="color" />
+    <attr name="viewProfileDialogIconTint" format="color" />
+    <declare-styleable name="FullscreenAttrs">
+        <attr name="fullscreenBackgroundColor" format="color" />
+        <attr name="fullscreenTextColor" format="color" />
+    </declare-styleable>
+
+    <declare-styleable name="CropImageView">
+        <attr name="cropGuidelines">
+            <enum name="off" value="0"/>
+            <enum name="onTouch" value="1"/>
+            <enum name="on" value="2"/>
+        </attr>
+        <attr name="cropScaleType">
+            <enum name="fitCenter" value="0"/>
+            <enum name="center" value="1"/>
+            <enum name="centerCrop" value="2"/>
+            <enum name="centerInside" value="3"/>
+        </attr>
+        <attr name="cropShape">
+            <enum name="rectangle" value="0"/>
+            <enum name="oval" value="1"/>
+        </attr>
+        <attr name="cropAutoZoomEnabled" format="boolean"/>
+        <attr name="cropMaxZoom" format="integer"/>
+        <attr name="cropMultiTouchEnabled" format="boolean"/>
+        <attr name="cropFixAspectRatio" format="boolean"/>
+        <attr name="cropAspectRatioX" format="integer"/>
+        <attr name="cropAspectRatioY" format="integer"/>
+        <attr name="cropInitialCropWindowPaddingRatio" format="float"/>
+        <attr name="cropBorderLineThickness" format="dimension"/>
+        <attr name="cropBorderLineColor" format="color"/>
+        <attr name="cropBorderCornerThickness" format="dimension"/>
+        <attr name="cropBorderCornerOffset" format="dimension"/>
+        <attr name="cropBorderCornerLength" format="dimension"/>
+        <attr name="cropBorderCornerColor" format="color"/>
+        <attr name="cropGuidelinesThickness" format="dimension"/>
+        <attr name="cropGuidelinesColor" format="color"/>
+        <attr name="cropBackgroundColor" format="color"/>
+        <attr name="cropSnapRadius" format="dimension"/>
+        <attr name="cropTouchRadius" format="dimension"/>
+        <attr name="cropSaveBitmapToInstanceState" format="boolean"/>
+        <attr name="cropShowCropOverlay" format="boolean"/>
+        <attr name="cropShowProgressBar" format="boolean"/>
+        <attr name="cropMinCropWindowWidth" format="dimension"/>
+        <attr name="cropMinCropWindowHeight" format="dimension"/>
+        <attr name="cropMinCropResultWidthPX" format="float"/>
+        <attr name="cropMinCropResultHeightPX" format="float"/>
+        <attr name="cropMaxCropResultWidthPX" format="float"/>
+        <attr name="cropMaxCropResultHeightPX" format="float"/>
+        <attr name="cropFlipHorizontally" format="boolean"/>
+        <attr name="cropFlipVertically" format="boolean"/>
+    </declare-styleable>
+
+</resources>

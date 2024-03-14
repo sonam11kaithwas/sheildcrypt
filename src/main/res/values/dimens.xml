@@ -1,0 +1,76 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="in_call_fab_margin">8dp</dimen>
+    <dimen name="in_call_fab_margin_center">12dp</dimen>
+    <dimen name="activity_horizontal_margin">8dp</dimen>
+    <dimen name="activity_vertical_margin">8dp</dimen>
+    <dimen name="card_padding_regular">16dp</dimen>
+    <dimen name="card_padding_list">8dp</dimen> <!-- card_padding_regular minus list_padding -->
+    <dimen name="list_padding">8dp</dimen>
+    <dimen name="image_button_padding">12dp</dimen>
+    <dimen name="key_action_width">48dp
+    </dimen>  <!-- icon width (24dp) + 2 * image button padding -->
+    <dimen name="fineprint_size">11sp</dimen>
+    <dimen name="audio_player_width">224dp</dimen>
+    <dimen name="image_preview_width">224dp</dimen>
+    <dimen name="avatar_item_distance">16dp</dimen>
+
+
+    <dimen name="ic_clear_margin">56dp</dimen>
+    <dimen name="media_preview_size">80dp</dimen>
+    <dimen name="media_size">56dp</dimen> <!-- ideally not larger than avatar_on_details_screen -->
+    <dimen name="browser_media_size">96dp</dimen>
+    <dimen name="toolbar_elevation">4dp</dimen>
+
+    <dimen name="publish_avatar_top_margin">8dp</dimen>
+    <dimen name="publish_avatar_size">96dp</dimen>
+    <dimen name="incoming_call_radius">48dp</dimen>
+    <dimen name="avatar_on_status_message">32dp</dimen>
+    <dimen name="avatar">48dp</dimen>
+    <dimen name="avatar_on_details_screen_size">56dp</dimen>
+    <dimen name="avatar_on_conversation_overview">56dp</dimen>
+    <dimen name="avatar_on_conversation_overview2">@dimen/_40sdp</dimen>
+
+    <dimen name="input_label_vertical_spacing">4dp</dimen>
+    <dimen name="input_label_horizontal_spacing">4dp</dimen>
+
+    <!-- scanner -->
+    <dimen name="scan_laser_width">4dp</dimen>
+    <dimen name="scan_dot_size">8dp</dimen>
+
+    <dimen name="swipe_escape_velocity">1200dp</dimen> <!-- android default is 120dp -->
+
+    <dimen name="background_image_opacity">0.12</dimen>
+
+    <dimen name="sd_label_max_width">256dp</dimen>
+
+    <dimen name="local_video_preview_height">128dp</dimen>
+    <dimen name="local_video_preview_width">96dp</dimen>
+    <dimen name="rtp_session_duration_top_margin">24dp</dimen>
+
+    <dimen name="fab_margin">16dp</dimen>
+    <dimen name="call_screen_button">@dimen/_50sdp</dimen>
+    <dimen name="pip_inner_view">@dimen/_120sdp</dimen>
+    <dimen name="pip_inner_view_enable">@dimen/_50sdp</dimen>
+
+    <dimen name="dp_0_5">0.5dp</dimen>
+    <dimen name="dp_1">1dp</dimen>
+    <dimen name="dp_1_5">1.5dp</dimen>
+    <dimen name="dp_2">2dp</dimen>
+    <dimen name="dp_4">4dp</dimen>
+    <dimen name="dp_6">6dp</dimen>
+    <dimen name="dp_8">8dp</dimen>
+    <dimen name="dp_10">10dp</dimen>
+    <dimen name="dp_12">12dp</dimen>
+    <dimen name="dp_55">55dp</dimen>
+
+
+    <dimen name="dp_14">14dp</dimen>
+    <dimen name="dp_16">16dp</dimen>
+    <dimen name="dp_18">18dp</dimen>
+
+    <dimen name="sp_12">12sp</dimen>
+    <dimen name="sp_14">14sp</dimen>
+    <dimen name="sp_16">16sp</dimen>
+    <dimen name="sp_18">18sp</dimen>
+</resources>

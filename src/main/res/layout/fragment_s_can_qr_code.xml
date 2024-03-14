@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    >
+
+
+    <com.budiyev.android.codescanner.CodeScannerView
+        android:id="@+id/scanner_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:autoFocusButtonVisible="true"
+        app:flashButtonVisible="true" />
+
+<!--    <LinearLayout-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="@dimen/_80sdp"-->
+<!--        android:background="@color/black_clr"-->
+<!--        android:gravity="center"-->
+<!--        android:orientation="horizontal"-->
+<!--        android:weightSum="3"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        app:layout_constraintLeft_toLeftOf="parent">-->
+
+<!--        <ImageView-->
+<!--            android:id="@+id/img_flash"-->
+<!--            android:layout_width="0dp"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_gravity="center"-->
+<!--            android:layout_weight="1"-->
+<!--            android:onClick="onClick"-->
+<!--            android:padding="@dimen/_20sdp"-->
+<!--            android:src="@drawable/ic_camerax_flash" />-->
+
+<!--        <ImageView-->
+<!--            android:id="@+id/img_capture_image"-->
+<!--            android:layout_width="0dp"-->
+<!--            android:layout_height="@dimen/_52sdp"-->
+<!--            android:layout_gravity="center"-->
+<!--            android:layout_weight="1"-->
+<!--            android:elevation="2dp"-->
+
+<!--            android:onClick="onClick"-->
+<!--            android:src="@drawable/ic_capture_image"-->
+<!--            android:visibility="invisible" />-->
+
+<!--        <ImageView-->
+<!--            android:id="@+id/camera_preview"-->
+<!--            android:layout_width="0dp"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_gravity="center"-->
+<!--            android:layout_weight="1"-->
+<!--            android:elevation="2dp"-->
+<!--            android:onClick="onClick"-->
+<!--            android:src="@drawable/ic_camera_prev" />-->
+
+<!--    </LinearLayout>-->
+
+
+</RelativeLayout>

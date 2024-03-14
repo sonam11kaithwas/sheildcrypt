@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+    <RelativeLayout android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        xmlns:tools="http://schemas.android.com/tools">
+
+        <LinearLayout
+            android:id="@+id/menu_layout"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_60sdp"
+            android:layout_alignParentTop="true"
+            android:layout_gravity="center"
+            android:background="@color/background_clr"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:visibility="visible"
+            android:weightSum="2">
+
+
+            <TextView
+                android:id="@+id/toolbar"
+                android:layout_width="0dp"
+                android:layout_height="?attr/actionBarSize"
+                android:layout_gravity="center"
+                android:layout_weight="1.8"
+                android:layout_marginLeft="@dimen/_10sdp"
+                android:background="?attr/colorPrimary"
+                android:fontFamily="@font/manrope_medium"
+                android:gravity="left|center"
+                android:text="Viewed By"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_14sdp"
+                android:textStyle="bold" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/ic_backarrow"
+                android:layout_width="@dimen/_30sdp"
+                android:layout_height="@dimen/_30sdp"
+                android:layout_gravity="center"
+                android:layout_marginLeft="@dimen/_2sdp"
+                android:layout_marginRight="@dimen/_2sdp"
+                android:layout_weight="0.1"
+                android:src="@drawable/ic_deletewhite_img" />
+
+
+
+        </LinearLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/viewStatusRecycler"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/menu_layout"
+            tools:listitem="@layout/my_status_viewed_by" />
+
+
+    </RelativeLayout>
+
+</FrameLayout>

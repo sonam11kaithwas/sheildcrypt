@@ -1,0 +1,24 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/thumbnailImage"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/_80sdp"
+        android:scaleType="fitXY"
+        android:src="@drawable/one_person" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/img_tick"
+        android:layout_width="@dimen/_17sdp"
+        android:layout_height="@dimen/_17sdp"
+        android:layout_gravity="bottom|end|center"
+        android:layout_marginRight="@dimen/_7sdp"
+        android:layout_marginBottom="@dimen/_7sdp"
+        android:background="@android:color/transparent"
+        android:scaleType="fitXY"
+        android:src="@drawable/ic_selecte_tick" />
+
+
+</FrameLayout>

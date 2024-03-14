@@ -1,0 +1,731 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/mode_white_grey">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/view_above_keyboard">
+
+            <com.advantal.shieldcrypt.sip.font_family.PoppinsEtReguler
+                android:id="@+id/et_mobile"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="@dimen/_34sdp"
+                android:layout_marginRight="@dimen/_34sdp"
+                android:layout_toLeftOf="@+id/iv_cross"
+                android:background="@android:color/transparent"
+                android:gravity="center"
+                android:inputType="numberSigned"
+                android:maxLength="20"
+                android:maxLines="1"
+                android:paddingTop="@dimen/_2sdp"
+                android:paddingBottom="@dimen/_2sdp"
+                android:singleLine="true"
+                android:text=""
+                android:textColor="@color/mode_black_white"
+                android:textColorHint="@color/grey_placeholder"
+                android:textCursorDrawable="@color/grey_placeholder"
+                android:textIsSelectable="true"
+                android:textSize="@dimen/_20sdp"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/iv_cross"
+                android:layout_width="@dimen/_22sdp"
+                android:layout_height="@dimen/_22sdp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/_20sdp"
+                android:background="@drawable/dialer_back"
+                android:contentDescription="carbon"
+                android:visibility="gone" />
+        </RelativeLayout>
+
+
+        <View
+            android:id="@+id/view_above_keyboard"
+            android:layout_width="match_parent"
+            android:layout_height="0.6dp"
+            android:layout_above="@+id/ll_keypad"
+            android:layout_marginLeft="@dimen/_20sdp"
+            android:layout_marginRight="@dimen/_20sdp"
+            android:layout_marginBottom="@dimen/_8sdp"
+            android:background="@color/mode_black_white"
+            android:visibility="visible" />
+
+        <!-- Keypad Layout -->
+
+        <LinearLayout
+            android:id="@+id/ll_keypad"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true">
+
+            <!--Vertical layout for 1 4 7 * -->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <!--Horizontal layout for 1 2 3 -->
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/_2sdp">
+
+                    <!--<com.adv.carbon.utility.MaterialRippleLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:mrl_rippleAlpha="@string/ripple_alpha"
+                        app:mrl_rippleColor="@color/ripple_color"
+                        app:mrl_rippleDelayClick="false"
+                        android:layout_weight="1"
+                        app:mrl_rippleDuration="@string/ripple_duration"
+                        app:mrl_rippleHover="true"
+                        app:mrl_rippleOverlay="true">-->
+
+                    <LinearLayout
+                        android:id="@+id/ll_1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="?selectableItemBackgroundBorderless"
+                        android:orientation="vertical"
+                        android:padding="@dimen/_2sdp">
+
+                        <com.advantal.shieldcrypt.sip.font_family.PoppinsTVRegular
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:includeFontPadding="false"
+                            android:text="1"
+                            android:textColor="@color/mode_black_white"
+                            android:textSize="@dimen/_20sdp"
+                            android:textStyle="bold" />
+
+                        <com.advantal.shieldcrypt.sip.font_family.PoppinsTVRegular
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:includeFontPadding="false"
+                            android:text="  "
+                            android:textSize="12sp" />
+                    </LinearLayout>
+                    <!--</com.adv.carbon.utility.MaterialRippleLayout>-->
+
+                    <!--<com.adv.carbon.utility.MaterialRippleLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:mrl_rippleAlpha="@string/ripple_alpha"
+                        app:mrl_rippleColor="@color/ripple_color"
+                        app:mrl_rippleDelayClick="false"
+                        android:layout_weight="1"
+                        app:mrl_rippleDuration="@string/ripple_duration"
+                        app:mrl_rippleHover="true"
+                        app:mrl_rippleOverlay="true">-->
+
+                    <LinearLayout
+                        android:id="@+id/ll_2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="?selectableItemBackgroundBorderless"
+                        android:orientation="vertical"
+                        android:padding="@dimen/_2sdp">
+
+                        <com.advantal.shieldcrypt.sip.font_family.PoppinsTVRegular
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:includeFontPadding="false"
+                            android:text="2"
+                            android:textColor="@color/mode_black_white"
+                            android:textSize="@dimen/_20sdp"
+                            android:textStyle="bold" />
+
+                        <com.advantal.shieldcrypt.sip.font_family.PoppinsTVRegular
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:includeFontPadding="false"
+                            android:text="ABC"
+                            android:textColor="@color/mode_black_white"
+                            android:textSize="@dimen/_9sdp" />
+                    </LinearLayout>
+                    <!--</com.adv.carbon.utility.MaterialRippleLayout>-->
+
+                    <!--<com.adv.carbon.utility.MaterialRippleLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:mrl_rippleAlpha="@string/ripple_alpha"
+                        app:mrl_rippleColor="@color/ripple_color"
+                        app:mrl_rippleDelayClick="false"
+                        android:layout_weight="1"
+                        app:mrl_rippleDuration="@string/ripple_duration"
+                        app:mrl_rippleHover="true"
+                        app:mrl_rippleOverlay="true">-->
+
+                    <LinearLayout
+                        android:id="@+id/ll_3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="?selectableItemBackgroundBorderless"
+                        android:orientation="vertical"
+                        android:padding="@dimen/_2sdp">
+
+                        <com.advantal.shieldcrypt.sip.font_family.PoppinsTVRegular
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:includeFontPadding="false"
+                            android:text="3"
+                            android:textColor="@color/mode_black_white"
+                            android:textSize="@dimen/_20sdp"
+                            android:textStyle="bold" />
+
+                        <com.advantal.shieldcrypt.sip.font_family.PoppinsTVRegular
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:includeFontPadding="false"
+                            android:text="DEF"
+                            android:textColor="@color/mode_black_white"
+                            android:textSize="@dimen/_9sdp" />
+                    </LinearLayout>
+                    <!--</com.adv.carbon.utility.MaterialRippleLayout>-->
+
+                </LinearLayout>
+
+                <!--Horizontal layout for 4 5 6 -->
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/_2sdp">
+
+                    <!--<com.adv.carbon.utility.MaterialRippleLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:mrl_rippleAlpha="@string/ripple_alpha"
+                        app:mrl_rippleColor="@color/ripple_color"
+                        app:mrl_rippleDelayClick="false"
+                        android:layout_weight="1"
+                        app:mrl_rippleDuration="@string/ripple_duration"
+                        app:mrl_rippleHover="true"
+                        app:mrl_rippleOverlay="true">-->
+
+                    <LinearLayout
+                        android:id="@+id/ll_4"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="?selectableItemBackgroundBorderless"
+                        android:orientation="vertical"
+                        android:padding="@dimen/_2sdp">
+
+                        <com.advantal.shieldcrypt.sip.font_family.PoppinsTVRegular
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:includeFontPadding="false"
+                            android:text="4"
+                            android:textColor="@color/mode_black_white"
+                            android:textSize="@dimen/_20sdp"
+                            android:textStyle="bold" />
+
+                        <com.advantal.shieldcrypt.sip.font_family.PoppinsTVRegular
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:includeFontPadding="false"
+                            android:text="GHI"
+                            android:textColor="@color/mode_black_white"
+                            android:textSize="@dimen/_9sdp" />
+                    </LinearLayout>
+                    <!--</com.adv.carbon.utility.MaterialRippleLayout>-->
+
+                    <!--<com.adv.carbon.utility.MaterialRippleLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:mrl_rippleAlpha="@string/ripple_alpha"
+                        app:mrl_rippleColor="@color/ripple_color"
+                        app:mrl_rippleDelayClick="false"
+                        android:layout_weight="1"
+                        app:mrl_rippleDuration="@string/ripple_duration"
+                        app:mrl_rippleHover="true"
+                        app:mrl_rippleOverlay="true">-->
+
+                    <LinearLayout
+                        android:id="@+id/ll_5"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="?selectableItemBackgroundBorderless"
+                        android:orientation="vertical"
+                        android:padding="@dimen/_2sdp">
+
+                        <com.advantal.shieldcrypt.sip.font_family.PoppinsTVRegular
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:includeFontPadding="false"
+                            android:text="5"
+                            android:textColor="@color/mode_black_white"
+                            android:textSize="@dimen/_20sdp"
+                            android:textStyle="bold" />
+
+                        <com.advantal.shieldcrypt.sip.font_family.PoppinsTVRegular
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:includeFontPadding="false"
+                            android:text="JKL"
+                            android:textColor="@color/mode_black_white"
+                            android:textSize="@dimen/_9sdp" />
+                    </LinearLayout>
+                    <!--</com.adv.carbon.utility.MaterialRippleLayout>-->
+
+                    <!--<com.adv.carbon.utility.MaterialRippleLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:mrl_rippleAlpha="@string/ripple_alpha"
+                        app:mrl_rippleColor="@color/ripple_color"
+                        app:mrl_rippleDelayClick="false"
+                        android:layout_weight="1"
+                        app:mrl_rippleDuration="@string/ripple_duration"
+                        app:mrl_rippleHover="true"
+                        app:mrl_rippleOverlay="true">-->
+
+                    <LinearLayout
+                        android:id="@+id/ll_6"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="?selectableItemBackgroundBorderless"
+                        android:orientation="vertical"
+                        android:padding="@dimen/_2sdp">
+
+                        <com.advantal.shieldcrypt.sip.font_family.PoppinsTVRegular
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:includeFontPadding="false"
+                            android:text="6"
+                            android:textColor="@color/mode_black_white"
+                            android:textSize="@dimen/_20sdp"
+                            android:textStyle="bold" />
+
+                        <com.advantal.shieldcrypt.sip.font_family.PoppinsTVRegular
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:includeFontPadding="false"
+                            android:text="MNO"
+                            android:textColor="@color/mode_black_white"
+                            android:textSize="@dimen/_9sdp" />
+                    </LinearLayout>
+                    <!--</com.adv.carbon.utility.MaterialRippleLayout>-->
+
+                </LinearLayout>
+
+                <!--Horizontal layout for  7 8 9  -->
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/_2sdp">
+
+                    <!--<com.adv.carbon.utility.MaterialRippleLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:mrl_rippleAlpha="@string/ripple_alpha"
+                        app:mrl_rippleColor="@color/ripple_color"
+                        app:mrl_rippleDelayClick="false"
+                        android:layout_weight="1"
+                        app:mrl_rippleDuration="@string/ripple_duration"
+                        app:mrl_rippleHover="true"
+                        app:mrl_rippleOverlay="true">-->
+                    <LinearLayout
+                        android:id="@+id/ll_7"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="?selectableItemBackgroundBorderless"
+                        android:orientation="vertical"
+                        android:padding="@dimen/_2sdp">
+
+                        <com.advantal.shieldcrypt.sip.font_family.PoppinsTVRegular
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:includeFontPadding="false"
+                            android:text="7"
+                            android:textColor="@color/mode_black_white"
+                            android:textSize="@dimen/_20sdp"
+                            android:textStyle="bold" />
+
+                        <com.advantal.shieldcrypt.sip.font_family.PoppinsTVRegular
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:includeFontPadding="false"
+                            android:text="PQRS"
+                            android:textColor="@color/mode_black_white"
+                            android:textSize="@dimen/_9sdp" />
+                    </LinearLayout>
+                    <!--</com.adv.carbon.utility.MaterialRippleLayout>-->
+
+                    <!--  <com.adv.carbon.utility.MaterialRippleLayout
+                          android:layout_width="match_parent"
+                          android:layout_height="wrap_content"
+                          app:mrl_rippleAlpha="@string/ripple_alpha"
+                          app:mrl_rippleColor="@color/ripple_color"
+                          app:mrl_rippleDelayClick="false"
+                          android:layout_weight="1"
+                          app:mrl_rippleDuration="@string/ripple_duration"
+                          app:mrl_rippleHover="true"
+                          app:mrl_rippleOverlay="true">
+      -->
+                    <LinearLayout
+                        android:id="@+id/ll_8"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="?selectableItemBackgroundBorderless"
+                        android:orientation="vertical"
+                        android:padding="@dimen/_2sdp">
+
+                        <com.advantal.shieldcrypt.sip.font_family.PoppinsTVRegular
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:includeFontPadding="false"
+                            android:text="8"
+                            android:textColor="@color/mode_black_white"
+                            android:textSize="@dimen/_20sdp"
+                            android:textStyle="bold" />
+
+                        <com.advantal.shieldcrypt.sip.font_family.PoppinsTVRegular
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:includeFontPadding="false"
+                            android:text="TUV"
+                            android:textColor="@color/mode_black_white"
+                            android:textSize="@dimen/_9sdp" />
+                    </LinearLayout>
+                    <!-- </com.adv.carbon.utility.MaterialRippleLayout>-->
+
+                    <!--<com.adv.carbon.utility.MaterialRippleLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:mrl_rippleAlpha="@string/ripple_alpha"
+                        app:mrl_rippleColor="@color/ripple_color"
+                        app:mrl_rippleDelayClick="false"
+                        android:layout_weight="1"
+                        app:mrl_rippleDuration="@string/ripple_duration"
+                        app:mrl_rippleHover="true"
+                        app:mrl_rippleOverlay="true">-->
+
+                    <LinearLayout
+                        android:id="@+id/ll_9"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="?selectableItemBackgroundBorderless"
+                        android:orientation="vertical"
+                        android:padding="@dimen/_2sdp">
+
+                        <com.advantal.shieldcrypt.sip.font_family.PoppinsTVRegular
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:includeFontPadding="false"
+                            android:text="9"
+                            android:textColor="@color/mode_black_white"
+                            android:textSize="@dimen/_20sdp"
+                            android:textStyle="bold" />
+
+                        <com.advantal.shieldcrypt.sip.font_family.PoppinsTVRegular
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:includeFontPadding="false"
+                            android:text="WXYZ"
+                            android:textColor="@color/mode_black_white"
+                            android:textSize="@dimen/_9sdp" />
+                    </LinearLayout>
+                    <!--</com.adv.carbon.utility.MaterialRippleLayout>-->
+
+                </LinearLayout>
+
+                <!--Horizontal layout for * 0 #-->
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/_2sdp">
+
+                    <!--<com.adv.carbon.utility.MaterialRippleLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:mrl_rippleAlpha="@string/ripple_alpha"
+                        app:mrl_rippleColor="@color/ripple_color"
+                        app:mrl_rippleDelayClick="false"
+                        android:layout_weight="1"
+                        app:mrl_rippleDuration="@string/ripple_duration"
+                        app:mrl_rippleHover="true"
+                        app:mrl_rippleOverlay="true">-->
+
+                    <LinearLayout
+                        android:id="@+id/ll_star"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="?selectableItemBackgroundBorderless"
+                        android:orientation="vertical"
+                        android:padding="@dimen/_2sdp">
+
+                        <com.advantal.shieldcrypt.sip.font_family.PoppinsTVRegular
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:includeFontPadding="false"
+                            android:text="*"
+                            android:textColor="@color/mode_black_white"
+                            android:textSize="@dimen/_20sdp"
+                            android:textStyle="bold" />
+
+                        <com.advantal.shieldcrypt.sip.font_family.PoppinsTVRegular
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:includeFontPadding="false"
+                            android:text="  "
+                            android:textSize="@dimen/_9sdp"
+                            android:visibility="invisible" />
+                    </LinearLayout>
+                    <!--</com.adv.carbon.utility.MaterialRippleLayout>-->
+
+                    <!--<com.adv.carbon.utility.MaterialRippleLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:mrl_rippleAlpha="@string/ripple_alpha"
+                        app:mrl_rippleColor="@color/ripple_color"
+                        app:mrl_rippleDelayClick="false"
+                        android:layout_weight="1"
+                        app:mrl_rippleDuration="@string/ripple_duration"
+                        app:mrl_rippleHover="true"
+                        app:mrl_rippleOverlay="true">-->
+
+                    <LinearLayout
+                        android:id="@+id/ll_0"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="?selectableItemBackgroundBorderless"
+                        android:orientation="vertical"
+                        android:padding="@dimen/_2sdp">
+
+                        <com.advantal.shieldcrypt.sip.font_family.PoppinsTVRegular
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:includeFontPadding="false"
+                            android:text="0"
+                            android:textColor="@color/mode_black_white"
+                            android:textSize="@dimen/_20sdp"
+                            android:textStyle="bold" />
+
+                        <com.advantal.shieldcrypt.sip.font_family.PoppinsTVRegular
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:includeFontPadding="false"
+                            android:text="+"
+                            android:textColor="@color/mode_black_white"
+                            android:textSize="@dimen/_9sdp" />
+                    </LinearLayout>
+                    <!--</com.adv.carbon.utility.MaterialRippleLayout>-->
+
+                    <!--<com.adv.carbon.utility.MaterialRippleLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:mrl_rippleAlpha="@string/ripple_alpha"
+                        app:mrl_rippleColor="@color/ripple_color"
+                        app:mrl_rippleDelayClick="false"
+                        android:layout_weight="1"
+                        app:mrl_rippleDuration="@string/ripple_duration"
+                        app:mrl_rippleHover="true"
+                        app:mrl_rippleOverlay="true">-->
+
+                    <LinearLayout
+                        android:id="@+id/ll_hash"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="?selectableItemBackgroundBorderless"
+                        android:orientation="vertical"
+                        android:padding="@dimen/_2sdp">
+
+                        <com.advantal.shieldcrypt.sip.font_family.PoppinsTVRegular
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:includeFontPadding="false"
+                            android:text="#"
+                            android:textColor="@color/mode_black_white"
+                            android:textSize="@dimen/_20sdp"
+                            android:textStyle="bold" />
+
+                        <com.advantal.shieldcrypt.sip.font_family.PoppinsTVRegular
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:includeFontPadding="false"
+                            android:text="  "
+                            android:textSize="@dimen/_9sdp" />
+                    </LinearLayout>
+                    <!--</com.adv.carbon.utility.MaterialRippleLayout>-->
+
+                </LinearLayout>
+
+                <!--Horizontal call image-->
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/_2sdp"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:padding="@dimen/_1sdp">
+
+                        <com.advantal.shieldcrypt.sip.font_family.PoppinsTVRegular
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:text=""
+                            android:textColor="@color/mode_black_white"
+                            android:textSize="@dimen/_20sdp" />
+
+                        <com.advantal.shieldcrypt.sip.font_family.PoppinsTVRegular
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:text="  "
+                            android:textSize="12sp" />
+                    </LinearLayout>
+
+                    <!--<com.adv.carbon.utility.MaterialRippleLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:mrl_rippleAlpha="@string/ripple_alpha"
+                        app:mrl_rippleColor="@color/ripple_color"
+                        app:mrl_rippleDelayClick="false"
+                        android:layout_weight="1"
+                        app:mrl_rippleDuration="@string/ripple_duration"
+                        app:mrl_rippleHover="true"
+                        app:mrl_rippleOverlay="true">-->
+
+                    <LinearLayout
+                        android:id="@+id/ll_hide"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="?selectableItemBackgroundBorderless"
+                        android:orientation="vertical"
+                        android:padding="@dimen/_2sdp">
+
+                        <!--<com.adv.carbon.utility.MaterialRippleLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:mrl_rippleAlpha="@string/ripple_alpha"
+                            app:mrl_rippleColor="@color/ripple_color"
+                            app:mrl_rippleDelayClick="false"
+                            android:layout_gravity="center"
+                            app:mrl_rippleDuration="@string/ripple_duration"
+                            app:mrl_rippleHover="true"
+                            app:mrl_rippleOverlay="true">-->
+
+                        <com.advantal.shieldcrypt.sip.font_family.PoppinsTVRegular
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:includeFontPadding="false"
+                            android:text="Hide"
+                            android:textColor="@color/mode_black_white"
+                            android:textSize="@dimen/_20sdp"
+                            android:textStyle="bold" />
+
+                        <com.advantal.shieldcrypt.sip.font_family.PoppinsTVRegular
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:includeFontPadding="false"
+                            android:text="ABC"
+                            android:textColor="@color/mode_black_white"
+                            android:textSize="@dimen/_9sdp"
+                            android:visibility="gone" />                        <!--</com.adv.carbon.utility.MaterialRippleLayout>-->
+                    </LinearLayout>
+                    <!--</com.adv.carbon.utility.MaterialRippleLayout>-->
+
+                    <!--<com.adv.carbon.utility.MaterialRippleLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:mrl_rippleAlpha="@string/ripple_alpha"
+                        app:mrl_rippleColor="@color/ripple_color"
+                        app:mrl_rippleDelayClick="false"
+                        android:layout_weight="1"
+                        app:mrl_rippleDuration="@string/ripple_duration"
+                        app:mrl_rippleHover="true"
+                        app:mrl_rippleOverlay="true">-->
+                    <LinearLayout
+                        android:id="@+id/ll_cross"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="?selectableItemBackgroundBorderless"
+                        android:orientation="vertical"
+                        android:padding="@dimen/_1sdp"
+                        android:visibility="invisible">
+
+                        <ImageView
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginBottom="10dp"
+                            android:background="@drawable/iv_voicemail"
+                            android:contentDescription="carbon" />
+                    </LinearLayout>
+                    <!--</com.adv.carbon.utility.MaterialRippleLayout>-->
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+        </LinearLayout>
+    </RelativeLayout>
+</RelativeLayout>

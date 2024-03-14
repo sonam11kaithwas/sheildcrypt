@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/relay"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorGreyBlue"
+    >
+
+
+    <LinearLayout
+        android:id="@+id/ll_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.vanniktech.emoji.EmojiEditText
+            android:id="@+id/edittext_status"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:cursorVisible="true"
+            android:gravity="center"
+            android:hint="Type a status"
+            android:inputType="textCapSentences|textMultiLine|textNoSuggestions"
+            android:maxLength="500"
+            android:padding="@dimen/_16sdp"
+            android:background="@null"
+            android:textColor="@color/white"
+            android:textColorHint="@color/white"
+            android:textSize="@dimen/_30sdp" />
+
+    </LinearLayout>
+
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/changebackground"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:background="@color/card_color"
+        android:contentDescription="@string/app_name"
+        android:padding="4dp"
+        android:src="@drawable/paintbackground"
+        app:backgroundTint="@color/eblue" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/textfont"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/changebackground"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:background="@color/card_color"
+        android:contentDescription="@string/app_name"
+        android:padding="4dp"
+        android:src="@drawable/textfont"
+        app:backgroundTint="@color/eblue" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/emoji"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textfont"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:background="@color/card_color"
+        android:contentDescription="@string/app_name"
+        android:padding="4dp"
+        android:src="@drawable/emoji"
+        app:backgroundTint="@color/eblue" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/sendpencilimage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="8dp"
+        android:layout_marginBottom="16dp"
+        android:contentDescription="@string/app_name"
+        android:padding="4dp"
+        android:src="@drawable/ic_send_msg" />
+
+
+</RelativeLayout>

@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:startDestination="@id/fragment_welcome">
+
+    <fragment
+        android:id="@+id/fragment_auth"
+        android:name="com.advantal.shieldcrypt.auth_pkg.AuthenticationActivity"
+        android:label="First Activity"
+        tools:layout="@layout/activity_authentication">
+
+        <action
+            android:id="@+id/action_open_conv"
+            app:destination="@id/openConversationFragment" />
+    </fragment>
+
+
+    <fragment
+        android:id="@+id/fragment_login"
+        android:name="com.advantal.shieldcrypt.auth_pkg.fragment_pkg.LoginFragment"
+        android:label="First Fragment"
+        tools:layout="@layout/fragment_login">
+
+        <action
+            android:id="@+id/action_loginFragment_to_welcome"
+            app:destination="@id/fragment_welcome" />
+        <action
+            android:id="@+id/action_loginFragment_to_forgot_password"
+            app:destination="@id/fragment_forgotpass" />
+        <action
+            android:id="@+id/action_profileinfoFragment_to_tabLayoutFragment"
+            app:destination="@id/tablayoutFragment" />
+
+
+        <action
+            android:id="@+id/action_fragment_login_to_fragment_sendotp"
+            app:destination="@id/fragment_sendotp" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/fragment_welcome"
+        android:name="com.advantal.shieldcrypt.auth_pkg.fragment_pkg.WelcomeFragment"
+        android:label="Welcome Fragment"
+        tools:layout="@layout/fragment_welcome">
+        <action
+            android:id="@+id/action_welcomeFragment_to_sendOtp"
+            app:destination="@id/fragment_sendotp" />
+        <action
+            android:id="@+id/action_welcomeFragment_to_userlogin"
+            app:destination="@id/fragment_login" />
+        <action
+            android:id="@+id/action_welcomeFragment_to_webview"
+            app:destination="@id/fragment_webview" />
+        <action
+            android:id="@+id/action_profileinfoFragment_to_tabLayoutFragment"
+            app:destination="@id/tablayoutFragment" />
+        <action
+            android:id="@+id/action_welcomeFragment_to_tabLayoutFragment"
+            app:destination="@id/tablayoutFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragment_webview"
+        android:name="com.advantal.shieldcrypt.auth_pkg.fragment_pkg.PrivacyPolicyHelpFragment"
+        android:label="First Fragment"
+        tools:layout="@layout/fragment_privacy_policy_help">
+
+    </fragment>
+    <fragment
+        android:id="@+id/fragment_forgotpass"
+        android:name="com.advantal.shieldcrypt.auth_pkg.fragment_pkg.ForgotPassWordFragment"
+        android:label="Forgot Password Fragment"
+        tools:layout="@layout/fragment_forgot_pass_word">
+
+        <action
+            android:id="@+id/action_forgotpass_to_login"
+            app:destination="@id/fragment_login" />
+
+    </fragment>
+    <fragment
+        android:id="@+id/fragment_sendotp"
+        android:name="com.advantal.shieldcrypt.auth_pkg.fragment_pkg.SendOtpFragment"
+        android:label="Second Fragment"
+        tools:layout="@layout/fragment_send_otp">
+        <action
+            android:id="@+id/action_sendOtpFragment_to_verifyNoFragment"
+            app:destination="@id/verifyNoFragment" />
+        <action
+            android:id="@+id/action_fragment_sendotp_to_fragment_login"
+            app:destination="@id/fragment_login" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/verifyNoFragment"
+        android:name="com.advantal.shieldcrypt.auth_pkg.fragment_pkg.VerifyNoFragment"
+        android:label="Second Fragment"
+        tools:layout="@layout/fragment_verify_no">
+        <action
+            android:id="@+id/action_verifyNoFragment_to_profileinfoFragment"
+            app:destination="@id/profileInfoFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/profileInfoFragment"
+        android:name="com.advantal.shieldcrypt.auth_pkg.fragment_pkg.ProfileInfoFragment"
+        android:label="Third Fragment"
+        tools:layout="@layout/fragment_profile_info">
+
+        <action
+            android:id="@+id/action_profileinfoFragment_to_tabLayoutFragment"
+            app:destination="@id/tablayoutFragment" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/openConversationFragment"
+        android:name="com.advantal.shieldcrypt.ui.ConversationFragment"
+        android:label="Conversation"
+        tools:layout="@layout/fragment_conversation">
+
+        <!--        <action-->
+        <!--            android:id="@+id/action_conversation_to_converList"-->
+        <!--            app:destination="@id/conversationlistFragment" />-->
+        <action
+            android:id="@+id/action_profileinfoFragment_to_tabLayoutFragment"
+            app:destination="@id/tablayoutFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/conversationlistFragment"
+        android:name="com.advantal.shieldcrypt.ui.ConversationsOverviewFragment"
+        android:label="Conversations"
+        tools:layout="@layout/fragment_conversations_overview">
+
+    </fragment>
+
+
+    <fragment
+        android:id="@+id/tablayoutFragment"
+        android:name="com.advantal.shieldcrypt.tabs_pkg.TabLayoutFragment"
+        android:label="Third Fragment"
+        tools:layout="@layout/fragment_tab_layout">
+        <action
+            android:id="@+id/action_conversationlistFragment_to_openConversationFragment"
+            app:destination="@id/openConversationFragment" />
+        <action
+            android:id="@+id/action_tablayout_to_statusfragment"
+            app:destination="@id/statusFragment" />
+        <action
+            android:id="@+id/action_tablayout_to_conversationfragment"
+            app:destination="@id/conversationlistFragment" />
+        <action
+            android:id="@+id/action_tablayoutFragment_to_openConversationFragment"
+            app:destination="@id/openConversationFragment" />
+    </fragment>
+
+
+    <fragment
+        android:id="@+id/statusFragment"
+        android:name="com.advantal.shieldcrypt.tabs_pkg.tab_fragment.StatusFragment"
+        android:label="Status Fragment"
+        tools:layout="@layout/fragment_status">
+
+        <action
+            android:id="@+id/action_statusfragment_to_mystatusfragment"
+            app:destination="@id/mystatusfragment" />
+        <action
+            android:id="@+id/action_statusfragment_to_textstatus_fragment"
+            app:destination="@id/textstatusfragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/mystatusfragment"
+        android:name="com.advantal.shieldcrypt.tabs_pkg.tab_fragment.MyStatusFragment"
+        android:label="Status Fragment"
+        tools:layout="@layout/fragment_my_status">
+        <action
+            android:id="@+id/action_statusfragment_to_mystatusfullpage"
+            app:destination="@id/myfullpagefragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/myfullpagefragment"
+        android:name="com.advantal.shieldcrypt.tabs_pkg.tab_fragment.MyStatusFullPageViewFragment"
+        android:label="Full Page Fragment"
+        tools:layout="@layout/fragment_my_status_full_page_view" />
+
+    <fragment
+        android:id="@+id/textstatusfragment"
+        android:name="com.advantal.shieldcrypt.tabs_pkg.tab_fragment.TextStatusFragment"
+        android:label="Text Status Fragment"
+        tools:layout="@layout/fragment_text_status" />
+
+
+</navigation>

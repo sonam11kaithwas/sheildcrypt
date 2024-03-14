@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="@dimen/_400sdp"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center|top"
+    android:background="@drawable/menu_cardview"
+    android:gravity="center_vertical"
+    android:orientation="vertical">
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/new_group"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_margin="@dimen/_10sdp"
+        android:fontFamily="@font/manrope_regular"
+        android:text="New Group"
+        android:textColor="@color/black_clr"
+        android:textSize="@dimen/_12sdp"
+        android:textStyle="normal" />
+
+
+</LinearLayout>

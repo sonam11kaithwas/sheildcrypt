@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="?attr/actionBarSize"
+    android:layout_gravity="center"
+    android:background="@color/background_clr"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <!--    android:layout_marginTop="@dimen/_10sdp"     android:layout_marginBottom="@dimen/_10sdp"
+
+-->
+    <LinearLayout
+        android:id="@+id/menu_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:layout_marginLeft="@dimen/_10sdp"
+        android:layout_marginRight="@dimen/_10sdp"
+        android:background="@color/background_clr"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:visibility="visible"
+        android:weightSum="3">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ic_backarrow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="@dimen/_5sdp"
+            android:layout_marginRight="@dimen/_2sdp"
+            android:layout_weight="0.1"
+            android:onClick="onClick"
+            android:src="@drawable/ic_baseline_arrow_back_24" />
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/toolbar"
+            android:layout_width="0dp"
+            android:layout_height="?attr/actionBarSize"
+            android:layout_gravity="center"
+            android:layout_weight="2.5"
+            android:background="?attr/colorPrimary"
+            app:contentInsetStartWithNavigation="0dp"
+            app:layout_scrollFlags="scroll|enterAlways|snap"
+            app:title="Contacts"
+            app:titleTextAppearance="@style/AppThemeLight.AppBarOverlays"
+            app:titleTextColor="@android:color/white" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/search_view"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginRight="@dimen/_4sdp"
+            android:layout_weight="0.3"
+            android:onClick="onClick"
+            android:src="@drawable/ic_search" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/three_dots_img"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginEnd="@dimen/_8sdp"
+            android:layout_weight="0.3"
+            android:onClick="onClick"
+            android:padding="@dimen/_2sdp"
+            android:src="@drawable/ic_baseline_refresh" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txt_send"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="0.4"
+            android:fontFamily="@font/manrope_semibold"
+            android:onClick="onClick"
+            android:text="Send"
+            android:textAllCaps="true"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_13sdp"
+            android:visibility="gone" />
+
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/search_lay"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:layout_marginLeft="@dimen/_10sdp"
+        android:layout_marginRight="@dimen/_10sdp"
+        android:background="@color/background_clr"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:visibility="gone"
+        android:weightSum="3">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/search_back"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/_16sdp"
+            android:layout_gravity="center"
+            android:layout_marginLeft="@dimen/_2sdp"
+            android:layout_marginRight="@dimen/_4sdp"
+            android:layout_weight="0.1"
+            android:onClick="onClick"
+            android:src="@drawable/ic_backarrow_chat" />
+
+        <EditText
+            android:id="@+id/search_edt"
+            android:layout_width="0dp"
+            android:layout_height="?attr/actionBarSize"
+            android:layout_gravity="center"
+            android:layout_marginLeft="@dimen/_5sdp"
+            android:layout_weight="2.8"
+            android:backgroundTint="@color/white"
+            android:fontFamily="@font/manrope_medium"
+            android:hint="Search..."
+            android:onClick="onClick"
+            android:textColor="@color/white"
+            android:textColorHint="@color/colorWhite"
+            android:textSize="@dimen/_14sdp"
+            android:textStyle="normal" />
+
+
+    </LinearLayout>
+
+    <!--
+        <LinearLayout
+            android:id="@+id/search_lay"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_weight="1.5"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:background="@color/background_clr"
+            android:visibility="gone">
+            &lt;!&ndash;        android:layout_marginLeft="@dimen/_minus11sdp"
+            &ndash;&gt;
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/search_back"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/_16sdp"
+                android:layout_gravity="center"
+                android:layout_marginRight="@dimen/_2sdp"
+                android:layout_weight="0.1"
+                android:onClick="onClick"
+                android:src="@drawable/ic_backarrow_chat" />
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/search_edt"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginRight="@dimen/_5sdp"
+                android:layout_weight="0.5"
+                android:backgroundTint="@color/white"
+                android:fontFamily="@font/manrope_medium"
+                android:hint="Search..."
+                android:onClick="onClick"
+                android:textColor="@color/white"
+                android:textColorHint="@color/colorWhite"
+                android:textSize="@dimen/_14sdp"
+                android:textStyle="normal"
+                android:visibility="visible" />
+
+
+        </LinearLayout>
+    -->
+
+</LinearLayout>

@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/relativeMain"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/background_clr_lgn">
+
+    <ImageView
+        android:id="@+id/pdf_img"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="@dimen/_12sdp"
+
+        android:layout_marginTop="@dimen/_5sdp"
+        android:layout_marginEnd="@dimen/_12sdp"
+        android:layout_marginBottom="@dimen/_5sdp"
+        android:background="@drawable/ic_pdf" />
+
+
+    <RelativeLayout
+        android:id="@+id/pdf_details_lay"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_marginRight="@dimen/_5sdp"
+        android:layout_toEndOf="@+id/pdf_img"
+
+        android:paddingLeft="@dimen/_2sdp"
+
+        android:paddingTop="@dimen/_5sdp"
+
+        android:paddingRight="@dimen/_10sdp"
+
+        android:paddingBottom="@dimen/_5sdp">
+        <!--        android:layout_toLeftOf="@+id/iv_select_unselect"
+        -->
+        <TextView
+            android:id="@+id/txtName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:fontFamily="@font/manrope_medium"
+
+            android:maxLines="2"
+            android:padding="@dimen/_1sdp"
+            android:text="PPDF_112121.pdf"
+            android:textColor="@color/black_clr"
+            android:textSize="@dimen/_13sdp"
+            android:textStyle="normal" />
+
+        <TextView
+            android:id="@+id/txtSize"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txtName"
+            android:layout_marginStart="@dimen/_1sdp"
+            android:fontFamily="@font/manrope_regular"
+            android:text="1.2MB"
+            android:textColor="@color/grey_clr"
+            android:textSize="@dimen/_12sdp"
+            android:textStyle="normal" />
+
+        <TextView
+            android:id="@+id/pdf_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txtName"
+            android:layout_alignParentRight="true"
+            android:layout_marginStart="@dimen/_5sdp"
+            android:layout_marginLeft="@dimen/_5sdp"
+            android:fontFamily="@font/manrope_regular"
+            android:text="1.2MB"
+            android:textColor="@color/grey_clr"
+            android:textSize="@dimen/_12sdp"
+            android:textStyle="normal" />
+
+    </RelativeLayout>
+
+
+    <!--    <ImageView-->
+    <!--        android:id="@+id/iv_select_unselect"-->
+    <!--        android:layout_width="@dimen/_20sdp"-->
+    <!--        android:layout_height="@dimen/_20sdp"-->
+    <!--        android:layout_alignParentRight="true"-->
+    <!--        android:layout_centerVertical="true"-->
+    <!--        android:layout_marginRight="@dimen/_10sdp"-->
+    <!--        android:background="@drawable/call_me_ic" />-->
+
+    <View
+        android:id="@+id/profile_lay_view"
+        android:layout_width="match_parent"
+        android:layout_height="0.3dp"
+        android:layout_below="@+id/pdf_details_lay"
+        android:layout_marginLeft="@dimen/_5sdp"
+        android:layout_marginTop="@dimen/_15sdp"
+        android:layout_marginRight="@dimen/_10sdp"
+        android:layout_toEndOf="@+id/pdf_img"
+        android:background="@color/grey_clr" />
+
+
+</RelativeLayout>

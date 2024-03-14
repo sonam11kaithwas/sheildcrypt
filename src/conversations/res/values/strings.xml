@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="pick_a_server">Pick your XMPP provider</string>
+    <string name="use_conversations.im">Use conversations.im</string>
+    <string name="create_new_account">Create new account</string>
+    <string name="do_you_have_an_account">Do you already have an XMPP account? This might be the case if you are already using a different XMPP client or have used Conversations before. If not you can create a new XMPP account right now.\nHint: Some email providers also provide XMPP accounts.</string>
+    <string name="server_select_text">XMPP is a provider independent instant messaging network. You can use this client with what ever XMPP server you choose.\nHowever for your convenience we made it easy to create an account on conversations.im; a provider specially suited for the use with Conversations.</string>
+    <string name="magic_create_text_on_x">You have been invited to %1$s. We will guide you through the process of creating an account.\nWhen picking %1$s as a provider you will be able to communicate with users of other providers by giving them your full XMPP address.</string>
+    <string name="magic_create_text_fixed">You have been invited to %1$s. A username has already been picked for you. We will guide you through the process of creating an account.\nYou will be able to communicate with users of other providers by giving them your full XMPP address.</string>
+    <string name="your_server_invitation">Your server invitation</string>
+    <string name="improperly_formatted_provisioning">Improperly formatted provisioning code</string>
+    <string name="tap_share_button_send_invite">Tap the share button to send your contact an invitation to %1$s.</string>
+    <string name="if_contact_is_nearby_use_qr">If your contact is nearby, they can also scan the code below to accept your invitation.</string>
+    <string name="easy_invite_share_text">Join %1$s and chat with me: %2$s</string>
+    <string name="share_invite_with">Share invite with…</string>
+
+
+    <string name="powered_by">Powered By</string>
+    <string name="wcl_to_shield">Welcome To ShieldCrypt</string>
+    <string name="terms_cond_privacy_policy"><font fgcolor='#FFFFFFFF'>Read our</font> <font fgcolor='#FFD500'>
+        Privacy Policy.</font> <font fgcolor='#FFFFFFFF'>Tap
+        \"Agree and continue\" to accept the</font> <font fgcolor='#FFD500'>Terms of Service.</font></string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="name_shield">ShieldCrypt</string>
+
+
+    <string name="google_maps_key">AIzaSyDENYcv5XojJCjNSm6F9fZ_rW3k6fDBGRM</string>
+
+
+    <string name="crop_image_activity_title"></string>
+    <string name="crop_image_menu_rotate_left">Rotate counter clockwise</string>
+    <string name="crop_image_menu_rotate_right">Rotate</string>
+    <string name="crop_image_menu_crop">Crop</string>
+    <string name="crop_image_menu_flip">Flip</string>
+    <string name="crop_image_menu_flip_horizontally">Flip horizontally</string>
+    <string name="crop_image_menu_flip_vertically">Flip vertically</string>
+    <string name="pick_image_intent_chooser_title">Select source</string>
+    <string name="crop_image_activity_no_permissions">Cancelling, required permissions are not granted</string>
+    <string name="crop_photo">Crop photo</string>
+    <string name="save">Save</string>
+    <string name="title">Shieldcrypt</string>
+    <string name="crop">Crop</string>
+    <string name="filter">Filter</string>
+    <string name="gallery">Gallery</string>
+    <string name="camera">Camera</string>
+    <string name="select_photo">Select photo</string>
+    <string name="please_enter_first_name">Please enter first name</string>
+    <string name="please_enter_last_name">Please enter last name</string>
+
+
+    <string name="agree_and_continue">AGREE AND CONTINUE</string>
+    <string name="continue_txt">CONTINUE</string>
+    <string name="vrify">Can\'t send an SMS with your code because you\'ve
+        tried to register +91 89588 45326 recently. Request a call or wait before requesting an SMS. Wrong number?</string>
+
+    <string name="enter_your_phone_number">Enter your phone number</string>
+    <string name="forgot_lable">Enter your email for the verification process we will send 4 digits code to your email.</string>
+
+
+    <string name="sheild_phone_num">ShieldCrypt will need to verify your phone number.</string>
+    <string name="mobile_number">Mobile Number</string>
+    <string name="enter_6_digit_code">Enter 4-digit code</string>
+    <string name="resend_sms">Resend SMS</string>
+    <string name="call_me">Call me</string>
+    <string name="profile_info">Profile Info</string>
+    <string name="profile_edit">Profile Edit</string>
+    <string name="profile_view">Profile View</string>
+    <string name="please_provide_your_name_and_an_optional_profile_photo">Please provide your name and an optional profile photo</string>
+    <string name="full_name">Full Name</string>
+    <string name="first_name">First Name</string>
+    <string name="last_name">Last Name</string>
+    <string name="logout">Logout</string>
+    <string name="yes">Yes</string>
+    <!-- TODO: Remove or change this placeholder text -->
+
+
+    <!-- Strings used for fragments for navigation -->
+    <string name="galery_lable">Gallery</string>
+    <string name="images_lable">Images</string>
+    <string name="login_lable">Login</string>
+    <string name="forgot_pass_lable">Forgot Password</string>
+    <string name="login_with_no">Login With Phone Number</string>
+    <string name="log_in">LOG IN</string>
+    <string name="update">UPDATE</string>
+    <string name="user_name">User Name</string>
+    <string name="email_adrs">Email address</string>
+    <string name="user_pass">Password</string>
+    <string name="forgot_pass">Forgot Password?</string>
+    <string name="use_phone_num">Use Phone Number</string>
+    <string name="next">Next</string>
+    <string name="whats">ShieldCrypt will need to verify your phone number.<font color="#2196F3"> Whats My Number?</font></string>
+    <!--    <string name=""></string>-->
+    <!--    <string name=""></string>-->
+    <!--    <string name=""></string>-->
+    <string name="camera_lable">Camera</string>
+    <string name="document_lable">Document</string>
+
+
+    <string name="popup_menu_clear_log">Clear Call Log</string>
+    <string name="popup_menu_new_grp">New Group</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="audio_title">Audio</string>
+    <string name="contact_title">Contact</string>
+    <string name="view_contact">View Contact</string>
+    <string name="audio_call">Audio Call</string>
+    <string name="chat_history">Chats History</string>
+    <string name="share_location">Share live location</string>
+    <string name="vedio_call">Vedio Call</string>
+    <string name="profile">Profile</string>
+    <string name="selected_contact">Selected Contact</string>
+    <string name="nearby_places">Nearby places</string>
+    <string name="dialog_msg">Are you sure want to send</string>
+    <string name="alert">Message</string>
+    <string name="ok">Ok</string>
+    <string name="cancel">Cancel</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
+    <!-- Strings used for fragments for navigation -->
+
+    <string name="change_password">Change Password</string>
+    <string name="old_password">Old Password</string>
+    <string name="new_password">New Password</string>
+    <string name="confirm_password">Confirm Password</string>
+    <string name="set_the_new_password_for_your_account">Set the new password for your account so you can login and access all the features.</string>
+    <string name="reset_password">Reset Password</string>
+    <string name="please_enter_your_old_password">Please enter your old password</string>
+    <string name="please_enter_your_new_password">Please enter your new password</string>
+    <string name="please_enter_your_confirm_password">Please enter your confirm password</string>
+    <string name="something_went_wrong_please_try_again">Something went wrong please try again.</string>
+    <string name="new_password_and_confirm_password_should_be_same">New password and confirm password should be same</string>
+    <string name="minimum_number_of_characters">Minimum number of characters: </string>
+    <string name="minimum_number_of_lowercase_characters">Minimum number of lowercase characters: </string>
+    <string name="minimum_number_of_numeric_characters">Minimum number of numeric characters: </string>
+    <string name="minimum_number_of_special_characters">Minimum number of special characters: </string>
+
+</resources>

@@ -1,0 +1,80 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+
+        <RelativeLayout
+            android:id="@+id/lay"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <include
+                android:id="@+id/toolbar"
+                layout="@layout/toolbar" />
+
+            <com.google.android.material.tabs.TabLayout
+                android:id="@+id/tab_layout"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_40sdp"
+                android:layout_below="@+id/toolbar"
+                android:background="@color/colorPrimary"
+                app:layout_scrollFlags="enterAlways|snap"
+                app:tabGravity="fill"
+                app:tabIconTint="@color/white"
+                app:tabIndicatorColor="@color/white"
+                app:tabIndicatorFullWidth="true"
+                app:tabInlineLabel="true"
+                app:tabMode="fixed"
+                app:tabPaddingEnd="0dp"
+                app:tabPaddingStart="@dimen/_minus10sdp"
+                app:tabSelectedTextColor="@color/white"
+                app:tabTextAppearance="@style/tab_text"
+                app:tabTextColor="@color/tab_unselected" />
+
+            <androidx.viewpager2.widget.ViewPager2
+                android:id="@+id/start_conversation_view_pager"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@id/tab_layout"
+                android:background="?attr/color_background_primary">
+
+
+            </androidx.viewpager2.widget.ViewPager2>
+
+            <com.leinardi.android.speeddial.SpeedDialOverlayLayout
+                android:id="@+id/overlay"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@id/tab_layout"
+                android:background="?color_background_overlay" />
+
+
+            <com.leinardi.android.speeddial.SpeedDialView
+                android:id="@+id/speed_dial"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                android:contentDescription="@string/add_contact_or_create_or_join_group_chat"
+                android:visibility="gone"
+                app:backgroundTint="?colorPrimary"
+                app:sdMainFabClosedBackgroundColor="?colorPrimary"
+                app:sdMainFabClosedSrc="@drawable/ic_add_white_24dp"
+                app:sdMainFabOpenedBackgroundColor="?colorPrimaryDark"
+                app:sdOverlayLayout="@id/overlay"
+                app:sdUseReverseAnimationOnClose="true" />
+        </RelativeLayout>
+
+        <FrameLayout
+            android:id="@+id/main_fragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="visible" />
+
+    </LinearLayout>
+</layout>
+

@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_view_contact_divider"
+    >
+
+    <LinearLayout
+        android:id="@+id/menu_layout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_60sdp"
+        android:layout_alignParentTop="true"
+        android:layout_gravity="center"
+        android:background="@color/background_clr"
+        android:orientation="horizontal"
+        android:visibility="visible">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ic_backarrow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="@dimen/_10sdp"
+            android:layout_marginRight="@dimen/_2sdp"
+            android:src="@drawable/ic_baseline_arrow_back_24" />
+
+        <TextView
+            android:id="@+id/toolbar"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/_15sdp"
+            android:background="?attr/colorPrimary"
+            android:fontFamily="@font/manrope_medium"
+            android:gravity="center"
+            android:text="About"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_14sdp"
+            android:textStyle="bold" />
+
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/menu_layouti"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_60sdp"
+        android:layout_below="@+id/recyclerview"
+        android:layout_gravity="center"
+        android:layout_marginTop="75dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:visibility="visible"
+        android:weightSum="2">
+
+
+        <!--        <androidx.appcompat.widget.AppCompatButton-->
+        <!--            android:id="@+id/cancel_status"-->
+        <!--            android:layout_width="0dp"-->
+        <!--            android:layout_height="?attr/actionBarSize"-->
+        <!--            android:layout_gravity="center"-->
+        <!--            android:layout_marginLeft="@dimen/_10sdp"-->
+        <!--            android:layout_marginRight="@dimen/_10sdp"-->
+        <!--            android:layout_weight="1"-->
+        <!--            android:background="@drawable/button_rectangle_grey_status"-->
+        <!--            android:fontFamily="@font/manrope_medium"-->
+        <!--            android:gravity="center"-->
+        <!--            android:text="Cancel"-->
+        <!--            android:textColor="@color/white"-->
+        <!--            android:textSize="@dimen/_14sdp"-->
+        <!--            android:textStyle="bold" />-->
+
+        <!--        <androidx.appcompat.widget.AppCompatButton-->
+        <!--            android:id="@+id/save_status"-->
+        <!--            android:layout_width="0dp"-->
+        <!--            android:layout_height="?attr/actionBarSize"-->
+        <!--            android:layout_gravity="center"-->
+        <!--            android:layout_marginLeft="@dimen/_10sdp"-->
+        <!--            android:layout_marginRight="@dimen/_10sdp"-->
+        <!--            android:layout_weight="1"-->
+        <!--            android:background="@drawable/button_rectangle_shap_"-->
+        <!--            android:fontFamily="@font/manrope_medium"-->
+        <!--            android:gravity="center"-->
+        <!--            android:text="Save"-->
+        <!--            android:textColor="@color/white"-->
+        <!--            android:textSize="@dimen/_14sdp"-->
+        <!--            android:textStyle="bold" />-->
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/lastname_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/last_txt"
+        android:layout_margin="@dimen/_10sdp"
+        android:layout_marginLeft="@dimen/_20sdp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_marginRight="@dimen/_20sdp"
+        android:gravity="center|start"
+        android:orientation="horizontal"
+        app:cardCornerRadius="@dimen/_10sdp"
+        android:weightSum="2"
+        app:cardElevation="6dp">
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/custom_status_edt"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="start"
+            android:layout_marginStart="@dimen/_5sdp"
+            android:fontFamily="@font/manrope_regular"
+            android:padding="@dimen/_5sdp"
+            android:singleLine="true"
+            android:background="@null"
+            android:layout_weight="1.8"
+            android:textColor="@color/grey_clr"
+            android:textSize="@dimen/_12sdp" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/update_profile"
+            android:layout_width="30dp"
+            android:layout_height="@dimen/_30sdp"
+            android:layout_gravity="center"
+            android:layout_marginRight="@dimen/_14sdp"
+            android:layout_weight="0.2"
+            android:src="@drawable/edit_icon" />
+
+
+    </LinearLayout>
+
+    <View
+        android:id="@+id/profile_lay_view"
+        android:layout_width="match_parent"
+        android:layout_height="0.3dp"
+        android:layout_below="@+id/lastname_layout"
+        android:background="@color/grey_clr" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/last_txt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/menu_layout"
+        android:layout_marginLeft="@dimen/_20sdp"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:layout_marginRight="@dimen/_20sdp"
+        android:fontFamily="@font/manrope_regular"
+        android:gravity="center|start"
+        android:text="Currently set to"
+        android:textColor="@color/black_clr"
+        android:textSize="@dimen/_12sdp"
+        android:textStyle="bold" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/select_about"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/lastname_layout"
+        android:layout_marginLeft="@dimen/_20sdp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_marginRight="@dimen/_20sdp"
+        android:fontFamily="@font/manrope_regular"
+        android:gravity="center|start"
+        android:text="Select About"
+        android:textColor="@color/black_clr"
+        android:textSize="@dimen/_12sdp"
+        android:textStyle="bold" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/select_about"
+        tools:listitem="@layout/about_status_profile" />
+
+
+</RelativeLayout>

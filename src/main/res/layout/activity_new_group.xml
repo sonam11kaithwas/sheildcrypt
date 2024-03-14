@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/background_clr_lgn"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical"
+    >
+
+
+    <LinearLayout
+        android:id="@+id/menu_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:background="@color/background_clr"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:visibility="visible"
+        android:weightSum="3">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ic_backarrow"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/_16sdp"
+            android:layout_gravity="center"
+            android:layout_marginLeft="@dimen/_5sdp"
+            android:layout_marginRight="@dimen/_2sdp"
+            android:layout_weight="0.1"
+            android:onClick="onClick"
+            android:src="@drawable/ic_backarrow_chat" />
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/toolbar"
+            android:layout_width="0dp"
+            android:layout_height="?attr/actionBarSize"
+            android:layout_gravity="center"
+            android:layout_weight="2.5"
+            android:background="?attr/colorPrimary"
+            app:contentInsetStartWithNavigation="0dp"
+            app:layout_scrollFlags="scroll|enterAlways|snap"
+            app:title="New Group"
+            app:titleTextAppearance="@style/AppThemeLight.AppBarOverlays"
+            app:titleTextColor="@android:color/white" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/search_view"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginRight="@dimen/_4sdp"
+            android:layout_weight="0.2"
+            android:onClick="onClick"
+            android:src="@drawable/ic_search" />
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txt_send"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="0.4"
+            android:fontFamily="@font/manrope_semibold"
+            android:onClick="onClick"
+            android:text="Send"
+            android:textAllCaps="true"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_13sdp"
+            android:visibility="gone" />
+
+
+    </LinearLayout>
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/whatsap_contact_recycler"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/menu_layout"
+        android:layout_marginBottom="@dimen/_3sdp"
+        tools:listitem="@layout/whatsapp_contact_item_view" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/idFABSettings"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="10dp"
+        android:contentDescription="@string/app_name"
+        android:padding="4dp"
+        android:src="@drawable/ic_next_img"
+        />
+
+</RelativeLayout>

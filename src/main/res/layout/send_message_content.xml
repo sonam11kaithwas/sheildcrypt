@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <TextView
+        android:id="@+id/message_body"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/manrope_medium"
+        android:longClickable="false"
+        android:autoLink="all"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_11sdp" />
+
+    <ImageView
+        android:id="@+id/message_image"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="4dp"
+        android:adjustViewBounds="true"
+        android:background="@color/white"
+        android:longClickable="true"
+        android:scaleType="centerCrop" />
+<!--     android:background="@color/black87"-->
+    <Button
+        android:id="@+id/download_button"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:longClickable="true"
+        android:visibility="gone" />
+
+    <RelativeLayout
+        android:id="@+id/audio_player"
+        android:layout_width="@dimen/audio_player_width"
+        android:layout_height="wrap_content"
+        android:visibility="visible">
+
+        <ImageButton
+            android:id="@+id/play_pause"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:alpha="?attr/icon_alpha"
+            android:background="?android:selectableItemBackground" />
+
+        <TextView
+            android:id="@+id/runtime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:paddingRight="16dp"
+            android:paddingBottom="16dp"
+            android:textAppearance="@style/TextAppearance.Conversations.Caption" />
+
+        <SeekBar
+            android:id="@+id/progress"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/runtime"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/play_pause"
+            android:progress="100" />
+    </RelativeLayout>
+
+</merge>

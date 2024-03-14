@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/xml_rounded_corner_white"
+    android:minWidth="250dp"
+    android:orientation="vertical"
+    android:padding="15dp">
+
+    <com.advantal.shieldcrypt.sip.font_family.PoppinsTVRegular
+        android:id="@+id/tv_heading"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:gravity="center"
+        android:padding="10dp"
+        android:text="dkfjlk"
+        android:textColor="@color/black"
+        android:textSize="20dp" />
+
+    <com.advantal.shieldcrypt.sip.font_family.PoppinsTVRegular
+        android:id="@+id/tv_detail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="0dp"
+        android:gravity="center"
+        android:minHeight="70dp"
+        android:paddingBottom="10dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:text=""
+        android:textSize="16sp" />
+
+    <com.advantal.shieldcrypt.utils_pkg.MaterialRippleLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_centerInParent="true"
+        app:mrl_rippleAlpha="0.3"
+        app:mrl_rippleColor="@color/ripple_color"
+        app:mrl_rippleDelayClick="false"
+        app:mrl_rippleHover="true"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="20dp"
+        app:mrl_rippleOverlay="true">
+
+        <com.advantal.shieldcrypt.sip.font_family.PoppinsTVRegular
+            android:id="@+id/tv_ok"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="@drawable/xml_rounded_corner_blue"
+            android:gravity="center"
+            android:text="Done"
+            android:padding="10dp"
+            android:textColor="#FFFFFF"
+            android:textSize="16dp" />
+    </com.advantal.shieldcrypt.utils_pkg.MaterialRippleLayout>
+
+</LinearLayout>

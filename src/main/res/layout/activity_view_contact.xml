@@ -1,0 +1,345 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_view_contact"
+    android:orientation="vertical"
+    tools:context=".tabs_pkg.chat_window_pkg.popup_menu_pkg.ViewContactActivity">
+
+
+    <LinearLayout
+        android:id="@+id/menu_layout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_60sdp"
+        android:layout_alignParentTop="true"
+        android:layout_gravity="center"
+        android:background="@color/background_clr"
+        android:orientation="horizontal"
+        android:visibility="visible">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ic_backarrow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="@dimen/_10sdp"
+            android:layout_marginRight="@dimen/_2sdp"
+            android:onClick="onClick"
+            android:src="@drawable/ic_baseline_arrow_back_24" />
+
+        <TextView
+            android:id="@+id/toolbar"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/_15sdp"
+            android:background="?attr/colorPrimary"
+            android:fontFamily="@font/manrope_medium"
+            android:gravity="center"
+            android:text="View Contact"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_14sdp"
+            android:textStyle="bold" />
+
+
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:visibility="visible">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="#e9f2f7"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:visibility="visible">
+
+
+                <com.advantal.shieldcrypt.utils_pkg.RoundedImageView2
+                    android:id="@+id/userImg"
+                    android:layout_width="@dimen/_80sdp"
+                    android:layout_height="@dimen/_80sdp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="@dimen/_30sdp"
+                    android:background="@drawable/one_person" />
+
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="@dimen/_20sdp"
+                    android:layout_marginTop="@dimen/_15sdp"
+                    android:layout_marginRight="@dimen/_20sdp"
+                    android:layout_marginBottom="@dimen/_15sdp"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:visibility="visible"
+                    android:weightSum="0.9">
+
+                    <LinearLayout
+                        android:id="@+id/chat_lay"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center|end"
+                        android:layout_marginRight="@dimen/_10sdp"
+                        android:layout_weight="0.3"
+                        android:gravity="center|end"
+                        android:onClick="onClick"
+                        android:orientation="vertical"
+                        android:visibility="visible">
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:layout_width="@dimen/_32sdp"
+                            android:layout_height="@dimen/_32sdp"
+                            android:src="@drawable/ic_chat_view_contact" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="@dimen/_4sdp"
+                            android:fontFamily="@font/manrope_regular"
+                            android:gravity="center"
+                            android:text="Chat"
+                            android:textColor="@color/grey_clr"
+                            android:textSize="@dimen/_12sdp"
+                            android:textStyle="normal" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/audio_lay"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center|end"
+                        android:layout_marginLeft="@dimen/_10sdp"
+                        android:layout_marginRight="@dimen/_10sdp"
+                        android:layout_weight="0.3"
+                        android:gravity="center|end"
+                        android:onClick="onClick"
+                        android:orientation="vertical"
+                        android:visibility="visible">
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:layout_width="@dimen/_32sdp"
+                            android:layout_height="@dimen/_32sdp"
+                            android:src="@drawable/ic_audio_contact_view" />
+
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="@dimen/_4sdp"
+                            android:fontFamily="@font/manrope_regular"
+                            android:gravity="center"
+                            android:text="Audio"
+                            android:textColor="@color/grey_clr"
+                            android:textSize="@dimen/_12sdp"
+                            android:textStyle="normal" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/vedio_lay"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center|end"
+                        android:layout_marginLeft="@dimen/_10sdp"
+                        android:layout_marginRight="@dimen/_5sdp"
+                        android:layout_weight="0.3"
+                        android:gravity="center|end"
+                        android:onClick="onClick"
+                        android:orientation="vertical"
+                        android:visibility="visible">
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:layout_width="@dimen/_32sdp"
+                            android:layout_height="@dimen/_32sdp"
+                            android:src="@drawable/ic_vedio_view_contact" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="@dimen/_4sdp"
+                            android:fontFamily="@font/manrope_regular"
+                            android:gravity="center"
+                            android:text="Video"
+                            android:textColor="@color/grey_clr"
+                            android:textSize="@dimen/_12sdp"
+                            android:textStyle="normal" />
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center|start"
+                android:layout_marginStart="@dimen/_15sdp"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:fontFamily="@font/manrope_medium"
+                android:text="Name"
+                android:textColor="@color/grey_clr"
+                android:textSize="@dimen/_14sdp"
+                android:textStyle="normal" />
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/name_edt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center|start"
+                android:layout_marginStart="@dimen/_15sdp"
+                android:layout_marginTop="@dimen/_2sdp"
+                android:layout_marginBottom="@dimen/_5sdp"
+                android:fontFamily="@font/manrope_regular"
+                android:text="John Dep"
+                android:textColor="@color/black_clr"
+                android:textSize="@dimen/_13sdp"
+                android:textStyle="bold" />
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_8sdp"
+                android:layout_marginRight="@dimen/_10sdp"
+                android:layout_marginBottom="@dimen/_8sdp"
+                android:background="@color/color_view_contact_divider" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center|start"
+                android:layout_marginStart="@dimen/_15sdp"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:fontFamily="@font/manrope_medium"
+                android:text="Contact Number"
+                android:textColor="@color/grey_clr"
+                android:textSize="@dimen/_14sdp"
+                android:textStyle="normal" />
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/phone_no_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center|start"
+                android:layout_marginStart="@dimen/_15sdp"
+                android:layout_marginTop="@dimen/_2sdp"
+
+                android:layout_marginBottom="@dimen/_5sdp"
+                android:fontFamily="@font/manrope_regular"
+                android:text="+91 55588 20034"
+                android:textColor="@color/black_clr"
+                android:textSize="@dimen/_13sdp"
+                android:textStyle="bold" />
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_8sdp"
+                android:layout_marginRight="@dimen/_10sdp"
+                android:layout_marginBottom="@dimen/_8sdp"
+                android:background="@color/color_view_contact_divider"
+                android:visibility="gone" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center|start"
+                android:layout_marginStart="@dimen/_15sdp"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:fontFamily="@font/manrope_medium"
+                android:text="Created By"
+                android:textColor="@color/grey_clr"
+                android:textSize="@dimen/_14sdp"
+                android:textStyle="normal"
+                android:visibility="gone" />
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/created_by_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center|start"
+                android:layout_marginStart="@dimen/_15sdp"
+                android:layout_marginTop="@dimen/_2sdp"
+                android:layout_marginBottom="@dimen/_5sdp"
+                android:fontFamily="@font/manrope_regular"
+                android:text="07/10/2021"
+                android:textColor="@color/black_clr"
+                android:textSize="@dimen/_13sdp"
+                android:textStyle="bold"
+                android:visibility="gone" />
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_8sdp"
+                android:layout_marginRight="@dimen/_10sdp"
+                android:layout_marginBottom="@dimen/_8sdp"
+                android:background="@color/color_view_contact_divider" />
+
+            <LinearLayout
+                android:id="@+id/block_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start|center"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:gravity="center|start"
+                android:orientation="horizontal"
+
+                >
+
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="@dimen/_15sdp"
+                    android:src="@drawable/ic_block" />
+
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/block_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="@dimen/_15sdp"
+                    android:fontFamily="@font/manrope_regular"
+                    android:gravity="center"
+                    android:text="Block"
+                    android:textColor="@color/black_clr"
+                    android:textSize="@dimen/_13sdp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+
+        </LinearLayout>
+    </ScrollView>
+
+
+</LinearLayout>

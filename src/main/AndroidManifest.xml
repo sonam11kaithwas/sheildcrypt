@@ -1,0 +1,761 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-permission android:name="android.permission.BLUETOOTH_CONNECT" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.READ_PROFILE" />
+    <uses-permission
+        android:name="android.permission.READ_PHONE_STATE"
+        android:maxSdkVersion="22" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.REQUEST_IGNORE_BATTERY_OPTIMIZATIONS" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES" />
+
+    <uses-feature
+        android:name="android.hardware.location"
+        android:required="false" />
+    <uses-feature
+        android:name="android.hardware.location.gps"
+        android:required="false" />
+    <uses-feature
+        android:name="android.hardware.location.network"
+        android:required="false" />
+
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+    <uses-permission android:name="android.permission.USE_FULL_SCREEN_INTENT" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="true" />
+    <uses-feature
+        android:name="android.hardware.camera.autofocus"
+        android:required="true" />
+    <uses-feature
+        android:name="android.hardware.microphone"
+        android:required="true" />
+
+    <queries>
+        <package android:name="org.sufficientlysecure.keychain" />
+        <package android:name="org.torproject.android" />
+
+        <intent>
+            <action android:name="shieldcrypt.location.request" />
+        </intent>
+        <intent>
+            <action android:name="shieldcrypt.location.show" />
+        </intent>
+        <intent>
+            <action android:name="android.intent.action.VIEW" />
+
+            <data android:mimeType="resource/folder" />
+        </intent>
+        <intent>
+            <action android:name="android.intent.action.VIEW" />
+        </intent>
+    </queries>
+
+    <permission
+        android:name="com.advantal.shieldcrypt.permission.MAPS_RECEIVE"
+        android:protectionLevel="signature" /> <!-- <uses-permission android:name="android.permission.BROADCAST_CLOSE_SYSTEM_DIALOGS" /> -->
+    <!--
+    <queries>
+        <intent>
+            <action android:name="android.media.action.IMAGE_CAPTURE" />
+        </intent>
+    </queries>
+    -->
+    <uses-feature
+        android:name="android.hardware.audio.low_latency"
+        android:required="false" /> <!-- QR code scan -->
+    <uses-feature
+        android:glEsVersion="0x00020000"
+        android:required="true" />
+
+    <uses-permission android:name="android.permission.MANAGE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_CONTACTS" />
+    <uses-permission android:name="android.permission.DISABLE_KEYGUARD" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.USE_SIP" />
+    <uses-permission android:name="android.permission.BODY_SENSORS" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" /> <!-- tools:ignore="ScopedStorage" -->
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.USES_POLICY_FORCE_LOCK" />
+    <uses-permission
+        android:name="android.permission.WRITE_SETTINGS"
+        tools:ignore="ProtectedPermissions" />
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" /> <!-- tools:ignore="ScopedStorage" -->
+    <uses-permission android:name="android.permission.BROADCAST_STICKY" />
+    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES" />
+    <uses-permission android:name="android.permission.WRITE_INTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_INTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.FLASHLIGHT" />
+    <uses-permission android:name="android.permission.MICROPHONE" />
+
+    <application
+        android:name="com.advantal.shieldcrypt.utils_pkg.MyApp"
+        android:appCategory="social"
+        android:fullBackupContent="@xml/backup_content"
+        android:hardwareAccelerated="true"
+        android:icon="@mipmap/ic_launcher_ifa"
+        android:label="@string/app_name"
+        android:largeHeap="true"
+        android:networkSecurityConfig="@xml/network_security_configuration"
+        android:preserveLegacyExternalStorage="true"
+        android:requestLegacyExternalStorage="true"
+        android:roundIcon="@mipmap/ic_launcher_ifa"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="true"
+        tools:replace="android:label"
+        tools:targetApi="q">
+        <activity
+            android:name=".tabs_pkg.chat_window_pkg.popup_menu_pkg.ViewGroupDetailsActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeLight.NoActionBar"/>
+
+        <activity
+            android:name=".ui.grp_create_contact.ContactListActivity2"
+            android:exported="false"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".ui.AllContactActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeLight.NoActionBar" />
+        <activity
+            android:name=".ui.grp_create_contact.CreateNewGroupActivity"
+            android:exported="false"
+            android:theme="@style/AppThemeLight.NoActionBar" />
+        <activity
+            android:name=".tabs_pkg.fab_contact_pkg.WhatsAppContactsActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeLight.NoActionBar" />
+        <activity
+            android:name=".ui.MyStartConversationActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+
+        <meta-data
+            android:name="com.google.android.gms.car.application"
+            android:resource="@xml/automotive_app_desc" />
+
+        <service android:name=".services.XmppConnectionService" />
+        <service android:name=".services.ContactSyncingService" />
+
+        <receiver
+            android:name=".services.EventReceiver"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+                <action android:name="android.intent.action.ACTION_SHUTDOWN" />
+                <action android:name="android.media.RINGER_MODE_CHANGED" />
+            </intent-filter>
+        </receiver>
+
+        <activity
+            android:name=".ui.ShareLocationActivity"
+            android:label="@string/title_activity_share_location"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.SearchActivity"
+            android:label="@string/search_messages" />
+        <activity
+            android:name=".ui.RecordingActivity"
+            android:configChanges="orientation|screenSize"
+            android:theme="@style/ConversationsTheme.Dialog" /> <!-- <activity -->
+        <activity
+            android:name=".auth_pkg.AuthenticationActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeLight.NoActionBar"
+            android:windowSoftInputMode="adjustResize|stateVisible" /> <!-- <activity android:name=".auth_pkg.AuthenticationActivity" /> -->
+        <activity android:name=".ui.WelcomeActivity" />
+        <!--
+<activity
+            android:name=".splash_scr_pkg.SplashScreenActivity"
+            android:exported="true"
+            android:theme="@style/SplashTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        -->
+        <activity
+            android:name=".splash_scr_pkg.SplashScreenActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:stateNotNeeded="true"
+            android:theme="@style/SplashScreenAppTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ui.ConversationsActivity"
+            android:label="@string/app_name"
+            android:launchMode="singleTask"
+            android:minWidth="300dp"
+            android:minHeight="300dp"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".ui.ScanActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/ConversationsTheme.FullScreen"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+        <activity
+            android:name=".ui.UriHandlerActivity"
+            android:exported="true"
+            android:label="@string/app_name">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data android:scheme="xmpp" />
+            </intent-filter>
+            <intent-filter android:autoVerify="true">
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data android:scheme="https" />
+                <data android:host="conversations.im" />
+                <data android:pathPrefix="/i/" />
+                <data android:pathPrefix="/j/" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.SENDTO" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data android:scheme="imto" />
+                <data android:host="jabber" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.SENDTO" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data android:scheme="imto" />
+                <data android:host="xmpp" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ui.SettingsActivity"
+            android:exported="true"
+            android:label="@string/title_activity_settings"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.NOTIFICATION_PREFERENCES" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ui.ChooseContactActivity"
+            android:label="@string/title_activity_choose_contact" />
+        <activity
+            android:name=".ui.BlocklistActivity"
+            android:label="@string/title_activity_block_list" />
+        <activity
+            android:name=".ui.ChooseAccountForProfilePictureActivity"
+            android:enabled="false"
+            android:exported="true"
+            android:label="@string/choose_account">
+            <intent-filter android:label="@string/set_profile_picture">
+                <action android:name="android.intent.action.ATTACH_DATA" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data android:mimeType="image/*" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ui.ShareViaAccountActivity"
+            android:label="@string/title_activity_share_via_account"
+            android:launchMode="singleTop" />
+        <activity
+            android:name=".ui.EditAccountActivity"
+            android:exported="false"
+            android:launchMode="singleTop"
+            android:theme="@style/AppThemeLight.NoActionBar"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+        <activity
+            android:name=".ui.ConferenceDetailsActivity"
+            android:label="@string/action_muc_details"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".ui.ContactDetailsActivity"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".ui.PublishProfilePictureActivity"
+            android:label="@string/mgmt_account_publish_avatar"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".ui.PublishGroupChatProfilePictureActivity"
+            android:label="@string/group_chat_avatar" />
+        <activity
+            android:name=".ui.ShareWithActivity"
+            android:exported="true"
+            android:label="@string/app_name"
+            android:launchMode="singleTop">
+            <intent-filter>
+                <action android:name="android.intent.action.SEND" />
+                <action android:name="android.intent.action.SEND_MULTIPLE" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data android:mimeType="text/plain" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.SEND" />
+                <action android:name="android.intent.action.SEND_MULTIPLE" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data android:mimeType="*/*" />
+            </intent-filter>
+
+            <!-- the value here needs to be the full class name; independent of the configured applicationId -->
+            <meta-data
+                android:name="android.service.chooser.chooser_target_service"
+                android:value="shieldcrypt.services.ContactChooserTargetService" />
+        </activity>
+        <activity
+            android:name=".ui.TrustKeysActivity"
+            android:label="@string/trust_omemo_fingerprints"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+        <activity
+            android:name=".ui.AboutActivity"
+            android:parentActivityName=".ui.SettingsActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.advantal.shieldcrypt.ui.SettingsActivity" />
+        </activity>
+        <activity
+            android:name="com.theartofdev.edmodo.cropper.CropImageActivity"
+            android:theme="@style/Base.Theme.AppCompat" />
+        <activity android:name=".ui.MemorizingActivity" />
+        <activity
+            android:name=".ui.MediaBrowserActivity"
+            android:label="@string/media_browser" />
+
+        <service android:name=".services.ExportBackupService" />
+        <service android:name=".services.ImportBackupService" />
+        <service
+            android:name=".services.ContactChooserTargetService"
+            android:exported="true"
+            android:permission="android.permission.BIND_CHOOSER_TARGET_SERVICE">
+            <intent-filter>
+                <action android:name="android.service.chooser.ChooserTargetService" />
+            </intent-filter>
+        </service>
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="${applicationId}.files"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
+        <provider
+            android:name=".services.BarcodeProvider"
+            android:authorities="${applicationId}.barcodes"
+            android:exported="false"
+            android:grantUriPermissions="true" />
+
+        <activity
+            android:name=".ui.ShortcutActivity"
+            android:exported="true"
+            android:label="@string/contact">
+            <intent-filter>
+                <action android:name="android.intent.action.CREATE_SHORTCUT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ui.MucUsersActivity"
+            android:label="@string/group_chat_members" />
+        <activity
+            android:name=".ui.ChannelDiscoveryActivity"
+            android:label="@string/discover_channels" />
+        <activity
+            android:name=".ui.RtpSessionActivity"
+            android:autoRemoveFromRecents="true"
+            android:launchMode="singleInstance"
+            android:supportsPictureInPicture="true" /> <!-- sonam -->
+        <activity
+            android:name=".broadcasting.BroadcastingMainPage"
+            android:exported="false"
+            android:theme="@style/AppThemeLight.NoActionBar">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".globalexceptionhandler.AuthActivity"
+            android:exported="false"
+            android:theme="@style/AppThemeLight.NoActionBar" />
+        <activity
+            android:name=".meeting.activity.MeetingDetailsActivity"
+            android:exported="false"
+            android:theme="@style/AppThemeLight.NoActionBar">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".meeting.activity.NewMeetingScheduleActivity"
+            android:exported="false"
+            android:theme="@style/AppThemeLight.NoActionBar">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".meeting.activity.EditMeetingScheduleActivity"
+            android:exported="false"
+            android:theme="@style/AppThemeLight.NoActionBar">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+
+        <activity
+            android:name=".meeting.activity.MeetingMainActivity"
+            android:exported="false"
+            android:theme="@style/AppThemeLight.NoActionBar">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <!--
+        <activity
+                    android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize|uiMode"
+                    android:exported="true"
+                    android:label="@string/app_name"
+                    android:launchMode="singleTask"
+                    android:name=".iaf.meeting.activity.OpenMeetingActivity"
+                    android:resizeableActivity="true"
+                    android:supportsPictureInPicture="true"
+                    android:windowSoftInputMode="adjustResize">
+                    <intent-filter>
+                        <action android:name="android.intent.action.VIEW" />
+                        <category android:name="android.intent.category.BROWSABLE" />
+                        <category android:name="android.intent.category.DEFAULT" />
+                        <data android:host="alpha.jitsi.net" android:scheme="https" />
+                        <data android:host="beta.meet.jit.si" android:scheme="https" />
+                        <data android:host="meet.jit.si" android:scheme="https" />
+                    </intent-filter>
+                    <intent-filter>
+                        <action android:name="android.intent.action.VIEW" />
+                        <category android:name="android.intent.category.BROWSABLE" />
+                        <category android:name="android.intent.category.DEFAULT" />
+                        <data android:scheme="org.jitsi.meet" />
+                    </intent-filter>
+                </activity>
+        -->
+        <activity
+            android:name=".tabs_pkg.mediastatus.MyStatusTotalSeenActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeLight.NoActionBar">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".tabs_pkg.mediastatus.OthersMediaStoryFullActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeLight.NoActionBar">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".tabs_pkg.mediastatus.MediaStoryFullActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeLight.NoActionBar">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".tabs_pkg.mediastatus.activity.MediaStoryStatus"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            tools:ignore="Instantiatable">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".tabs_pkg.chat_window_pkg.newgroup.NewGroupActivity"
+            android:exported="true"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".tabs_pkg.chat_window_pkg.profileaboutstatus_pkg.ProfileAboutActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeLight.NoActionBar" /> <!-- <receiver android:name=".iaf.broadcast.ActionReceiver" /> -->
+        <activity
+            android:name=".tabs_pkg.chat_window_pkg.privacy_help_pkg.WebViewActivity"
+            android:exported="true"
+            android:hardwareAccelerated="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeLight.NoActionBar" />
+        <activity
+            android:name=".meeting.activity.JoinMeetingWebViewActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeLight.NoActionBar" />
+        <activity
+            android:name=".ui.LocationActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeLight.NoActionBar" />
+        <activity
+            android:name=".xmpp_pkg.MainActivityFor"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeLight.NoActionBar" />
+        <activity
+            android:name=".tabs_pkg.chat_window_pkg.profile_pkg.ProfileActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeLight.NoActionBar" />
+        <activity
+            android:name=".tabs_pkg.chat_window_pkg.chats_histry_pkg.ChatsHistoryActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeLight.NoActionBar" />
+        <activity
+            android:name=".qr_code_pkg.QRCodeActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeLight.NoActionBar" />
+        <activity
+            android:name=".tabs_pkg.chat_window_pkg.popup_menu_pkg.vedio_call_pkg.VedioCallActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeLight.NoActionBar" />
+        <activity
+            android:name=".tabs_pkg.chat_window_pkg.audio_pkg.AudioActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeLight.NoActionBar" />
+        <activity
+            android:name=".tabs_pkg.chat_window_pkg.popup_menu_pkg.ViewContactActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeLight.NoActionBar" />
+        <activity
+            android:name=".tabs_pkg.chat_window_pkg.gallery_folder_pkg.GalleryFolderActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeLight.NoActionBar" />
+        <activity
+            android:name=".tabs_pkg.chat_window_pkg.gallery_folder_pkg.GalleryImageActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeLight.NoActionBar" />
+        <activity
+            android:name=".tabs_pkg.chat_window_pkg.camera_pkg.CameraXActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeLight.NoActionBar" />
+        <activity
+            android:name=".tabs_pkg.chat_window_pkg.contact_pkg.ContactListActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeLight.NoActionBar" />
+        <activity
+            android:name=".MapsActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeLight.NoActionBar" />
+        <activity
+            android:name=".tabs_pkg.chat_window_pkg.document_pkg.DocumentPickerActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeLight.NoActionBar" />
+        <activity
+            android:name=".sip.MainActivity"
+            android:exported="false" />
+        <activity
+            android:name=".tabs_pkg.chat_window_pkg.ChatsActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeLight.NoActionBar" />
+        <activity
+            android:name=".tabs_pkg.TabLayoutActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeLight.NoActionBar" />
+        <activity
+            android:name=".tabs_pkg.chat_window_pkg.change_pass_pkg.ChangePasswordActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeLight.NoActionBar" />
+        <activity
+            android:name=".cropping_filter.ui.CropFilterActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeLight.NoActionBar" />
+        <activity
+            android:name=".cropping_filter.cropping.CropImageActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeLight.NoActionBar" />
+        <activity
+            android:name=".sip.CallActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeLight.NoActionBar"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".sip.IthubContactForChatActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeLight.NoActionBar"
+            android:windowSoftInputMode="adjustResize" /> <!-- android:screenOrientation="portrait" -->
+        <activity
+            android:name=".sip.VideoActivity"
+            android:allowTaskReparenting="true"
+            android:configChanges="screenSize|smallestScreenSize|screenLayout|orientation"
+            android:excludeFromRecents="true"
+            android:exported="true"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:supportsPictureInPicture="true"
+            android:theme="@style/AppThemeLight.NoActionBar"
+            android:windowSoftInputMode="adjustResize">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".sip.ExitActivity"
+            android:autoRemoveFromRecents="true"
+            android:theme="@android:style/Theme.NoDisplay" /> <!-- <meta-data -->
+        <!-- android:name="com.google.android.gms.version" -->
+        <!-- android:value="@integer/google_play_services_version" /> -->
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="dfgh345678cvbnmnbvcfg5678987656cvbnm" />
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="${applicationId}.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
+
+        <receiver
+            android:name=".broadcast.PhoneCallStateReceiver"
+            android:exported="true">
+            <intent-filter android:priority="100">
+                <action android:name="android.intent.action.PHONE_STATE" />
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name=".broadcast.PowerButtonReceiver"
+            android:exported="true">
+            <intent-filter android:priority="100">
+                <action android:name="android.intent.action.SCREEN_OFF" />
+                <action android:name="android.intent.action.SCREEN_ON" />
+                <action android:name="android.intent.action.ACTION_POWER_CONNECTED" />
+                <action android:name="android.intent.action.ACTION_POWER_DISCONNECTED" />
+                <action android:name="android.intent.action.ACTION_SHUTDOWN" />
+            </intent-filter>
+        </receiver>
+        <receiver android:name=".broadcast.ActionReceiver" /> <!-- <receiver android:name=".iaf.broadcast.HeadsUpNotificationActionReceiver" /> -->
+        <receiver
+            android:name=".broadcast.HeadsUpNotificationActionReceiver"
+            android:enabled="true"
+            android:exported="true" />
+        <receiver
+            android:name=".broadcast.BootReceiver"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+                <action android:name="android.intent.action.QUICKBOOT_POWERON" />
+            </intent-filter>
+        </receiver> <!-- <service android:name="iaf.service.ContactSyncingService" /> -->
+        <service
+            android:name="net.gotev.sipservice.SipService"
+            android:enabled="true"
+            android:exported="true" />
+        <service
+            android:name=".service.HeadsUpNotificationService"
+            android:enabled="true"
+            android:exported="true" />
+        <service android:name=".service.ContactSyncingService" />
+        <service
+            android:name=".service.BackgroundConnectionService"
+            android:stopWithTask="false" />
+
+        <activity
+            android:name=".tabs_pkg.tab_fragment.ActivityFragment"
+            android:exported="false"
+            android:theme="@style/AppThemeLight.NoActionBar">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".tabs_pkg.tab_fragment.StatusStoryActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeLight.NoActionBar">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".tabs_pkg.tab_fragment.storie_view.ui.activity.MiStoryDisplayActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar.FullScreen" />
+        <activity android:name=".ui.StartConversationActivity" />
+        <activity android:name=".ui.ConversationActivity" />
+    </application>
+
+</manifest>

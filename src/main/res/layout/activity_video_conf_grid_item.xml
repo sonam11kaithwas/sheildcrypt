@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/llMainView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:background="@color/white"
+    android:layout_gravity="center">
+    <SurfaceView
+        android:id="@+id/surfaceVideo"
+        android:layout_width="match_parent"
+        android:layout_margin="1dp"
+        android:layout_height="match_parent" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/idIVcourseIV"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:scaleType="fitXY"
+            android:src="@mipmap/ic_launcher_ifa" />
+
+        <TextView
+            android:id="@+id/idTVCourse"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/app_name"
+            android:textAlignment="center" />
+
+    </LinearLayout>
+
+</LinearLayout>

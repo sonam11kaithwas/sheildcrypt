@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="@dimen/_10sdp"
+        android:layout_marginBottom="@dimen/_5sdp">
+
+
+
+
+        <ScrollView
+            android:id="@+id/scroll_view"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_300sdp"
+            android:fillViewport="true"
+            android:nestedScrollingEnabled="true"
+            android:layout_marginBottom="@dimen/_5sdp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recyclerAttachmentView"
+                    android:layout_width="match_parent"
+                    android:layout_marginStart="@dimen/_12sdp"
+                    android:layout_marginEnd="@dimen/_10sdp"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+        </ScrollView>
+
+
+
+
+
+
+    </RelativeLayout>
+</RelativeLayout>

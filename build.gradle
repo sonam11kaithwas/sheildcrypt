@@ -1,0 +1,415 @@
+// Top-level build file where you can add configuration options common to all
+// sub-projects/modules.
+buildscript {
+    repositories {
+        google()
+        mavenCentral()
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:7.2.2'
+        classpath 'org.jetbrains.kotlin:kotlin-gradle-plugin:1.7.10'
+        classpath 'com.google.dagger:hilt-android-gradle-plugin:2.43'
+
+    }
+}
+
+apply plugin: 'com.android.application'
+apply plugin: 'org.jetbrains.kotlin.android'
+apply plugin: 'dagger.hilt.android.plugin'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-kapt'
+apply plugin: 'kotlin-parcelize'
+
+/*repositories {
+    google()
+    mavenCentral()
+    jcenter()
+}*/
+ext {
+    smackVersion = '4.3.4'
+}
+configurations {
+    playstoreImplementation
+    freeImplementation
+    conversationsFreeImplementation
+    conversationsPlaystorImplementation
+    conversationsPlaystoreImplementation
+    quicksyPlaystoreImplementation
+    quicksyPlaystoreImplementation
+    quicksyFreeImplementation
+    quicksyImplementation
+
+
+    implementation.exclude group: 'org.jetbrains', module: 'annotations'
+
+    all*.exclude group: 'xpp3', module: 'xpp3'
+    cleanedAnnotations
+    compile.exclude group: 'org.jetbrains', module: 'annotations'
+}
+
+dependencies {
+    implementation 'androidx.viewpager:viewpager:1.0.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
+    implementation 'androidx.work:work-runtime-ktx:2.7.1'
+
+    playstoreImplementation('com.google.firebase:firebase-messaging:23.1.0') {
+        exclude group: 'com.google.firebase', module: 'firebase-core'
+        exclude group: 'com.google.firebase', module: 'firebase-analytics'
+        exclude group: 'com.google.firebase', module: 'firebase-measurement-connector'
+    }
+//    implementation 'androidx.core:core-ktx:1.8.0'
+
+    conversationsPlaystoreImplementation("com.android.installreferrer:installreferrer:2.2")
+    quicksyPlaystoreImplementation 'com.google.android.gms:play-services-auth-api-phone:18.0.1'
+    implementation 'org.sufficientlysecure:openpgp-api:10.0'
+    implementation 'com.theartofdev.edmodo:android-image-cropper:2.8.0'
+    implementation 'androidx.appcompat:appcompat:1.5.1'
+    implementation 'androidx.exifinterface:exifinterface:1.3.3'
+    implementation 'androidx.cardview:cardview:1.0.0'
+    implementation 'androidx.swiperefreshlayout:swiperefreshlayout:1.1.0'
+    implementation 'com.google.android.material:material:1.7.0'
+
+    implementation "androidx.emoji2:emoji2:1.2.0"
+    freeImplementation "androidx.emoji2:emoji2-bundled:1.2.0"
+
+    implementation 'org.bouncycastle:bcmail-jdk15on:1.64'
+    //zxing stopped supporting Java 7 so we have to stick with 3.3.3
+    //https://github.com/zxing/zxing/issues/1170
+    implementation 'com.google.zxing:core:3.3.3'
+    implementation 'de.measite.minidns:minidns-hla:0.2.4'
+    implementation 'me.leolin:ShortcutBadger:1.1.22@aar'
+    implementation 'org.whispersystems:signal-protocol-java:2.6.2'
+    implementation 'com.makeramen:roundedimageview:2.3.0'
+    implementation "com.wefika:flowlayout:0.4.1"
+    //noinspection GradleDependency
+    implementation 'com.otaliastudios:transcoder:0.9.1'
+
+    implementation 'org.jxmpp:jxmpp-jid:1.0.3'
+    implementation 'org.osmdroid:osmdroid-android:6.1.11'
+    implementation 'org.hsluv:hsluv:0.2'
+    implementation 'org.conscrypt:conscrypt-android:2.5.2'
+    implementation 'me.drakeet.support:toastcompat:1.1.0'
+    implementation "com.leinardi.android:speed-dial:3.2.0"
+
+//    implementation "com.squareup.retrofit2:retrofit:2.9.0"
+//    implementation "com.squareup.retrofit2:converter-gson:2.9.0"
+//    implementation "com.squareup.okhttp3:okhttp:4.10.0"
+
+
+    // Networking
+    def network_version = "2.9.0"
+
+    implementation "com.squareup.retrofit2:retrofit:${network_version}"
+    implementation "com.squareup.retrofit2:converter-gson:${network_version}"
+    implementation "com.squareup.okhttp3:okhttp:${network_version}"
+    implementation "com.squareup.okhttp3:logging-interceptor:4.2.2"
+
+
+    implementation 'com.google.guava:guava:31.1-android'
+    quicksyImplementation 'io.michaelrocks:libphonenumber-android:8.12.49'
+    freeImplementation 'ch.threema:webrtc-android:100.0.0'
+    playstoreImplementation fileTree(include: ['libwebrtc-m104.aar'], dir: 'libs')
+
+
+    /********************* Rx java libraries ************************/
+    implementation 'io.reactivex.rxjava2:rxandroid:2.0.2'
+    implementation 'io.reactivex.rxjava2:rxjava:2.2.9'
+    implementation 'com.squareup.retrofit2:adapter-rxjava2:2.3.0'
+
+    /******add denpandency in all screen sizes*************************/
+    implementation 'com.intuit.sdp:sdp-android:1.0.6'
+
+    implementation 'com.google.dagger:hilt-android:2.43'
+    kapt 'com.google.dagger:hilt-compiler:2.43'
+
+    // For instrumentation tests
+    androidTestImplementation 'com.google.dagger:hilt-android-testing:2.43'
+    kaptAndroidTest 'com.google.dagger:hilt-compiler:2.43'
+
+
+    implementation "android.arch.lifecycle:extensions:1.1.1"
+    implementation "android.arch.lifecycle:viewmodel:1.1.1"
+
+    // Room components
+    implementation "androidx.room:room-runtime:2.4.3"
+    kapt "androidx.room:room-compiler:2.4.3"
+    implementation "androidx.room:room-ktx:2.4.3"
+    androidTestImplementation "androidx.room:room-testing:2.4.3"
+    implementation 'com.github.bumptech.glide:glide:4.13.2'
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.13.2'
+
+
+    implementation 'com.google.android.material:material:1.1.0-alpha08'
+    implementation 'androidx.viewpager2:viewpager2:1.0.0-beta02'
+
+
+///////////////////////////////////////////////
+    implementation 'androidx.core:core-ktx:1.8.0'
+    /* implementation 'com.google.android.libraries.places:places:2.6.0'*/
+    /*implementation 'androidx.emoji:emoji:1.2.0-alpha03'*/
+    testImplementation 'junit:junit:4.13.2'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.3'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
+    implementation 'androidx.lifecycle:lifecycle-extensions:2.2.0'
+    /*custom camera*/
+    def camerax_version = "1.2.0-alpha03"
+    implementation "androidx.camera:camera-core:${camerax_version}"
+    implementation "androidx.camera:camera-camera2:${camerax_version}"
+    implementation "androidx.camera:camera-lifecycle:${camerax_version}"
+    implementation "androidx.camera:camera-video:${camerax_version}"
+
+    implementation "androidx.camera:camera-view:${camerax_version}"
+    implementation "androidx.camera:camera-extensions:${camerax_version}"
+
+    //QR code scan
+    implementation 'com.github.yuriy-budiyev:code-scanner:2.3.2'
+
+    implementation 'com.google.android.gms:play-services-maps:18.1.0'
+    implementation 'com.google.android.gms:play-services-location:20.0.0'
+    implementation "com.google.maps.android:maps-compose:1.0.0"
+
+    // For local unit tests
+    testImplementation 'com.google.dagger:hilt-android-testing:2.43'
+    kaptTest 'com.google.dagger:hilt-compiler:2.43'
+
+    // Coroutine
+    def coroutines_version = "1.6.1"
+//    def room_version = "2.2.3"
+
+    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-android:${coroutines_version}"
+    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-core:${coroutines_version}"
+
+    implementation "org.jetbrains.kotlin:kotlin-stdlib"
+    implementation 'com.google.code.gson:gson:2.8.9'
+    /******for gallery picker single and multiple picker*********/
+    implementation 'com.droidninja:filepicker:2.2.5'
+    /*********/
+    implementation "androidx.work:work-runtime:2.7.1"
+
+    implementation 'com.github.voismart:crypto:0.1.0'
+    implementation 'androidx.security:security-crypto:1.0.0'
+    implementation 'com.burhanrashid52:photoeditor:2.0.0'
+    /******for gallery picker single and multiple picker*********/
+
+    // dependency for exoplayer
+    implementation 'com.google.android.exoplayer:exoplayer:2.18.0'
+    // for core support in exoplayer.
+    implementation 'com.google.android.exoplayer:exoplayer-core:2.18.0'
+    // for adding dash support in our exoplayer.
+    implementation 'com.google.android.exoplayer:exoplayer-dash:2.18.0'
+    // for adding hls support in exoplayer.
+    implementation 'com.google.android.exoplayer:exoplayer-hls:2.18.0'
+
+    implementation "org.igniterealtime.smack:smack-tcp:$smackVersion"
+    implementation "org.igniterealtime.smack:smack-experimental:$smackVersion"
+    implementation "org.igniterealtime.smack:smack-android:$smackVersion"
+    implementation "org.igniterealtime.smack:smack-extensions:$smackVersion"
+
+    // for emoji
+    implementation "com.vanniktech:emoji-google:0.6.0"
+    implementation 'com.github.grapesnberries:curlloggerinterceptor:0.1'
+    implementation "androidx.activity:activity-ktx:1.5.0"
+
+    /******Auth navigation ********/
+    implementation 'androidx.navigation:navigation-fragment-ktx:2.5.3'
+    implementation 'androidx.navigation:navigation-ui-ktx:2.5.3'
+}
+
+ext {
+    travisBuild = System.getenv("TRAVIS") == "true"
+    preDexEnabled = System.getProperty("pre-dex", "true")
+    abiCodes = ['armeabi-v7a': 1, 'x86': 2, 'x86_64': 3, 'arm64-v8a': 4]
+}
+
+android {
+    namespace 'com.advantal.shieldcrypt'
+    compileSdkVersion 32
+
+    defaultConfig {
+        minSdkVersion 23
+        targetSdkVersion 32
+        versionCode 42038
+        versionName "2.10.10"
+        archivesBaseName += "-$versionName"
+        applicationId "com.advantal.shieldcrypt"
+        resValue "string", "applicationId", applicationId
+//        def appName = "ShieldCrypt App"
+        def appName = "Shieldcrypt"
+        resValue "string", "app_name", appName
+        buildConfigField "String", "APP_NAME", "\"$appName\""
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+
+//        buildConfigField 'String', 'BASE_URL', "\"http://157.23.156.141:8090/\""
+                buildConfigField 'String', 'BASE_URL', "\"https://shieldcrypt.co.in:8011/\""
+      //  buildConfigField 'String', 'BASE_URL', "\"http://192.168.8.109:8090/\""
+        //buildConfigField 'String', 'BASE_URL', "\"http://192.168.8.78:8090/\""
+//        buildConfigField 'String', 'BASE_URL', "\"http://shieldcrypt.co.in:8080/\""
+
+
+        /* ndk {
+             abiFilters "armeabi-v7a", "arm64-v8a", "x86", "x86_64", "armeabi", "mips"
+             //abiFilters "armeabi-v7a", "x86", "armeabi", "mips"
+         }*/
+    }
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+    splits {
+        abi {
+            universalApk true
+            enable true
+        }
+    }
+
+    /*configurations {
+        implementation.exclude group: 'org.jetbrains', module: 'annotations'
+
+        all*.exclude group: 'xpp3', module: 'xpp3'
+        cleanedAnnotations
+        compile.exclude group: 'org.jetbrains', module: 'annotations'
+    }*/
+
+    buildFeatures {
+        viewBinding true
+        dataBinding true
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_11
+        targetCompatibility JavaVersion.VERSION_11
+    }
+
+    flavorDimensions("mode", "distribution")
+
+    productFlavors {
+
+        quicksy {
+            dimension "mode"
+            applicationId = "im.quicksy.client"
+            resValue "string", "applicationId", applicationId
+
+            def appName = "Quicksy"
+            resValue "string", "app_name", appName
+            buildConfigField "String", "APP_NAME", "\"$appName\""
+        }
+
+        conversations {
+            dimension "mode"
+        }
+
+        playstore {
+            dimension "distribution"
+            versionNameSuffix "+playstore"
+        }
+        free {
+            dimension "distribution"
+            versionNameSuffix "+free"
+        }
+    }
+
+    sourceSets {
+
+//        main {
+//            java {
+//                srcDirs += 'build/generated/source/navigation-args'
+//            }
+//        }
+        /* main {
+             jniLibs.srcDirs = ['libs']
+         }*/
+        quicksyFree {
+            java {
+                srcDir 'src/quicksyFree/java'
+            }
+        }
+        quicksyPlaystore {
+            java {
+                srcDir 'src/quicksyPlaystore/java'
+            }
+            res {
+                srcDir 'src/quicksyPlaystore/res'
+            }
+        }
+        conversationsFree {
+            java {
+                srcDir 'src/conversationsFree/java'
+            }
+        }
+        conversationsPlaystore {
+            java {
+                srcDir 'src/conversationsPlaystore/java'
+            }
+            res {
+                srcDir 'src/conversationsPlaystore/res'
+            }
+        }
+    }
+
+    buildTypes {
+        release {
+            shrinkResources false
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+        debug {
+            shrinkResources false
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+
+    if (new File("signing.properties").exists()) {
+        Properties props = new Properties()
+        props.load(new FileInputStream(file("signing.properties")))
+
+        signingConfigs {
+            release {
+                storeFile file(props['keystore'])
+                storePassword props['keystore.password']
+                keyAlias props['keystore.alias']
+                keyPassword props['keystore.password']
+            }
+        }
+        buildTypes.release.signingConfig = signingConfigs.release
+    }
+
+
+    subprojects {
+
+        afterEvaluate {
+            if (getPlugins().hasPlugin('android') || getPlugins().hasPlugin('android-library')) {
+
+                configure(android.lintOptions) {
+                    disable 'AndroidGradlePluginVersion', 'MissingTranslation'
+                }
+            }
+
+        }
+    }
+    packagingOptions {
+        resources {
+            excludes += ['META-INF/BCKEY.DSA', 'META-INF/BCKEY.SF']
+        }
+    }
+    lint {
+        disable 'MissingTranslation', 'InvalidPackage', 'AppCompatResource'
+    }
+
+    android.applicationVariants.all { variant ->
+        variant.outputs.each { output ->
+            def baseAbiVersionCode = project.ext.abiCodes.get(output.getFilter(com.android.build.OutputFile.ABI))
+            if (baseAbiVersionCode != null) {
+                output.versionCodeOverride = (100 * project.android.defaultConfig.versionCode) + baseAbiVersionCode
+            } else {
+                output.versionCodeOverride = 100 * project.android.defaultConfig.versionCode
+            }
+        }
+
+    }
+}
+
+kapt {
+    correctErrorTypes true
+}

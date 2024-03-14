@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+   >
+
+    <fragment
+        android:id="@+id/fragment_chatwindow"
+        android:name="com.advantal.shieldcrypt.auth_pkg.fragment_pkg.WelcomeFragment"
+        android:label="First Fragment"
+        tools:layout="@layout/fragment_chat_window">
+<!--        <action-->
+<!--            android:id="@+id/action_welcomeFragment_to_sendOtp"-->
+<!--            app:destination="@id/fragment_sendotp" />-->
+    </fragment>
+    <!-- <fragment
+         android:id="@+id/fragment_sendotp"
+         android:name="com.advantal.shieldcrypt.auth_pkg.fragment_pkg.SendOtpFragment"
+         android:label="Second Fragment"
+         tools:layout="@layout/fragment_send_otp">
+         <action
+             android:id="@+id/action_sendOtpFragment_to_verifyNoFragment"
+             app:destination="@id/verifyNoFragment" />
+     </fragment>
+
+     <fragment
+         android:id="@+id/verifyNoFragment"
+         android:name="com.advantal.shieldcrypt.auth_pkg.fragment_pkg.VerifyNoFragment"
+         android:label="Second Fragment"
+         tools:layout="@layout/fragment_verify_no">
+         <action
+             android:id="@+id/action_verifyNoFragment_to_profileinfoFragment"
+             app:destination="@id/profileInfoFragment" />
+     </fragment>
+
+     <fragment
+         android:id="@+id/profileInfoFragment"
+         android:name="com.advantal.shieldcrypt.auth_pkg.fragment_pkg.ProfileInfoFragment"
+         android:label="Third Fragment"
+         tools:layout="@layout/fragment_verify_no">
+         &lt;!&ndash;        <action&ndash;&gt;
+         &lt;!&ndash;            android:id="@+id/action_verifyNoFragment_to_profileinfoFragment"&ndash;&gt;
+         &lt;!&ndash;            app:destination="@id/profileInfoFragment" />&ndash;&gt;
+     </fragment>-->
+
+</navigation>

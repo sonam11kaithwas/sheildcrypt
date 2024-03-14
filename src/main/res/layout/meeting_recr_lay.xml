@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/meetingrecr"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/_10sdp"
+        android:text="Meeting"
+        android:textColor="@color/black"
+        android:textStyle="normal"
+        android:textSize="@dimen/_16sdp"></TextView>
+
+
+</RelativeLayout>

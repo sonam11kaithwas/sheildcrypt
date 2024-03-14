@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/card_color"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/itemClickListner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/_12sdp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:orientation="horizontal">
+
+        <com.advantal.shieldcrypt.utils.RoundedImageView
+            android:id="@+id/idIVCourse"
+            android:layout_width="@dimen/_40sdp"
+            android:layout_gravity="center"
+            android:layout_height="@dimen/_40sdp"
+            android:background="@drawable/circular_bg"
+            android:backgroundTint="#E1E1E1"
+            android:src="@drawable/person_ic" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/idIVCoursea"
+            android:layout_width="@dimen/_40sdp"
+            android:layout_height="@dimen/_40sdp"
+            android:fontFamily="@font/manrope_medium"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_14sdp"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:visibility="gone"
+            android:background="@drawable/circular_bg"
+            android:text="prashat"
+            android:textStyle="bold" />
+
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="@dimen/_10sdp"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/idTVCourseName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/manrope_medium"
+                android:textColor="@color/black_clr"
+                android:textSize="@dimen/_14sdp"
+                android:text="Prashant"
+                android:textStyle="bold" />
+
+
+            <LinearLayout
+                android:id="@+id/call_hist"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center|start"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:layout_weight="1.5"
+                android:orientation="horizontal">
+
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/idTseentime"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/_16sdp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/manrope_regular"
+                    android:text="Just Now"
+                    android:textColor="@color/grey_clr"
+                    android:textSize="@dimen/_10sdp"
+                    android:textStyle="normal" />
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginLeft="@dimen/_40sdp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_marginRight="@dimen/_10sdp">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_marginHorizontal="@dimen/_15sdp"
+            android:background="@color/grey_clr" />
+
+    </LinearLayout>
+</LinearLayout>

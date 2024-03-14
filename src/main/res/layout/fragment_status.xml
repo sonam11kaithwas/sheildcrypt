@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/card_color"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    >
+
+
+
+    <LinearLayout
+        android:id="@+id/mystatus_lay"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:orientation="horizontal"
+        android:weightSum="3">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/_10sdp">
+
+            <ProgressBar
+                android:id="@+id/progressBar"
+                android:layout_width="@dimen/_30sdp"
+                android:layout_height="@dimen/_30sdp"
+                android:layout_centerInParent="true"
+                android:visibility="gone" />
+
+            <com.advantal.shieldcrypt.utils_pkg.RoundedImageView2
+                android:id="@+id/img"
+                android:layout_width="@dimen/_50sdp"
+                android:layout_height="@dimen/_50sdp"
+                android:src="@drawable/one_person" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/imgPickerBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignEnd="@+id/img"
+                android:layout_alignBottom="@+id/img"
+                android:src="@drawable/icon_statusplus" />
+
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/mystatus_layout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="2"
+            android:layout_marginLeft="@dimen/_20sdp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/person_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/_10sdp"
+                android:layout_toEndOf="@id/img"
+                android:fontFamily="@font/manrope_semibold"
+                android:singleLine="true"
+                android:text="My Status"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_14sdp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/msg_timmer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/person_name"
+                android:layout_marginLeft="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_3sdp"
+                android:layout_toEndOf="@id/img"
+                android:fontFamily="@font/manrope_regular"
+                android:singleLine="true"
+                android:text="13 Views"
+                android:textColor="@color/grey_clr"
+                android:textSize="@dimen/_12sdp"
+                android:textStyle="normal" />
+
+        </LinearLayout>
+
+
+
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/viewedstatus"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/_10sdp"
+        android:layout_below="@id/mystatus_lay"
+        android:singleLine="true"
+        android:text="viewed Updtaes"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:fontFamily="@font/manrope_semibold"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_14sdp"
+        android:textStyle="bold" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvStory"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clipToPadding="false"
+        android:orientation="vertical"
+        android:layout_marginTop="@dimen/_10sdp"
+        tools:itemCount="3"
+        android:layout_below="@+id/viewedstatus"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        tools:listitem="@layout/item_user_story" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/getAllStatusRecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:itemCount="3"
+        android:visibility="gone"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_below="@+id/viewedstatus"
+        tools:listitem="@layout/status_list_item" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="10dp"
+        android:orientation="vertical"
+        android:padding="10dp">
+
+        <!--on below line we are creating a add fab-->
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/textstatusStory"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:layout_marginBottom="16dp"
+            android:contentDescription="@string/app_name"
+            android:padding="4dp"
+            android:background="@color/card_color"
+            app:backgroundTint="@color/card_color"
+            android:src="@drawable/icon_editstatus"/>
+
+        <!--on below line we are creating a home fab
+             and setting its visibility to gone-->
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/cameraicon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:layout_marginBottom="16dp"
+            android:contentDescription="@string/app_name"
+            android:padding="4dp"
+            android:src="@drawable/icon_statuscamera"
+            />
+    </LinearLayout>
+</RelativeLayout>

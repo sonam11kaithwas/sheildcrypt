@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/ll_message"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/xml_grey_gradient"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/rl_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/iv_back"
+            android:layout_width="@dimen/_15sdp"
+            android:layout_height="@dimen/_15sdp"
+            android:layout_marginStart="@dimen/_8sdp"
+            android:layout_marginTop="@dimen/_8sdp"
+            android:layout_marginEnd="@dimen/_8sdp"
+            android:layout_marginBottom="@dimen/_8sdp"
+            android:background="@drawable/back_arrow_white_icon" />
+
+        <com.advantal.shieldcrypt.sip.font_family.PoppinsTVRegular
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_centerVertical="true"
+            android:text="Conference Call"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_15sdp" />
+    </RelativeLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_conf_call"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/rl_toolbar"
+        android:visibility="visible"
+        tools:listitem="@layout/row_conf_call">
+
+    </androidx.recyclerview.widget.RecyclerView>
+
+</RelativeLayout>

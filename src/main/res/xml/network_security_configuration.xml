@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<network-security-config>
+    <base-config>
+        <trust-anchors>
+            <certificates src="system" />
+            <certificates src="user" />
+        </trust-anchors>
+    </base-config>
+    <domain-config cleartextTrafficPermitted="true">
+        <domain includeSubdomains="false">shieldcrypt.co.in</domain>
+        <domain includeSubdomains="false">92.204.128.15</domain>
+        <domain includeSubdomains="false">157.23.156.141</domain>
+        <domain includeSubdomains="false">192.168.8.109</domain>
+        <domain includeSubdomains="false">192.168.8.78</domain>
+    </domain-config>
+</network-security-config>
+<!--
+<network-security-config>
+    <base-config cleartextTrafficPermitted="true">
+        <trust-anchors>
+            <certificates src="system" />
+            <certificates src="user" />
+        </trust-anchors>
+    </base-config>
+</network-security-config>-->

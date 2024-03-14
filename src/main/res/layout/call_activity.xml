@@ -1,0 +1,710 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    android:id="@+id/call_frame_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+        android:background="@drawable/mode_call_bg"
+    android:orientation="vertical">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/app_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:animateLayoutChanges="true"
+        android:clipChildren="false"
+        android:elevation="0dp"
+        android:fitsSystemWindows="true"
+        android:theme="@style/AppTheme.AppBarOverlay"
+        app:elevation="0dp"
+        app:liftOnScroll="false">
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/topAppBar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@android:color/transparent"
+            app:contentInsetStartWithNavigation="0dp"
+            app:layout_collapseMode="pin"
+            app:title="Audio Call"
+            app:titleCentered="true"
+            app:navigationIcon="@drawable/ic_backarrow_chat"
+            app:titleTextColor="@color/white">
+        </com.google.android.material.appbar.MaterialToolbar>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <com.advantal.shieldcrypt.utils_pkg.RoundedImageView2
+        android:id="@+id/userImg"
+        android:layout_width="@dimen/_80sdp"
+        android:layout_height="@dimen/_80sdp"
+        android:layout_below="@+id/app_bar"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:src="@drawable/one_person" />
+
+    <TextView
+        android:id="@+id/tv_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/userImg"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:fontFamily="@font/manrope_medium"
+        android:gravity="center_horizontal"
+        android:singleLine="true"
+        android:text="+1(090) 90900-202"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_18sdp" />
+
+    <TextView
+        android:id="@+id/tv_number"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_name"
+        android:layout_gravity="center_horizontal"
+        android:fontFamily="@font/manrope_regular"
+        android:gravity="center_horizontal"
+        android:singleLine="true"
+        android:text="+1(090) 90900-202"
+        android:textColor="@color/grey_clr"
+        android:textSize="@dimen/_15sdp"
+        android:visibility="visible" />
+
+    <TextView
+        android:id="@+id/tv_city"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_number"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/_12sdp"
+        android:gravity="center_horizontal"
+        android:text="Glandale, CA"
+        android:fontFamily="@font/manrope_regular"
+        android:textColor="@color/grey_clr"
+        android:textSize="@dimen/_15sdp"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/tv_call_status"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_city"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:fontFamily="@font/manrope_regular"
+        android:gravity="center_horizontal"
+        android:text="Calling..."
+        android:textColor="@color/grey_clr"
+        android:textSize="@dimen/_15sdp" />
+
+    <Chronometer
+        android:id="@+id/elapsedTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_call_status"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:gravity="center"
+        android:fontFamily="@font/manrope_regular"
+        android:textColor="@color/grey_clr"
+        android:textSize="@dimen/_15sdp"
+        android:visibility="gone" />
+
+    <ImageView
+        android:id="@+id/iv_conf_call_info"
+        android:layout_width="@dimen/_25sdp"
+        android:layout_height="@dimen/_25sdp"
+        android:layout_below="@+id/elapsedTime"
+        android:layout_centerInParent="true"
+        android:visibility="gone"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:background="@drawable/ic_baseline_info_24" />
+
+
+    <RelativeLayout
+        android:id="@+id/rl_calling"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="@dimen/_25sdp"
+        android:visibility="visible">
+
+        <LinearLayout
+            android:id="@+id/ll_calling"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+
+            <LinearLayout
+
+                android:id="@+id/ll_call_park_parent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/_5sdp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:visibility="invisible">
+
+                    <com.advantal.shieldcrypt.utils_pkg.MaterialRippleLayout
+                        android:layout_width="@dimen/call_screen_button"
+                        android:layout_height="@dimen/call_screen_button"
+                        android:layout_gravity="center"
+                        app:mrl_rippleAlpha="@string/ripple_alpha"
+                        app:mrl_rippleColor="@color/ripple_color"
+                        app:mrl_rippleDelayClick="false"
+                        app:mrl_rippleDuration="@string/ripple_duration"
+                        app:mrl_rippleHover="true"
+                        app:mrl_rippleOverlay="true">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:background="@drawable/keypad"
+                            android:contentDescription="carbon" />
+                    </com.advantal.shieldcrypt.utils_pkg.MaterialRippleLayout>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="5dp"
+                        android:gravity="center_horizontal"
+                        android:text="Keypad"
+                        android:fontFamily="@font/manrope_regular"
+                        android:textColor="@color/call_screen_text_color"
+                        android:textSize="@dimen/_14sdp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_call_park"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:visibility="invisible">
+
+                    <com.advantal.shieldcrypt.utils_pkg.MaterialRippleLayout
+                        android:id="@+id/ripple_call_park"
+                        android:layout_width="@dimen/call_screen_button"
+                        android:layout_height="@dimen/call_screen_button"
+                        android:layout_gravity="center"
+                        app:mrl_rippleAlpha="@string/ripple_alpha"
+                        app:mrl_rippleColor="@color/ripple_color"
+                        app:mrl_rippleDelayClick="false"
+                        app:mrl_rippleDuration="@string/ripple_duration"
+                        app:mrl_rippleHover="true"
+                        app:mrl_rippleOverlay="true">
+
+                        <ImageView
+                            android:id="@+id/iv_call_park"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:background="@drawable/ic_call_park_disable"
+                            android:clickable="true"
+                            android:contentDescription="carbon" />
+                    </com.advantal.shieldcrypt.utils_pkg.MaterialRippleLayout>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="5dp"
+                        android:gravity="center_horizontal"
+                        android:text="Call Park"
+                        android:fontFamily="@font/manrope_regular"
+                        android:textColor="@color/call_screen_text_color"
+                        android:textSize="@dimen/_14sdp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:visibility="invisible">
+
+                    <com.advantal.shieldcrypt.utils_pkg.MaterialRippleLayout
+                        android:layout_width="@dimen/call_screen_button"
+                        android:layout_height="@dimen/call_screen_button"
+                        android:layout_gravity="center"
+                        app:mrl_rippleAlpha="@string/ripple_alpha"
+                        app:mrl_rippleColor="@color/ripple_color"
+                        app:mrl_rippleDelayClick="false"
+                        app:mrl_rippleDuration="@string/ripple_duration"
+                        app:mrl_rippleHover="true"
+                        app:mrl_rippleOverlay="true">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:background="@drawable/add_call_disable"
+                            android:contentDescription="carbon" />
+                    </com.advantal.shieldcrypt.utils_pkg.MaterialRippleLayout>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="5dp"
+                        android:gravity="center_horizontal"
+                        android:text="Add Call"
+                        android:fontFamily="@font/manrope_regular"
+                        android:textColor="@color/call_screen_text_color"
+                        android:textSize="@dimen/_14sdp"/>
+
+                </LinearLayout>
+            </LinearLayout>
+
+
+
+
+
+            <LinearLayout
+                android:id="@+id/ll_keypad_hold_add"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/_5sdp">
+
+                <LinearLayout
+                    android:id="@+id/ll_keypad"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:visibility="visible">
+
+                    <com.advantal.shieldcrypt.utils_pkg.MaterialRippleLayout
+                        android:id="@+id/ripple_keypad"
+                        android:layout_width="@dimen/call_screen_button"
+                        android:layout_height="@dimen/call_screen_button"
+                        android:layout_gravity="center"
+                        app:mrl_rippleAlpha="@string/ripple_alpha"
+                        app:mrl_rippleColor="@color/ripple_color"
+                        app:mrl_rippleDelayClick="false"
+                        app:mrl_rippleDuration="@string/ripple_duration"
+                        app:mrl_rippleHover="true"
+                        app:mrl_rippleOverlay="true">
+
+                        <ImageView
+                            android:id="@+id/iv_keypad"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:background="@drawable/keypad"
+                            android:contentDescription="carbon" />
+                    </com.advantal.shieldcrypt.utils_pkg.MaterialRippleLayout>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="5dp"
+                        android:gravity="center_horizontal"
+                        android:text="Keypad"
+                        android:fontFamily="@font/manrope_regular"
+                        android:textColor="@color/call_screen_text_color"
+                        android:textSize="@dimen/_14sdp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_hold"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal|center_vertical"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:visibility="visible">
+
+                    <com.advantal.shieldcrypt.utils_pkg.MaterialRippleLayout
+                        android:id="@+id/ripple_hold"
+                        android:layout_width="@dimen/call_screen_button"
+                        android:layout_height="@dimen/call_screen_button"
+                        android:layout_gravity="center"
+                        app:mrl_rippleAlpha="@string/ripple_alpha"
+                        app:mrl_rippleColor="@color/ripple_color"
+                        app:mrl_rippleDelayClick="false"
+                        app:mrl_rippleDuration="@string/ripple_duration"
+                        app:mrl_rippleHover="true"
+                        app:mrl_rippleOverlay="true">
+                        <ImageView
+                            android:id="@+id/iv_hold"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/hold_disable"
+                            android:layout_gravity="center_horizontal" />
+                    </com.advantal.shieldcrypt.utils_pkg.MaterialRippleLayout>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="5dp"
+                        android:gravity="center_horizontal"
+                        android:text="Hold"
+                        android:fontFamily="@font/manrope_medium"
+                        android:textColor="@color/call_screen_text_color"
+                        android:textSize="@dimen/_14sdp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_add_call"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:visibility="visible">
+
+                    <com.advantal.shieldcrypt.utils_pkg.MaterialRippleLayout
+                        android:id="@+id/ripple_add_call"
+                        android:layout_width="@dimen/call_screen_button"
+                        android:layout_height="@dimen/call_screen_button"
+                        android:layout_gravity="center"
+                        app:mrl_rippleAlpha="@string/ripple_alpha"
+                        app:mrl_rippleColor="@color/ripple_color"
+                        app:mrl_rippleDelayClick="false"
+                        app:mrl_rippleDuration="@string/ripple_duration"
+                        app:mrl_rippleHover="true"
+                        app:mrl_rippleOverlay="true">
+
+                        <ImageView
+                            android:id="@+id/iv_add_call"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:background="@drawable/add_call_disable"
+                            android:contentDescription="carbon" />
+                    </com.advantal.shieldcrypt.utils_pkg.MaterialRippleLayout>
+
+                    <TextView
+                        android:id="@+id/tv_add_call"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="5dp"
+                        android:gravity="center_horizontal"
+                        android:text="Add Call"
+                        android:fontFamily="@font/manrope_regular"
+                        android:textColor="@color/call_screen_text_color"
+                        android:textSize="@dimen/_14sdp" />
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_speaker_decline_mute"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:padding="@dimen/_5sdp">
+
+                <LinearLayout
+                    android:id="@+id/ll_speaker"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal|center_vertical"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:visibility="visible">
+
+                    <com.advantal.shieldcrypt.utils_pkg.MaterialRippleLayout
+                        android:id="@+id/ripple_speaker"
+                        android:layout_width="@dimen/call_screen_button"
+                        android:layout_height="@dimen/call_screen_button"
+                        android:layout_gravity="center"
+                        app:mrl_rippleAlpha="@string/ripple_alpha"
+                        app:mrl_rippleColor="@color/ripple_color"
+                        app:mrl_rippleDelayClick="false"
+                        app:mrl_rippleDuration="@string/ripple_duration"
+                        app:mrl_rippleHover="true"
+                        app:mrl_rippleOverlay="true">
+
+                        <ImageView
+                            android:id="@+id/iv_speaker"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:background="@drawable/speaker"
+                            android:contentDescription="carbon" />
+                    </com.advantal.shieldcrypt.utils_pkg.MaterialRippleLayout>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="5dp"
+                        android:gravity="center_horizontal"
+                        android:text="Speaker"
+                        android:fontFamily="@font/manrope_regular"
+                        android:textColor="@color/call_screen_text_color"
+                        android:textSize="@dimen/_14sdp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_decline"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal|center_vertical"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:visibility="visible">
+
+                    <com.advantal.shieldcrypt.utils_pkg.MaterialRippleLayout
+                        android:id="@+id/ripple_decline"
+                        android:layout_width="@dimen/call_screen_button"
+                        android:layout_height="@dimen/call_screen_button"
+                        android:layout_gravity="center"
+                        app:mrl_rippleAlpha="@string/ripple_alpha"
+                        app:mrl_rippleColor="@color/ripple_color"
+                        app:mrl_rippleDelayClick="false"
+                        app:mrl_rippleDuration="@string/ripple_duration"
+                        app:mrl_rippleHover="true"
+                        app:mrl_rippleOverlay="true">
+
+                        <ImageView
+                            android:id="@+id/iv_decline"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:background="@drawable/decline_call"
+                            android:clickable="true"
+                            android:contentDescription="carbon" />
+                    </com.advantal.shieldcrypt.utils_pkg.MaterialRippleLayout>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="5dp"
+                        android:fontFamily="@font/manrope_regular"
+                        android:gravity="center_horizontal"
+                        android:textColor="@color/call_screen_text_color"
+                        android:textSize="@dimen/_14sdp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_mute"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal|center_vertical"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:visibility="visible">
+
+                    <com.advantal.shieldcrypt.utils_pkg.MaterialRippleLayout
+                        android:id="@+id/ripple_mute"
+                        android:layout_width="@dimen/call_screen_button"
+                        android:layout_height="@dimen/call_screen_button"
+                        android:layout_gravity="center"
+                        app:mrl_rippleAlpha="@string/ripple_alpha"
+                        app:mrl_rippleColor="@color/ripple_color"
+                        app:mrl_rippleDelayClick="false"
+                        app:mrl_rippleDuration="@string/ripple_duration"
+                        app:mrl_rippleHover="true"
+                        app:mrl_rippleOverlay="true">
+                        <ImageView
+                            android:id="@+id/iv_mute"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:background="@drawable/mute"
+                            android:contentDescription="carbon" />
+                    </com.advantal.shieldcrypt.utils_pkg.MaterialRippleLayout>
+
+                    <TextView
+                        android:id="@+id/tv_mute"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="5dp"
+                        android:gravity="center_horizontal"
+                        android:text="Mute"
+                        android:fontFamily="@font/manrope_regular"
+                        android:textColor="@color/call_screen_text_color"
+                        android:textSize="@dimen/_14sdp" />
+
+                </LinearLayout>
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_incoming"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="@dimen/_30sdp"
+        android:layout_marginRight="@dimen/_30sdp"
+        android:layout_marginBottom="@dimen/_30sdp"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:id="@+id/ll_incoming_componant"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:id="@+id/rl_block_user_message"
+                android:layout_width="match_parent"
+                android:visibility="gone"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:id="@+id/ll_block_user"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:visibility="visible">
+
+                    <com.advantal.shieldcrypt.utils_pkg.MaterialRippleLayout
+                        android:id="@+id/ripple_block_user"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_gravity="center"
+                        app:mrl_rippleAlpha="@string/ripple_alpha"
+                        app:mrl_rippleColor="@color/ripple_color"
+                        app:mrl_rippleDelayClick="false"
+                        app:mrl_rippleDuration="@string/ripple_duration"
+                        app:mrl_rippleHover="true"
+                        app:mrl_rippleOverlay="true">
+
+                        <ImageView
+                            android:id="@+id/iv_block_user"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_gravity="center_horizontal"
+                            android:background="@drawable/block_user"
+                            android:contentDescription="carbon" />
+                    </com.advantal.shieldcrypt.utils_pkg.MaterialRippleLayout>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="5dp"
+                        android:gravity="center_horizontal"
+                        android:text="Block User"
+                        android:fontFamily="@font/manrope_regular"
+                        android:textColor="@color/call_screen_text_color"
+                        android:textSize="@dimen/_14sdp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_message"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:visibility="visible">
+
+                    <com.advantal.shieldcrypt.utils_pkg.MaterialRippleLayout
+                        android:id="@+id/ripple_message"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_gravity="center"
+                        app:mrl_rippleAlpha="@string/ripple_alpha"
+                        app:mrl_rippleColor="@color/ripple_color"
+                        app:mrl_rippleDelayClick="false"
+                        app:mrl_rippleDuration="@string/ripple_duration"
+                        app:mrl_rippleHover="true"
+                        app:mrl_rippleOverlay="true">
+
+                        <ImageView
+                            android:id="@+id/iv_message"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_gravity="center_horizontal"
+                            android:background="@drawable/message" />
+                    </com.advantal.shieldcrypt.utils_pkg.MaterialRippleLayout>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="5dp"
+                        android:gravity="center_horizontal"
+                        android:text="@string/message"
+                        android:fontFamily="@font/manrope_regular"
+                        android:textColor="@color/call_screen_text_color"
+                        android:textSize="@dimen/_14sdp" />
+
+                </LinearLayout>
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_accept_decline"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_20sdp">
+
+                <ImageView
+                    android:id="@+id/iv_incoming_decline"
+                    android:layout_width="@dimen/call_screen_button"
+                    android:layout_height="@dimen/call_screen_button"
+                    android:layout_alignParentLeft="true"
+                    android:background="@drawable/decline_call" />
+
+                <ImageView
+                    android:id="@+id/iv_incoming_accept"
+                    android:layout_width="@dimen/call_screen_button"
+                    android:layout_height="@dimen/call_screen_button"
+                    android:layout_alignParentRight="true"
+                    android:background="@drawable/accept_call" />
+
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+</RelativeLayout>
+</FrameLayout>

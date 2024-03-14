@@ -1,0 +1,517 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_view_contact"
+    android:orientation="vertical"
+    tools:context=".tabs_pkg.chat_window_pkg.popup_menu_pkg.ViewGroupDetailsActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <LinearLayout
+                android:id="@+id/menu_layout"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_60sdp"
+                android:layout_alignParentTop="true"
+                android:layout_gravity="center"
+                android:background="@color/background_clr"
+                android:orientation="horizontal"
+                android:visibility="visible">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/ic_backarrow"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="@dimen/_10sdp"
+                    android:layout_marginRight="@dimen/_2sdp"
+                    android:onClick="onClick"
+                    android:src="@drawable/ic_baseline_arrow_back_24" />
+
+
+                <TextView
+                    android:id="@+id/toolbar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="@dimen/_15sdp"
+                    android:background="?attr/colorPrimary"
+                    android:fontFamily="@font/manrope_medium"
+                    android:gravity="center"
+                    android:text="Group Info"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_14sdp"
+                    android:textStyle="bold" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginRight="@dimen/_14sdp"
+                    android:onClick="onClick"
+                    android:src="@drawable/ic_gallery_folder_menu"
+                    android:visibility="gone" />
+            </LinearLayout>
+
+            <com.advantal.shieldcrypt.utils_pkg.RoundedImageView2
+                android:id="@+id/userImg"
+                android:layout_width="@dimen/_80sdp"
+                android:layout_height="@dimen/_80sdp"
+                android:layout_below="@+id/menu_layout"
+                android:layout_centerInParent="true"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/_30sdp"
+                android:src="@drawable/groupavatar" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/imgPickerBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignEnd="@+id/userImg"
+                android:layout_alignBottom="@+id/userImg"
+                android:src="@drawable/ic_pick_camera" />
+
+
+
+
+
+
+            <LinearLayout
+                android:id="@+id/name_layout"
+                android:layout_below="@+id/userImg"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_40sdp"
+                android:layout_margin="@dimen/_10sdp"
+                android:layout_marginLeft="@dimen/_20sdp"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:layout_marginRight="@dimen/_20sdp"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:visibility="visible"
+                android:weightSum="2">
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/name_edt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="@dimen/_20sdp"
+                    android:background="@android:color/transparent"
+                    android:layout_marginRight="@dimen/_20sdp"
+                    android:fontFamily="@font/manrope_medium"
+                    android:gravity="center"
+                    android:layout_weight="1.8"
+                    android:text="Group Name"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_14sdp"
+                    android:textStyle="bold" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/update_profile"
+                    android:layout_width="30dp"
+                    android:layout_height="@dimen/_30sdp"
+                    android:layout_gravity="center"
+                    android:layout_marginRight="@dimen/_14sdp"
+                    android:layout_weight="0.2"
+                    android:onClick="onClick"
+                    android:src="@drawable/edit_icon" />
+
+
+            </LinearLayout>
+
+
+
+
+
+
+
+
+<!--
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/grp_nm_txt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/userImg"
+                android:layout_marginLeft="@dimen/_20sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginRight="@dimen/_20sdp"
+                android:fontFamily="@font/manrope_medium"
+                android:gravity="center"
+                android:text="Group Name"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_14sdp"
+                android:textStyle="bold" />
+-->
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/grp_part"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/name_layout"
+                android:layout_gravity="center"
+                android:layout_marginStart="@dimen/_15sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginBottom="@dimen/_5sdp"
+                android:fontFamily="@font/manrope_regular"
+                android:gravity="center"
+                android:text="07/10/2021"
+                android:textColor="@color/black_clr"
+                android:textSize="@dimen/_13sdp"
+                android:textStyle="bold"
+                android:visibility="visible" />
+
+
+            <LinearLayout
+                android:id="@+id/view_lay"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/grp_part"
+                android:layout_centerInParent="true"
+                android:layout_gravity="center"
+                android:layout_marginLeft="@dimen/_20sdp"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:layout_marginRight="@dimen/_20sdp"
+                android:layout_marginBottom="@dimen/_15sdp"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:visibility="visible"
+                android:weightSum="1">
+
+                <LinearLayout
+                    android:id="@+id/add_lay"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center|end"
+                    android:layout_weight="0.5"
+                    android:gravity="center|end"
+                    android:onClick="onClick"
+                    android:orientation="vertical"
+                    android:visibility="visible">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:layout_width="@dimen/_32sdp"
+                        android:layout_height="@dimen/_32sdp"
+                        android:src="@drawable/ic_group_add" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="@dimen/_4sdp"
+                        android:fontFamily="@font/manrope_regular"
+                        android:gravity="center"
+                        android:text="Add"
+                        android:textColor="@color/grey_clr"
+                        android:textSize="@dimen/_12sdp"
+                        android:textStyle="normal" />
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:id="@+id/chat_lay"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center|end"
+                    android:layout_marginLeft="@dimen/_20sdp"
+                    android:layout_weight="0.5"
+                    android:gravity="center|end"
+                    android:onClick="onClick"
+                    android:orientation="vertical"
+                    android:visibility="visible">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:layout_width="@dimen/_32sdp"
+                        android:layout_height="@dimen/_32sdp"
+                        android:src="@drawable/ic_chat_view_contact" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="@dimen/_4sdp"
+                        android:fontFamily="@font/manrope_regular"
+                        android:gravity="center"
+                        android:text="Chat"
+                        android:textColor="@color/grey_clr"
+                        android:textSize="@dimen/_12sdp"
+                        android:textStyle="normal" />
+
+                </LinearLayout>
+            </LinearLayout>
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/grp_desc_txt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/view_lay"
+                android:layout_marginLeft="@dimen/_20sdp"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:layout_marginRight="@dimen/_20sdp"
+                android:fontFamily="@font/manrope_medium"
+                android:gravity="center|start"
+                android:text="Group Name"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_12sdp"
+                android:textStyle="normal" />
+
+            <ProgressBar
+                android:id="@+id/progressBar"
+                android:layout_width="@dimen/_30sdp"
+                android:layout_height="@dimen/_30sdp"
+                android:layout_below="@+id/menu_layout"
+                android:layout_centerInParent="true"
+                android:layout_marginTop="@dimen/_50sdp"
+                android:visibility="gone" />
+
+
+<!--
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/name_txt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/grp_desc_txt"
+                android:layout_marginLeft="@dimen/_20sdp"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:layout_marginRight="@dimen/_20sdp"
+                android:fontFamily="@font/manrope_regular"
+                android:gravity="center|start"
+                android:text="Group Name"
+                android:textColor="@color/grey_clr"
+                android:textSize="@dimen/_12sdp"
+                android:textStyle="normal"
+                android:visibility="gone" />
+-->
+
+         <!--   <LinearLayout
+                android:id="@+id/name_layout"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_40sdp"
+                android:layout_below="@+id/name_txt"
+                android:layout_margin="@dimen/_10sdp"
+                android:layout_marginLeft="@dimen/_20sdp"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:layout_marginRight="@dimen/_20sdp"
+                android:background="@drawable/background_phone_view"
+                android:gravity="center|start"
+                android:orientation="horizontal"
+                android:visibility="gone"
+                android:weightSum="2">
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/name_edt"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="start|center"
+                    android:layout_marginStart="@dimen/_5sdp"
+                    android:layout_weight="1.8"
+                    android:background="@android:color/transparent"
+                    android:fontFamily="@font/manrope_regular"
+                    android:padding="@dimen/_5sdp"
+                    android:singleLine="true"
+                    android:src="@drawable/send_ic"
+                    android:textColor="@color/black_clr" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/update_profile"
+                    android:layout_width="30dp"
+                    android:layout_height="@dimen/_30sdp"
+                    android:layout_gravity="center"
+                    android:layout_marginRight="@dimen/_14sdp"
+                    android:layout_weight="0.2"
+                    android:onClick="onClick"
+                    android:src="@drawable/edit_icon" />
+
+
+            </LinearLayout>-->
+
+            <View
+                android:id="@+id/view"
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_below="@+id/grp_desc_txt"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_8sdp"
+
+                android:layout_marginRight="@dimen/_10sdp"
+                android:layout_marginBottom="@dimen/_8sdp"
+                android:background="@color/color_view_contact_divider"
+                android:visibility="visible" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/last_txt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/view"
+                android:layout_gravity="center|start"
+                android:layout_marginStart="@dimen/_15sdp"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:fontFamily="@font/manrope_medium"
+                android:text="Created Date"
+                android:textColor="@color/grey_clr"
+                android:textSize="@dimen/_14sdp"
+                android:textStyle="normal"
+                android:visibility="visible" />
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/created_by_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/last_txt"
+                android:layout_gravity="center|start"
+                android:layout_marginStart="@dimen/_15sdp"
+                android:layout_marginTop="@dimen/_2sdp"
+                android:layout_marginBottom="@dimen/_5sdp"
+                android:fontFamily="@font/manrope_regular"
+                android:text="07/10/2021"
+                android:textColor="@color/black_clr"
+                android:textSize="@dimen/_13sdp"
+                android:textStyle="bold"
+                android:visibility="visible" />
+
+
+            <View
+                android:id="@+id/view2"
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_below="@+id/created_by_view"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_8sdp"
+                android:layout_marginRight="@dimen/_10sdp"
+                android:layout_marginBottom="@dimen/_8sdp"
+                android:background="@color/color_view_contact_divider" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/participat"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/view2"
+                android:layout_gravity="center|start"
+                android:layout_marginStart="@dimen/_15sdp"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:fontFamily="@font/manrope_medium"
+                android:text="Participants : 2"
+                android:textColor="@color/grey_clr"
+                android:textSize="@dimen/_14sdp"
+                android:textStyle="normal"
+                android:visibility="visible" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recycle_contact"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/participat"
+                android:layout_gravity="center|start"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginEnd="@dimen/_10sdp"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                tools:listitem="@layout/contact_item_view" />
+
+
+            <LinearLayout
+                android:id="@+id/delete_grp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/delete_grp_usr"
+                android:layout_gravity="start|center"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:layout_marginBottom="@dimen/_15sdp"
+                android:gravity="center|start"
+                android:onClick="onClick"
+                android:orientation="horizontal">
+
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="@dimen/_15sdp"
+                    android:src="@drawable/ic_grp_delete" />
+
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/delete_grp_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="@dimen/_15sdp"
+                    android:fontFamily="@font/manrope_regular"
+                    android:gravity="center"
+                    android:text="Delete Group"
+                    android:textColor="@color/black_clr"
+                    android:textSize="@dimen/_13sdp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/delete_grp_usr"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/recycle_contact"
+                android:layout_gravity="start|center"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:gravity="center|start"
+                android:onClick="onClick"
+                android:orientation="horizontal">
+
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="@dimen/_15sdp"
+                    android:src="@drawable/ic_exit_group" />
+
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/delete_grp_usr_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="@dimen/_15sdp"
+                    android:fontFamily="@font/manrope_regular"
+                    android:gravity="center"
+                    android:text="Exit User"
+                    android:textColor="@color/black_clr"
+                    android:textSize="@dimen/_13sdp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/update_btn"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_40sdp"
+                android:layout_below="@+id/delete_grp"
+                android:layout_margin="@dimen/_10sdp"
+                android:layout_marginLeft="@dimen/_20sdp"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:layout_marginRight="@dimen/_20sdp"
+                android:background="@drawable/bluecustom_bordered_ripple"
+                android:fontFamily="@font/manrope_semibold"
+                android:gravity="center"
+                android:text="@string/update"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_13sdp"
+                android:textStyle="bold"
+                android:visibility="gone" />
+
+        </RelativeLayout>
+
+    </ScrollView>
+</LinearLayout>

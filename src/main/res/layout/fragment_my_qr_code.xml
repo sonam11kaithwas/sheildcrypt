@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_view_contact"
+    android:orientation="vertical"
+    >
+
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/qr_code_img"
+        android:layout_width="@dimen/_160sdp"
+        android:layout_height="@dimen/_160sdp"
+        android:layout_alignParentTop="true"
+        android:layout_centerInParent="true"
+        android:layout_gravity="center"
+        android:layout_marginTop="@dimen/_30sdp"
+        android:layout_weight="1"
+        android:background="@drawable/ic_qr_code_scan" />
+
+
+    <com.advantal.shieldcrypt.utils_pkg.RoundedImageView2
+        android:id="@+id/userImg"
+        android:layout_width="@dimen/_80sdp"
+        android:layout_height="@dimen/_80sdp"
+        android:layout_below="@+id/qr_code_img"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="@dimen/_30sdp"
+        android:layout_gravity="center"
+        android:background="@drawable/person_ic" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/user_nm"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/userImg"
+        android:layout_centerInParent="true"
+        android:layout_gravity="center|start"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:fontFamily="@font/manrope_medium"
+        android:text="Arthur Henry"
+        android:textColor="@color/black_clr"
+        android:textSize="@dimen/_14sdp"
+        android:textStyle="normal" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/user_nm"
+        android:layout_centerInParent="true"
+        android:layout_gravity="center|start"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:fontFamily="@font/manrope_regular"
+        android:text="+91 55588 20034"
+        android:textColor="@color/grey_clr"
+        android:textSize="@dimen/_12sdp"
+        android:textStyle="normal" />
+
+
+</RelativeLayout>

@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <LinearLayout
+        android:id="@+id/menu_layout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_60sdp"
+        android:layout_alignParentTop="true"
+        android:layout_gravity="center"
+        android:background="@color/background_clr"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:visibility="visible"
+        android:weightSum="3">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ic_backarrow"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/_16sdp"
+            android:layout_gravity="center"
+            android:layout_marginLeft="@dimen/_2sdp"
+            android:layout_marginRight="@dimen/_2sdp"
+            android:layout_weight="0.1"
+            android:onClick="onClick"
+            android:src="@drawable/ic_backarrow_chat" />
+
+
+        <TextView
+            android:id="@+id/toolbar"
+            android:layout_width="0dp"
+            android:layout_height="?attr/actionBarSize"
+            android:layout_gravity="center"
+            android:layout_weight="2.6"
+            android:background="?attr/colorPrimary"
+            android:fontFamily="@font/manrope_medium"
+            android:gravity="left|center"
+            android:text="Created New Group"
+            android:layout_marginLeft="@dimen/_10sdp"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_14sdp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+    <com.advantal.shieldcrypt.utils_pkg.RoundedImageView2
+        android:id="@+id/userImg"
+        android:layout_width="@dimen/_80sdp"
+        android:layout_height="@dimen/_80sdp"
+        android:layout_below="@+id/menu_layout"
+        android:layout_centerInParent="true"
+        android:layout_gravity="center"
+        android:layout_marginTop="@dimen/_30sdp"
+        android:src="@drawable/profile_pick" />
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="@dimen/_30sdp"
+        android:layout_height="@dimen/_30sdp"
+        android:layout_below="@+id/menu_layout"
+        android:layout_centerInParent="true"
+        android:visibility="gone"
+        android:layout_marginTop="@dimen/_50sdp" />
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/imgPickerBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/userImg"
+        android:layout_alignBottom="@+id/userImg"
+        android:src="@drawable/ic_pick_camera"/>
+
+
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/name_txt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/userImg"
+        android:layout_marginLeft="@dimen/_20sdp"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:layout_marginRight="@dimen/_20sdp"
+        android:fontFamily="@font/manrope_regular"
+        android:gravity="center|start"
+        android:text="Group Name"
+        android:textColor="@color/grey_clr"
+        android:textSize="@dimen/_12sdp"
+        android:textStyle="normal" />
+
+    <LinearLayout
+        android:id="@+id/name_layout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_40sdp"
+        android:layout_below="@+id/name_txt"
+        android:layout_margin="@dimen/_10sdp"
+        android:layout_marginLeft="@dimen/_20sdp"
+
+        android:layout_marginTop="@dimen/_20sdp"
+        android:layout_marginRight="@dimen/_20sdp"
+        android:background="@drawable/background_phone_view"
+        android:gravity="center|start"
+        android:orientation="horizontal">
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/name_edt"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="start|center"
+            android:layout_marginStart="@dimen/_5sdp"
+            android:background="@android:color/transparent"
+            android:fontFamily="@font/manrope_regular"
+            android:padding="@dimen/_5sdp"
+            android:singleLine="true"
+            android:src="@drawable/send_ic"
+            android:textColor="@color/black_clr" />
+
+
+
+
+    </LinearLayout>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/nae_txt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/name_layout"
+        android:layout_marginLeft="@dimen/_20sdp"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:layout_marginRight="@dimen/_20sdp"
+        android:fontFamily="@font/manrope_regular"
+        android:gravity="center|start"
+        android:text="Participant"
+        android:textColor="@color/grey_clr"
+        android:textSize="@dimen/_12sdp"
+        android:textStyle="normal" />
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/whatsap_contact_recycler"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/nae_txt"
+        android:layout_marginBottom="@dimen/_3sdp"
+        tools:listitem="@layout/whatsapp_contact_item_view" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/idFABSettings"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="10dp"
+        android:contentDescription="@string/app_name"
+        android:padding="4dp"
+        android:src="@drawable/ic_next_img"
+        />
+
+
+
+
+
+</RelativeLayout>

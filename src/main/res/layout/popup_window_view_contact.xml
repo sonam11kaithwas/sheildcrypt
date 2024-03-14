@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="@dimen/_400sdp"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center|top"
+    android:background="@drawable/menu_cardview"
+    android:gravity="center_vertical"
+    android:orientation="vertical">
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/share_lable"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_margin="@dimen/_6sdp"
+        android:fontFamily="@font/manrope_regular"
+        android:text="Share"
+        android:textColor="@color/black_clr"
+        android:textSize="@dimen/_12sdp"
+        android:textStyle="normal" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/edit_lable"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_margin="@dimen/_6sdp"
+        android:fontFamily="@font/manrope_regular"
+        android:text="Edit"
+        android:textColor="@color/black_clr"
+        android:textSize="@dimen/_12sdp"
+        android:textStyle="normal" />
+
+</LinearLayout>

@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <RelativeLayout
+        android:id="@+id/menu_layout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_60sdp"
+        android:layout_alignParentTop="true"
+        android:layout_gravity="center"
+        android:background="@color/background_clr"
+        android:visibility="visible">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/imgBackBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/_10sdp"
+            android:layout_marginRight="@dimen/_2sdp"
+            android:src="@drawable/ic_baseline_arrow_back_24" />
+
+
+        <TextView
+            android:id="@+id/toolbar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:background="?attr/colorPrimary"
+            android:layout_marginLeft="@dimen/_50sdp"
+            android:fontFamily="@font/manrope_medium"
+            android:text="@string/crop_photo"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_14sdp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/txtSaveFromCropBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_centerInParent="true"
+            android:layout_gravity="center"
+            android:background="?attr/colorPrimary"
+            android:fontFamily="@font/manrope_medium"
+            android:gravity="center"
+            android:paddingRight="@dimen/_10sdp"
+            android:text="@string/save"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_14sdp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/txtSaveFromFilterBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_centerInParent="true"
+            android:layout_gravity="center"
+            android:background="?attr/colorPrimary"
+            android:fontFamily="@font/manrope_medium"
+            android:gravity="center"
+            android:visibility="gone"
+            android:paddingRight="@dimen/_10sdp"
+            android:text="@string/save"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_14sdp"
+            android:textStyle="bold" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rlCropMainView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/llBottomView"
+        android:layout_below="@+id/menu_layout"
+        android:background="@color/light_grey_clr">
+
+        <com.advantal.shieldcrypt.cropping_filter.cropping.CropImageView
+            android:id="@+id/cropImageView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:background="@color/light_grey_clr"
+            android:visibility="visible"
+            app:cropAspectRatioX="5"
+            app:cropAspectRatioY="5"
+            app:cropAutoZoomEnabled="false"
+            app:cropShape="oval" />
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/rlPhotoEditorView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        android:layout_below="@+id/menu_layout"
+        android:layout_above="@+id/llBottomView">
+
+        <ja.burhanrashid52.photoeditor.PhotoEditorView
+            android:id="@+id/photoEditorView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/recyclerViewFilters"
+            android:background="@color/light_grey_clr" />
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerViewFilters"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_alignParentBottom="true"/>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/llBottomView"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_60sdp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/background_clr"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="100dp"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/txtCrop"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_gravity="center"
+                android:drawableTop="@drawable/ic_baseline_crop_24"
+                android:background="?attr/colorPrimary"
+                android:fontFamily="@font/manrope_medium"
+                android:text="@string/crop"
+                android:gravity="center"
+                android:drawablePadding="5dp"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_14sdp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="100dp"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/txtFilter"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_gravity="center"
+                android:drawableTop="@drawable/ic_baseline_photo_filter_24"
+                android:background="?attr/colorPrimary"
+                android:fontFamily="@font/manrope_medium"
+                android:text="@string/filter"
+                android:gravity="center"
+                android:drawablePadding="5dp"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_14sdp"
+                android:textStyle="bold" />
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>

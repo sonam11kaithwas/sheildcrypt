@@ -1,0 +1,469 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar1"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_50sdp"
+        android:background="@color/colorPrimary">
+
+        <ImageView
+            android:id="@+id/iv_back_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/_10sdp"
+            android:src="@drawable/ic_baseline_arrow_back_24"
+            app:tint="@color/white" />
+
+        <TextView
+            android:id="@+id/toolbar_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Meeting Scheduled"
+            android:textColor="@color/white"
+            android:textSize="18sp" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/editMeetingBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center|right"
+            android:layout_gravity="right"
+            android:background="@null"
+            android:paddingRight="@dimen/_15sdp"
+            android:text="Edit"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="18sp" />
+    </androidx.appcompat.widget.Toolbar>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="@dimen/_10sdp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/_10sdp"
+                        android:text="Meeting Title"
+                        android:textColor="@color/black"
+                        android:textStyle="normal"
+                        android:textSize="@dimen/_16sdp"></TextView>
+
+                    <TextView
+                        android:id="@+id/meeting_title"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/_10sdp"
+                        android:text=""
+                        android:textSize="@dimen/_14sdp"></TextView>
+
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:weightSum="2"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:layout_marginLeft="@dimen/_10sdp"
+                        >
+                        <TextView
+
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:background="@null"
+                            android:layout_weight="1.2"
+                            android:maxLength="25"
+                            android:singleLine="true"
+                            android:textColor="@color/black"
+                            android:text="Start Date"
+                            android:textSize="@dimen/_14sdp"></TextView>
+
+                        <TextView
+                            android:id="@+id/meeting_start_tie"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:background="@null"
+                            android:layout_weight="0.8"
+                            android:maxLength="25"
+                            android:text="satrt Time"
+                            android:textColor="@color/black"
+                            android:singleLine="true"
+                            android:textSize="@dimen/_14sdp"></TextView>
+
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:weightSum="2"
+                        android:layout_marginLeft="@dimen/_10sdp"
+                        >
+                        <TextView
+                            android:id="@+id/start_date"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:background="@null"
+                            android:layout_weight="1.2"
+                            android:maxLength="25"
+                            android:singleLine="true"
+                            android:textSize="@dimen/_14sdp"></TextView>
+
+                        <TextView
+                            android:id="@+id/start_time"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:background="@null"
+                            android:layout_weight="0.8"
+                            android:maxLength="25"
+                            android:singleLine="true"
+                            android:textSize="@dimen/_14sdp"></TextView>
+
+
+                    </LinearLayout>
+
+                    <!--                    <View-->
+                    <!--                        android:layout_width="match_parent"-->
+                    <!--                        android:layout_height="1dp"-->
+                    <!--                        android:layout_marginLeft="@dimen/_10sdp"-->
+                    <!--                        android:layout_marginTop="@dimen/_5sdp"-->
+                    <!--                        android:layout_marginRight="@dimen/_10sdp"-->
+                    <!--                        android:background="@color/grey_clr" />-->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:weightSum="2"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:layout_marginLeft="@dimen/_10sdp"
+                        >
+                        <TextView
+
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:background="@null"
+                            android:layout_weight="1.2"
+                            android:maxLength="25"
+                            android:text="End Date"
+                            android:singleLine="true"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/_14sdp"></TextView>
+
+                        <TextView
+
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:background="@null"
+                            android:layout_weight="0.8"
+                            android:text="End Time"
+                            android:maxLength="25"
+                            android:singleLine="true"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/_14sdp"></TextView>
+
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:weightSum="2"
+                        android:layout_marginLeft="@dimen/_10sdp"
+                        >
+                        <TextView
+                            android:id="@+id/end_date"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:background="@null"
+                            android:layout_weight="1.2"
+                            android:maxLength="25"
+                            android:singleLine="true"
+                            android:textSize="@dimen/_14sdp"></TextView>
+
+                        <TextView
+                            android:id="@+id/end_time"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:background="@null"
+                            android:layout_weight="0.8"
+                            android:maxLength="25"
+                            android:singleLine="true"
+                            android:textSize="@dimen/_14sdp"></TextView>
+
+
+                    </LinearLayout>
+
+
+
+
+
+
+                    <!--                    <View-->
+                    <!--                        android:layout_width="match_parent"-->
+                    <!--                        android:layout_height="1dp"-->
+                    <!--                        android:layout_marginLeft="@dimen/_10sdp"-->
+                    <!--                        android:layout_marginRight="@dimen/_10sdp"-->
+                    <!--                        android:layout_marginBottom="@dimen/_10sdp"-->
+                    <!--                        android:background="@color/grey_clr" />-->
+
+
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/_10sdp"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:text="Meeting Recurrence"
+                        android:textColor="@color/black"
+                        android:textStyle="normal"
+                        android:textSize="@dimen/_16sdp">
+
+                    </TextView>
+
+                    <TextView
+                        android:id="@+id/mtng_rec"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/_10sdp"
+                        android:textSize="@dimen/_14sdp">
+
+                    </TextView>
+
+                    <TextView
+
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/_10sdp"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:text="Meeting For"
+                        android:textColor="@color/black"
+                        android:textStyle="normal"
+                        android:visibility="gone"
+                        android:textSize="@dimen/_16sdp">
+
+                    </TextView>
+
+                    <TextView
+                        android:id="@+id/mtng_for"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/_10sdp"
+                        android:visibility="gone"
+                        android:textSize="@dimen/_14sdp">
+
+                    </TextView>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/_10sdp"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:text="Meeting  For Value"
+                        android:textColor="@color/black"
+                        android:textStyle="normal"
+                        android:visibility="gone"
+                        android:textSize="@dimen/_16sdp">
+
+                    </TextView>
+
+                    <TextView
+                        android:id="@+id/mtng_fot_value"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/_10sdp"
+                        android:visibility="gone"
+                        android:textSize="@dimen/_14sdp">
+
+                    </TextView>
+                    <TextView
+
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/_10sdp"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:text="Organizer By"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_16sdp"
+                        android:textStyle="normal">
+
+                    </TextView>
+
+                    <TextView
+                        android:id="@+id/txtOrganizerBy"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/_10sdp"
+                        android:textSize="@dimen/_14sdp">
+
+                    </TextView>
+                    <TextView
+
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/_10sdp"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:text="Organizer Type"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_16sdp"
+                        android:textStyle="normal">
+
+                    </TextView>
+
+                    <TextView
+                        android:id="@+id/txtOrganizerType"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/_10sdp"
+                        android:textSize="@dimen/_14sdp">
+
+                    </TextView>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/_10sdp"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:text="Description"
+                        android:textColor="@color/black"
+                        android:textStyle="normal"
+                        android:textSize="@dimen/_16sdp">
+
+                    </TextView>
+
+                    <TextView
+                        android:id="@+id/mtng_desc"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/_10sdp"
+                        android:textSize="@dimen/_14sdp">
+
+                    </TextView>
+
+                    <LinearLayout
+                        android:id="@+id/llAttenderMainView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:visibility="visible"
+                        android:layout_marginLeft="@dimen/_10sdp"
+                        android:orientation="vertical">
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/manrope_regular"
+                            android:gravity="center|start"
+                            android:text="Attender's"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/_16sdp"
+                            android:textStyle="normal" />
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/_40sdp"
+                            android:layout_marginTop="@dimen/_5sdp"
+                            android:background="@drawable/background_phone_view"
+                            android:gravity="center|start"
+                            android:orientation="horizontal">
+
+                            <com.advantal.shieldcrypt.meeting.custom.CustomAutoCompleteView
+                                android:id="@+id/autoCompleteAttender"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="start|center"
+                                android:layout_marginStart="@dimen/_5sdp"
+                                android:background="@android:color/transparent"
+                                android:fontFamily="@font/manrope_regular"
+                                android:inputType="text"
+                                android:padding="@dimen/_5sdp"
+                                android:imeOptions="actionNext"
+                                android:singleLine="true"
+                                android:completionThreshold="2"
+                                android:hint="Add user in Meeting..."
+                                android:textColorHint="@color/hint_color"
+                                android:textColor="@color/black_clr" />
+                        </LinearLayout>
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/rvAddedAttenderList"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            tools:listitem="@layout/added_attender_show_item"/>
+                    </LinearLayout>
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_30sdp"
+                        android:layout_marginBottom="@dimen/_25sdp"
+                        android:orientation="vertical">
+                        <androidx.appcompat.widget.AppCompatButton
+                            android:id="@+id/deleteMeetingBtn"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/_40sdp"
+                            android:fontFamily="@font/manrope_semibold"
+                            android:gravity="center"
+                            android:background="@drawable/button_rectangle_shap_delete"
+                            android:layout_marginRight="@dimen/_10sdp"
+                            android:layout_toLeftOf="@+id/saveMeetingBtn"
+                            android:text="Delete"
+                            android:textAllCaps="false"
+                            android:textColor="@color/red700"
+                            android:textSize="@dimen/_13sdp"
+                            android:textStyle="bold" />
+                        <androidx.appcompat.widget.AppCompatButton
+                            android:id="@+id/saveMeetingBtn"
+                            android:layout_width="wrap_content"
+                            android:layout_height="@dimen/_40sdp"
+                            android:background="@drawable/button_rectangle_shap_"
+                            android:fontFamily="@font/manrope_semibold"
+                            android:gravity="center"
+                            android:layout_alignParentRight="true"
+                            android:text="Edit"
+                            android:visibility="gone"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/_13sdp"
+                            android:textStyle="bold" />
+                    </RelativeLayout>
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginLeft="@dimen/_10sdp"
+                    android:layout_marginRight="@dimen/_10sdp"
+                    android:weightSum="2">
+
+                </LinearLayout>
+            </LinearLayout>
+
+
+        </ScrollView>
+    </LinearLayout>
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

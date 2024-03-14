@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/background_clr_lgn">
+
+    <!-- TODO: Update blank fragment layout -->
+
+
+    <!--Swipe Refresh Layout -->
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/pull_refreshLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/_100sdp"
+        tools:layout_editor_absoluteX="-205dp"
+        tools:layout_editor_absoluteY="0dp">
+
+        <!--TextView -->
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/callsRecyclerView"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            tools:listitem="@layout/calls_list_item" />
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+    <TextView
+        android:id="@+id/msg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:fontFamily="@font/manrope_medium"
+        android:text="No calls"
+        android:textColor="@color/light_grey_clr"
+        android:textSize="@dimen/_12sdp"
+        android:textStyle="normal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/pull_refreshLayout"
+        app:layout_constraintStart_toStartOf="@+id/pull_refreshLayout"
+        app:layout_constraintTop_toTopOf="parent" />
+    <ProgressBar
+        android:id="@+id/progressBarMain"
+        android:layout_width="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/pull_refreshLayout"
+        app:layout_constraintStart_toStartOf="@+id/pull_refreshLayout"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <!--    <TextView-->
+    <!--        android:id="@+id/call"-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:fontFamily="@font/manrope_medium"-->
+    <!--        android:layout_marginLeft="@dimen/_12sdp"-->
+    <!--        android:layout_marginTop="@dimen/_10sdp"-->
+    <!--        android:gravity="center|start"-->
+    <!--        android:text="Calls"-->
+    <!--        android:textColor="@color/light_grey_clr"-->
+    <!--        android:textSize="@dimen/_12sdp"-->
+    <!--        android:textStyle="normal" />-->
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

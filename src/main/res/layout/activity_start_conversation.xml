@@ -1,0 +1,160 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        >
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:id="@+id/lay"
+            android:layout_height="match_parent">
+
+
+            <com.google.android.material.appbar.AppBarLayout
+                android:id="@+id/app_bar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:animateLayoutChanges="true"
+                android:clipChildren="false"
+                android:fitsSystemWindows="true"
+                android:theme="@style/AppThemeLight.AppBarOverlay"
+                app:liftOnScroll="false">
+
+                <LinearLayout
+                    android:id="@+id/menu_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="?attr/actionBarSize"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:weightSum="3">
+
+                    <com.google.android.material.appbar.MaterialToolbar
+                        android:id="@+id/toolbar"
+                        android:layout_width="0dp"
+                        android:layout_height="?attr/actionBarSize"
+                        android:layout_weight="2.5"
+                        android:background="?attr/colorPrimary"
+                        app:contentInsetStartWithNavigation="0dp"
+                        app:layout_scrollFlags="scroll|enterAlways|snap"
+                        app:title="@string/name_shield"
+                        app:titleTextAppearance="@style/AppThemeLight.AppBarOverlays" />
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/search_view"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginRight="@dimen/_4sdp"
+                        android:layout_weight="0.2"
+                        android:onClick="onClick"
+                        android:src="@drawable/ic_search" />
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/three_dots_img"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginRight="@dimen/_2sdp"
+                        android:layout_weight="0.3"
+                        android:onClick="onClick"
+                        android:src="@drawable/ic_more_vert_white_24dp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/search_parent_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="?attr/actionBarSize"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:gravity="center"
+                    android:visibility="gone">
+
+                    <include
+                        android:id="@+id/search_layout"
+                        layout="@layout/searchview_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="?attr/actionBarSize"
+                        android:layout_marginLeft="@dimen/_minus5sdp" />
+
+                </LinearLayout>
+
+                <com.google.android.material.tabs.TabLayout
+                    android:id="@+id/tab_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_40sdp"
+                    android:background="@color/colorPrimary"
+                    app:layout_scrollFlags="enterAlways|snap"
+                    app:tabGravity="fill"
+                    app:tabIconTint="@color/white"
+                    app:tabIndicatorColor="@color/white"
+                    app:tabIndicatorFullWidth="true"
+                    app:tabInlineLabel="true"
+                    app:tabMode="fixed"
+                    app:tabPaddingEnd="0dp"
+                    app:tabPaddingStart="@dimen/_minus10sdp"
+                    app:tabSelectedTextColor="@color/white"
+                    app:tabTextAppearance="@style/tab_text"
+                    app:tabTextColor="@color/tab_unselected" />
+                <!--    app:tabIndicatorHeight="4dp"
+                -->
+
+            </com.google.android.material.appbar.AppBarLayout>
+
+            <androidx.viewpager2.widget.ViewPager2
+                android:id="@+id/start_conversation_view_pager"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@id/app_bar"
+                android:background="?attr/color_background_primary">
+
+
+            </androidx.viewpager2.widget.ViewPager2>
+
+            <com.leinardi.android.speeddial.SpeedDialOverlayLayout
+                android:id="@+id/overlay"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@id/app_bar"
+                android:background="?color_background_overlay" />
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/fab"
+                app:backgroundTint="?colorPrimary"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end|bottom"
+                android:layout_margin="16dp"
+                android:visibility="invisible"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                android:src="@drawable/ic_add_white_24dp"/>
+
+            <com.leinardi.android.speeddial.SpeedDialView
+                android:id="@+id/speed_dial"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                android:contentDescription="@string/add_contact_or_create_or_join_group_chat"
+                app:backgroundTint="?colorPrimary"
+                app:sdMainFabClosedBackgroundColor="?colorPrimary"
+                app:sdMainFabClosedSrc="@drawable/ic_add_white_24dp"
+                app:sdMainFabOpenedBackgroundColor="?colorPrimaryDark"
+                app:sdOverlayLayout="@id/overlay"
+                android:visibility="gone"
+                app:sdUseReverseAnimationOnClose="true" />
+        </RelativeLayout>
+
+        <FrameLayout
+            android:id="@+id/main_fragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="visible" />
+    </LinearLayout>
+</layout>

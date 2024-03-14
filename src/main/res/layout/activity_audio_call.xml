@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_view_contact"
+    android:orientation="vertical"
+    tools:context=".tabs_pkg.chat_window_pkg.popup_menu_pkg.audio_call_pkg.AudioCallActivity">
+
+    <include
+        android:id="@+id/toolbar_bar"
+        layout="@layout/title_bar_layout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_60sdp"
+        android:layout_alignParentTop="true" />
+
+    <!--    <LinearLayout-->
+    <!--        android:id="@+id/menu_layout"-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="@dimen/_60sdp"-->
+    <!--        android:layout_alignParentTop="true"-->
+    <!--        android:layout_gravity="center"-->
+    <!--        android:background="@color/background_clr"-->
+    <!--        android:gravity="center"-->
+    <!--        android:orientation="horizontal"-->
+    <!--        android:visibility="visible"-->
+    <!--        android:weightSum="3">-->
+
+    <!--        <androidx.appcompat.widget.AppCompatImageView-->
+    <!--            android:id="@+id/ic_backarrow"-->
+    <!--            android:layout_width="0dp"-->
+    <!--            android:layout_height="@dimen/_16sdp"-->
+    <!--            android:layout_gravity="center"-->
+    <!--            android:layout_marginLeft="@dimen/_8sdp"-->
+    <!--            android:layout_marginRight="@dimen/_2sdp"-->
+    <!--            android:layout_weight="0.1"-->
+    <!--            android:onClick="onClick"-->
+    <!--            android:src="@drawable/ic_backarrow_chat" />-->
+
+
+    <!--        <TextView-->
+    <!--            android:id="@+id/toolbar"-->
+    <!--            android:layout_width="0dp"-->
+    <!--            android:layout_height="?attr/actionBarSize"-->
+    <!--            android:layout_gravity="center"-->
+    <!--            android:layout_weight="2.6"-->
+    <!--            android:background="?attr/colorPrimary"-->
+    <!--            android:fontFamily="@font/manrope_medium"-->
+    <!--            android:gravity="center"-->
+    <!--            android:text="@string/audio_call"-->
+    <!--            android:textColor="@color/white"-->
+    <!--            android:textSize="@dimen/_14sdp"-->
+    <!--            android:textStyle="bold" />-->
+
+
+    <!--    </LinearLayout>-->
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/toolbar_bar">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <com.advantal.shieldcrypt.utils_pkg.RoundedImageView2
+                android:id="@+id/userImg"
+                android:layout_width="@dimen/_80sdp"
+                android:layout_height="@dimen/_80sdp"
+                android:layout_alignParentTop="true"
+                android:layout_centerInParent="true"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/_30sdp"
+                android:src="@drawable/ic_man" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/user_nm"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/userImg"
+                android:layout_centerInParent="true"
+                android:layout_gravity="center|start"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:fontFamily="@font/manrope_medium"
+                android:text="John Dep"
+                android:textColor="@color/black_clr"
+                android:textSize="@dimen/_14sdp"
+                android:textStyle="normal" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/user_nm"
+                android:layout_centerInParent="true"
+                android:layout_gravity="center|start"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:fontFamily="@font/manrope_regular"
+                android:text="04:65"
+                android:textColor="@color/grey_clr"
+                android:textSize="@dimen/_12sdp"
+                android:textStyle="normal" />
+
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/speaker_img"
+        android:layout_width="@dimen/_42sdp"
+        android:layout_height="@dimen/_42sdp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentBottom="true"
+        android:layout_centerInParent="true"
+        android:layout_marginLeft="@dimen/_30sdp"
+        android:layout_marginBottom="@dimen/_30sdp"
+        android:onClick="onClick"
+        android:src="@drawable/ic_speaker_on" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/mute_img"
+        android:layout_width="@dimen/_42sdp"
+        android:layout_height="@dimen/_42sdp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerInParent="true"
+        android:layout_marginBottom="@dimen/_30sdp"
+        android:onClick="onClick"
+        android:src="@drawable/ic_audio_call" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/end_call_img"
+        android:layout_width="@dimen/_42sdp"
+        android:layout_height="@dimen/_42sdp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_centerInParent="true"
+        android:layout_marginRight="@dimen/_30sdp"
+        android:layout_marginBottom="@dimen/_30sdp"
+        android:onClick="onClick"
+        android:src="@drawable/ic_end_call" />
+
+</RelativeLayout>

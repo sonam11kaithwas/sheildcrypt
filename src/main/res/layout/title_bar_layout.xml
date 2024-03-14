@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/menu_layout"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/_60sdp"
+    android:layout_alignParentTop="true"
+    android:layout_gravity="center"
+    android:background="@color/background_clr"
+    android:gravity="center"
+    android:orientation="horizontal"
+    android:visibility="visible"
+    android:weightSum="3">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/ic_backarrow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_weight="0.1"
+        android:onClick="onClick"
+        android:src="@drawable/ic_backarrow_chat" />
+
+
+    <TextView
+        android:id="@+id/toolbar"
+        android:layout_width="0dp"
+        android:layout_height="?attr/actionBarSize"
+        android:layout_gravity="center"
+        android:layout_weight="2.6"
+        android:background="?attr/colorPrimary"
+        android:fontFamily="@font/manrope_medium"
+        android:gravity="center"
+        android:text="@string/audio_call"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_14sdp"
+        android:textStyle="bold" />
+
+
+</LinearLayout>

@@ -1,0 +1,254 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_view_contact"
+    android:orientation="vertical"
+    >
+    <include
+        android:id="@+id/toolbar_bar"
+        layout="@layout/title_bar_layout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_60sdp"
+        android:layout_alignParentTop="true" />
+
+<!--    <LinearLayout-->
+<!--        android:id="@+id/menu_layout"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="@dimen/_60sdp"-->
+<!--        android:layout_alignParentTop="true"-->
+<!--        android:layout_gravity="center"-->
+<!--        android:background="@color/background_clr"-->
+<!--        android:gravity="center"-->
+<!--        android:orientation="horizontal"-->
+<!--        android:visibility="visible"-->
+<!--        android:weightSum="3">-->
+
+<!--        <androidx.appcompat.widget.AppCompatImageView-->
+<!--            android:id="@+id/ic_backarrow"-->
+<!--            android:layout_width="0dp"-->
+<!--            android:layout_height="@dimen/_16sdp"-->
+<!--            android:layout_gravity="center"-->
+<!--            android:layout_marginLeft="@dimen/_8sdp"-->
+<!--            android:layout_marginRight="@dimen/_2sdp"-->
+<!--            android:layout_weight="0.1"-->
+<!--            android:onClick="onClick"-->
+<!--            android:src="@drawable/ic_backarrow_chat" />-->
+
+
+<!--        <AutoCompleteTextView-->
+<!--            android:id="@+id/toolbar"-->
+<!--            android:layout_width="0dp"-->
+<!--            android:layout_height="?attr/actionBarSize"-->
+<!--            android:layout_gravity="center"-->
+<!--            android:layout_weight="2.6"-->
+<!--            android:background="?attr/colorPrimary"-->
+<!--            android:fontFamily="@font/manrope_medium"-->
+<!--            android:gravity="center"-->
+<!--            android:text="@string/vedio_call"-->
+<!--            android:textColor="@color/white"-->
+<!--            android:textSize="@dimen/_14sdp"-->
+<!--            android:textStyle="bold" />-->
+
+
+<!--    </LinearLayout>-->
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/toolbar_bar"
+        android:id="@+id/recieve_call_layout"
+
+        android:visibility="visible">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <com.advantal.shieldcrypt.utils_pkg.RoundedImageView2
+                    android:id="@+id/userImg"
+                    android:layout_width="@dimen/_80sdp"
+                    android:layout_height="@dimen/_80sdp"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerInParent="true"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="@dimen/_30sdp"
+                    android:background="@drawable/person_ic" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/user_nm"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/userImg"
+                    android:layout_centerInParent="true"
+                    android:layout_gravity="center|start"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:fontFamily="@font/manrope_medium"
+                    android:text="John Dep"
+                    android:textColor="@color/black_clr"
+                    android:textSize="@dimen/_14sdp"
+                    android:textStyle="normal" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/user_nm"
+                    android:layout_centerInParent="true"
+                    android:layout_gravity="center|start"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:fontFamily="@font/manrope_regular"
+                    android:text="Incoming Video Call.."
+                    android:textColor="@color/grey_clr"
+                    android:textSize="@dimen/_12sdp"
+                    android:textStyle="normal" />
+
+
+            </RelativeLayout>
+
+        </ScrollView>
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/call_recieve_img"
+            android:layout_width="@dimen/_42sdp"
+            android:layout_height="@dimen/_42sdp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentBottom="true"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="@dimen/_30sdp"
+            android:layout_marginBottom="@dimen/_30sdp"
+            android:onClick="onClick"
+            android:src="@drawable/ic_call_receive" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/end_call_img"
+            android:layout_width="@dimen/_42sdp"
+            android:layout_height="@dimen/_42sdp"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_centerInParent="true"
+            android:layout_marginRight="@dimen/_30sdp"
+            android:layout_marginBottom="@dimen/_30sdp"
+            android:onClick="onClick"
+            android:src="@drawable/ic_end_call" />
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        android:id="@+id/vedio_call_view_layout"
+        android:layout_below="@+id/menu_layout">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <FrameLayout
+                android:id="@+id/frmaelayout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/backimage"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+
+                <ImageView
+                    android:id="@+id/appImage"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center_horizontal|top"
+                    android:background="@drawable/ic_woman" />
+            </FrameLayout>
+
+            <ImageView
+
+                android:layout_width="@dimen/_120sdp"
+                android:layout_height="@dimen/_120sdp"
+                android:layout_marginRight="@dimen/_10sdp"
+                android:layout_marginBottom="@dimen/_20sdp"
+                android:elevation="2dp"
+                android:src="@drawable/ic_man"
+                app:layout_constraintBottom_toTopOf="@+id/ll"
+                app:layout_constraintRight_toRightOf="parent" />
+
+            <LinearLayout
+                android:id="@+id/ll"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_52sdp"
+                android:layout_marginLeft="@dimen/_20sdp"
+                android:layout_marginRight="@dimen/_20sdp"
+                android:layout_marginBottom="@dimen/_20sdp"
+                android:orientation="horizontal"
+                android:weightSum="4"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent">
+
+                <ImageView
+                    android:id="@+id/camera_rotate_button"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/_46sdp"
+                    android:layout_weight="1"
+                    android:onClick="onClick"
+                    android:elevation="2dp"
+                    android:src="@drawable/ic_camera_rotate" />
+
+                <ImageView
+                    android:id="@+id/vedio_call_button"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/_46sdp"
+                    android:layout_weight="1"
+                    android:onClick="onClick"
+
+                    android:elevation="2dp"
+                    android:src="@drawable/ic_vedio_call"
+                    android:visibility="visible" />
+
+                <ImageView
+                    android:id="@+id/mute_call_button"
+                    android:onClick="onClick"
+
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/_46sdp"
+                    android:layout_weight="1"
+                    android:elevation="2dp"
+                    android:src="@drawable/ic_audio_call"
+                    android:visibility="visible" />
+
+                <ImageView
+                    android:id="@+id/end_call_button"
+                    android:layout_width="0dp"
+                    android:onClick="onClick"
+
+                    android:layout_height="@dimen/_46sdp"
+                    android:layout_weight="1"
+
+
+                    android:elevation="2dp"
+
+                    android:src="@drawable/ic_end_call"
+                    android:visibility="visible" />
+            </LinearLayout>
+
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/vertical_centerline"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent=".50" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </RelativeLayout>
+</RelativeLayout>

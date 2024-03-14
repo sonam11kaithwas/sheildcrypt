@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="20dp"
+    android:background="@drawable/xml_rounded_corner_white">
+
+    <LinearLayout
+        android:id="@+id/ll_set_name_label"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:gravity="center">
+
+        <com.advantal.shieldcrypt.sip.font_family.PoppinsTVRegular
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Message"
+            android:textColor="@color/black"
+            android:textSize="18sp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_sms_greeting"
+        android:layout_width="match_parent"
+        android:layout_height="130dp"
+        android:layout_below="@+id/ll_set_name_label"
+        android:layout_marginTop="8dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:background="@drawable/xml_black_rounded_border">
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <com.advantal.shieldcrypt.sip.font_family.PoppinsEtReguler
+                    android:id="@+id/et_message_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/transparent" />
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ll_sms_greeting"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:orientation="horizontal">
+
+        <com.advantal.shieldcrypt.utils_pkg.MaterialRippleLayout
+            android:id="@+id/ripple_login"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="10dp"
+            android:layout_weight="1"
+            app:mrl_rippleAlpha="@string/ripple_alpha"
+            app:mrl_rippleColor="@color/ripple_color"
+            app:mrl_rippleDelayClick="false"
+            app:mrl_rippleDuration="@string/ripple_duration"
+            app:mrl_rippleHover="true"
+            app:mrl_rippleOverlay="true">
+
+            <com.advantal.shieldcrypt.sip.font_family.PoppinsTVRegular
+                android:id="@+id/tv_done"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:gravity="center"
+                android:padding="7dp"
+                android:text="Send"
+                android:textColor="@color/blue" />
+        </com.advantal.shieldcrypt.utils_pkg.MaterialRippleLayout>
+
+        <com.advantal.shieldcrypt.utils_pkg.MaterialRippleLayout
+            android:id="@+id/ripple_cancel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="20dp"
+            android:layout_weight="1"
+            app:mrl_rippleAlpha="@string/ripple_alpha"
+            app:mrl_rippleColor="@color/ripple_color"
+            app:mrl_rippleDelayClick="false"
+            app:mrl_rippleDuration="@string/ripple_duration"
+            app:mrl_rippleHover="true"
+            app:mrl_rippleOverlay="true">
+
+            <com.advantal.shieldcrypt.sip.font_family.PoppinsTVRegular
+                android:id="@+id/tv_cancel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+
+                android:gravity="center"
+                android:padding="7dp"
+                android:text="Cancel"
+                android:textColor="@color/blue" />
+        </com.advantal.shieldcrypt.utils_pkg.MaterialRippleLayout>
+    </LinearLayout>
+
+
+</RelativeLayout>
